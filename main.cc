@@ -30,7 +30,7 @@ void test_nonleaf_insertion()
 
 	b.initializeRoot(pid1, 3, pid2);
 	b.printBuffer();
-	b.insert(5, pid3);
+	b.insert(6, pid3);
 	b.insert(4, pid4);
 	//b.insert(1, 11);
 	 b.printBuffer();
@@ -40,6 +40,14 @@ void test_nonleaf_insertion()
 	b.locateChildPtr(6,pid2);
 	cout << "pid2 after call = " << pid2 << endl;
 	assert(pid2 == 199);
+	b.locateChildPtr(2,pid2);
+	cout << "pid2 after call = " << pid2 << endl;
+	assert(pid2 == 1);
+	b.locateChildPtr(4, pid2);
+	assert(pid2 == pid4);
+	b.locateChildPtr(5, pid2);
+	cout << "pid2 after call = " << pid2 << endl;
+	assert(pid2 == pid4);
 }
 
 void test_insertion()
@@ -167,7 +175,7 @@ void test_insertion()
 
 	while (b.insert(counter, rid4) == 0)
 		counter++;
-	// b2.printBuffer();
+	 b2.printBuffer();
  // [4,5,7,12,15,16,17]
 	cout << "Insertion tests passed...\n";
 }
@@ -353,7 +361,7 @@ void test_locate_and_read_forward()
 	}
 
 
-	
+
 	IndexCursor ic;
 	b.locate(678, ic);
 

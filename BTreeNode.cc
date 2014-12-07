@@ -13,7 +13,7 @@ BTLeafNode::BTLeafNode()
 	int i = 0;
 	char* iter = &(buffer[0]);
 	const int neg = NULL_VALUE;
-	while(i+1 < sizeof(buffer)/sizeof(int)) {
+	while(i < PageFile::PAGE_SIZE/sizeof(int)) {
 		memcpy(iter, &neg, sizeof(int));
 		i++;
 		iter += sizeof(int);
@@ -132,7 +132,6 @@ RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
 	sibling.setKeyCount(keyCount - splitter);
 	keyCount = splitter;
 
-	
 
 	memcpy(&siblingKey, sibling.getBuffer() + sizeof(RecordId), sizeof(key));
 
@@ -140,7 +139,7 @@ RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
 		sibling.insert(key, rid);
 	else
 		insert(key, rid);
-	
+
 
 	sibling.setNextNodePtr(getNextNodePtr());
 	setNextNodePtr(getNextNodePtr());
@@ -239,7 +238,7 @@ BTNonLeafNode::BTNonLeafNode()
 	int i = 0;
 	char* iter = &(buffer[0]);
 	const int neg = NULL_VALUE;
-	while(i < sizeof(buffer)) {
+	while(i < PageFile::PAGE_SIZE) {
 		memcpy(iter, &neg, sizeof(int));
 		i += sizeof(int);
 		iter += sizeof(int);
@@ -414,8 +413,8 @@ RC BTNonLeafNode::locateChildPtr(int searchKey, PageId& pid)
 
 	while (key < keyCount) {
 		memcpy(&cur, iter, sizeof(int));
-		if (cur >= searchKey) {
-			iter += sizeof(int);
+		if (cur > searchKey) {
+			iter -= sizeof(PageId);
 			memcpy(&pid, iter, sizeof(PageId));
 			return 0;
 		}
@@ -484,14 +483,14 @@ void BTLeafNode::printBuffer()
 		RecordId rid;
 		//readLeafEntry(i, key, rid);
 		key = *p;
-		cout << "buffer[" << i << "] is equal to " << key << endl; 
+		cout << "buffer[" << i << "] is equal to " << key << endl;
 		p++;
 		// cout << "[" << rid.pid << "]";
 		// cout << "[" << rid.sid << "]\n";
 	}
 
 
-	cout << "Stack checker: " << "buffer[256] is equal to " << key << endl; 
+	cout << "Stack checker: " << "buffer[256] is equal to " << key << endl;
 	cout << "End Buffer =====================================\n";
 }
 

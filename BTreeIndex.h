@@ -13,23 +13,23 @@
 #include "Bruinbase.h"
 #include "PageFile.h"
 #include "RecordFile.h"
-             
+
 /**
  * The data structure to point to a particular entry at a b+tree leaf node.
- * An IndexCursor consists of pid (PageId of the leaf node) and 
+ * An IndexCursor consists of pid (PageId of the leaf node) and
  * eid (the location of the index entry inside the node).
  * IndexCursor is used for index lookup and traversal.
  */
 typedef struct {
   // PageId of the index entry
-  PageId  pid;  
+  PageId  pid;
   // The entry number inside the node
-  int     eid;  
+  int     eid;
 } IndexCursor;
 
 /**
  * Implements a B-Tree index for bruinbase.
- * 
+ *
  */
 class BTreeIndex {
  public:
@@ -49,7 +49,7 @@ class BTreeIndex {
    * @return error code. 0 if no error
    */
   RC close();
-    
+
   /**
    * Insert (key, RecordId) pair to the index.
    * @param key[IN] the key for the value inserted into the index
@@ -62,14 +62,17 @@ class BTreeIndex {
   /**
    * Recursive helper
    */
-  RC insertHelper(PageId pid, int key, const RecordId& rid, 
-                int curHeight, int& siblingPid, int& siblingKey);
+  //RC insertHelper(PageId pid, int key, const RecordId& rid,
+  //              int curHeight, int& siblingPid, int& siblingKey);
+  RC recursiveInsert(int stage, int key, PageId& retPid, int& retKey, const RecordId& rid, PageId currPid);
+
+  RC popedupRoot(PageId lPid, PageId rPid, int key);
 
   /**
    * Find the leaf-node index entry whose key value is larger than or
    * equal to searchKey and output its location (i.e., the page id of the node
    * and the entry number in the node) as "IndexCursor."
-   * IndexCursor consists of pid (page id of the node that contains the 
+   * IndexCursor consists of pid (page id of the node that contains the
    * searchKey) and eid (the entry number inside the node)
    * to indicate the location of a particular index entry in the B+tree.
    * Note that, for range queries, we need to scan the B+tree leaf nodes.
@@ -96,14 +99,14 @@ class BTreeIndex {
    * @return error code. 0 if no error
    */
   RC readForward(IndexCursor& cursor, int& key, RecordId& rid);
-  
+
  private:
   PageFile pf;         /// the PageFile used to store the actual b+tree in disk
 
   PageId   rootPid;    /// the PageId of the root node
   int      treeHeight; /// the height of the tree
   /// Note that the content of the above two variables will be gone when
-  /// this class is destructed. Make sure to store the values of the two 
+  /// this class is destructed. Make sure to store the values of the two
   /// variables in disk, so that they can be reconstructed when the index
   /// is opened again later.
 };

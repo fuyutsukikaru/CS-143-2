@@ -80,7 +80,7 @@ RC BTreeIndex::close()
  * @param rid[IN] the RecordId for the record being inserted into the index
  * @return error code. 0 if no error
  */
-RC BTreeIndex::insert(int key, const RecordId& rid)
+/*RC BTreeIndex::insert(int key, const RecordId& rid)
 {
 	int currentHeight = 0;
 	int siblingKey;
@@ -105,7 +105,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 		rc = insertHelper(pid, key, rid, curHeight+1, siblingPid, siblingKey); //rc will be NODE_FULL if it split
 
-		if (rc == RC_NODE_FULL && curHeight != 0) //not the root
+		if (rc == RC_NODE_FULL && curHeight > 1) //not the root
 		{//check to split the "parent" node
 			int rc2 = curHead.insert(siblingKey, siblingPid);
 			if(rc2 == RC_NODE_FULL)
@@ -155,6 +155,15 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 		int rc = 0;
 		BTLeafNode curHead;
+
+		if (treeHeight == 0) {
+			curHead.insert(key,rid);
+			rootPid = pf.endPid();
+			curHead.write(rootPid, pf); //save this node
+			treeHeight++; //tree height is no longer 0
+			return 0;
+		}
+
 		rc = curHead.read(pid, pf);
 		if(rc != 0)
 		{
@@ -175,6 +184,14 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 			curHead.insertAndSplit(key, rid, newNode, siblingKey);
 
+			if (treeHeight == 1) {
+				BTNonLeafNode firstRoot;
+				rootPid = pf.endPid();
+				firstRoot.initializeRoot(pid, siblingKey, siblingPid);
+				treeHeight++;
+				firstRoot.write(rootPid, pf);
+			}
+
 			// Need to set the sibling pointer
 			curHead.setNextNodePtr(siblingPid);
 
@@ -184,6 +201,120 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 		return rc;
 	}
 
+}*/
+
+RC BTreeIndex::insert(int key, const RecordId& rid){
+
+    RC rcode;
+    if (treeHeight != 0){
+    	int rKey;
+    	int start =1;
+    	PageId retPid;
+    	rcode = recursiveInsert(start, key, retPid, rKey, rid, rootPid);
+
+    }else{
+
+    	BTLeafNode leaf;
+    	//leaf.cleanStart();
+    	leaf.insert(key, rid);
+    	rootPid = pf.endPid();
+
+    	//if (rootPid == BTreeIndex::PAGE_TEMP){ rootPid++; }
+
+    	rcode = leaf.write(rootPid, pf);
+    	treeHeight = 1;
+
+    }
+
+    //if (key < minKey || minKey == INITIAL){minKey = key; }
+    return rcode;
+}
+
+
+RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, const RecordId& rid, PageId currPid)
+{
+    if (stage != treeHeight)
+    {
+        BTNonLeafNode n;
+        //n.initializeRoot(INITIAL, INITIAL, INITIAL);
+        n.read(currPid, pf);
+
+        PageId nextPid, splitPid;
+        int splitKey;
+        n.locateChildPtr(key, nextPid);
+
+        RC rcode = (*this).recursiveInsert(stage+1, key, splitPid, splitKey, rid, nextPid);
+
+        if (rcode == RC_NODE_FULL)
+        {
+            rcode = n.insert(splitKey, splitPid);
+            if (rcode == 0)
+            {
+                n.write(currPid, pf);
+                return rcode;
+            }else{
+                RC rcode = RC_NODE_FULL;
+                BTNonLeafNode sn;
+                //sn.initializeRoot(INITIAL, INITIAL, INITIAL);
+
+                int midKey;
+                n.insertAndSplit(splitKey, splitPid, sn, midKey);
+                PageId sibId = pf.endPid();
+                sn.write(sibId, pf);
+                n.write(currPid, pf);
+
+                if ( stage == 1){ rcode = (*this).popedupRoot( currPid, sibId, midKey); }
+
+                retPid = sibId;
+                retKey = midKey;
+                return rcode;
+            }
+        } else  return rcode;
+
+    } else
+    {
+        BTLeafNode leaf;
+        //leaf.cleanStart();
+        leaf.read(currPid, pf);
+
+        RC rcode = leaf.insert(key, rid);
+
+        if (rcode == 0)
+        {
+            leaf.write(currPid, pf);
+            return rcode;
+        } else{
+            BTLeafNode sn;
+            //sn.cleanStart();
+            int key_sibling;
+            leaf.insertAndSplit(key, rid, sn, key_sibling);
+
+            PageId sibPid = pf.endPid();
+            sn.write(sibPid, pf);
+
+            leaf.setNextNodePtr(sibPid);
+            leaf.write(currPid, pf);
+
+            retPid = sibPid;
+            retKey = key_sibling;
+
+            if (stage == 1){ rcode = (*this).popedupRoot(currPid, sibPid, key_sibling);}
+
+            return rcode;
+        }
+    }
+}
+
+
+RC BTreeIndex::popedupRoot(PageId lPid, PageId rPid, int key)
+{
+    BTNonLeafNode nleaf;
+    RC rcode = nleaf.initializeRoot(lPid, key, rPid);
+    rootPid = pf.endPid();
+    nleaf.write(rootPid, pf);
+    treeHeight +=1;
+
+    return rcode;
 }
 
 /*
