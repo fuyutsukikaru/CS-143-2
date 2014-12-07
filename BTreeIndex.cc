@@ -106,7 +106,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 			return rc2; //RC_NODE_FULL
 		}
-		else if (rc == RC_NODE_FULL)
+		else if (rc == RC_NODE_FULL) //full, and at root
 		{
 			int rc2 = curHead.insert(siblingKey, siblingPid);
 			if(rc2 == RC_NODE_FULL)
@@ -130,7 +130,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 				return curHead.write(pid, pf);
 			}
 
-			return rc2;		
+			return rc2;  //error in insert function that isn't RC_NODE_FULL
 		}
 	} else {
 		//at a leaf node
