@@ -363,6 +363,8 @@ void test_locate_and_read_forward()
 	b.readForward(ic, key, rid2);
 
 	cout << "Key is " << key << endl;
+	cout << "Rid pid is " << rid2.pid << endl;
+	cout << "Rid sid is " << rid2.sid << endl;
 	assert(key == 678);
 	assert(rid2.pid == 678);
 	assert(rid2.sid == 678);
