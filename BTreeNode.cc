@@ -1,4 +1,5 @@
 #include "BTreeNode.h"
+#include <iostream>
 
 using namespace std;
 
@@ -419,7 +420,7 @@ RC BTNonLeafNode::locateChildPtr(int searchKey, PageId& pid)
 		iter += nodeSize;
 	}
 
-	iter += sizeof(key);
+	iter -= sizeof(PageId);
 	memcpy(&pid, iter, sizeof(PageId));
 	return 0;
 }
@@ -438,6 +439,32 @@ RC BTNonLeafNode::initializeRoot(PageId pid1, int key, PageId pid2)
 	iter += sizeof(PageId);
 	memcpy(iter, &key, sizeof(int));
 	iter += sizeof(int);
-	memcpy(iter, &pid2, sizeof(PageId));
+	memmove(iter, &pid2, sizeof(PageId));
+	keyCount++;
 	return 0;
+}
+
+
+void BTNonLeafNode::printBuffer()
+{
+
+	cout << "Print Buffer ===================================\n";
+	for (int i = 0; i < keyCount; i++)
+	{
+		int key = 0;
+		RecordId rid;
+		//readLeafEntry(i, key, rid);
+		int *p = (int*) buffer;
+		p++;
+		p = p + i*2;
+		key = *p;
+		int pid = *(p + 1);
+
+
+		cout << "[" << key << "]";
+		cout << "[" << pid << "]\n";
+		// cout << "[" << rid.pid << "]";
+		// cout << "[" << rid.sid << "]\n";
+	}
+	cout << "End Buffer =====================================\n";
 }

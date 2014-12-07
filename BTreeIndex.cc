@@ -210,9 +210,9 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 	RC rc;
 
 	// If the tree is empty, return error
-	if (treeHeight == 0) {
-		return RC_NO_SUCH_RECORD;
-	}
+	//if (treeHeight == 0) {
+	//	return RC_NO_SUCH_RECORD;
+	//}
 
 	// Initialize a temp node
 	BTNonLeafNode curHead;
