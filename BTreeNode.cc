@@ -2,9 +2,9 @@
 
 using namespace std;
 
-// BTLeafNode constructor.  Keeps track of the current key count; be sure to 
+// BTLeafNode constructor.  Keeps track of the current key count; be sure to
 //	increment whenever adding a new element
-BTLeafNode::BTLeafNode() 
+BTLeafNode::BTLeafNode()
 {
 	keyCount = 0;
 	nextPid = 0;
@@ -35,12 +35,12 @@ RC BTLeafNode::read(PageId pid, const PageFile& pf)
 		keyCount++;
 		iter += nodeSize;
 		memcpy(&check, iter, sizeof(int));
-		
+
 	}
 
 	return ret;
 }
-    
+
 /*
  * Write the content of the node to the page pid in the PageFile pf.
  * @param pid[IN] the PageId to write to
@@ -85,14 +85,14 @@ RC BTLeafNode::insert(int key, const RecordId& rid)
 			//position should contain where the stuff should go
 		}
 		keyCount++;
-		
+
 		memmove(buffer + position*nodeSize + nodeSize, buffer + position*nodeSize, nodeSize*((keyCount-1)-position) + sizeof(PageId));
 		memcpy(buffer + position*nodeSize, &rid, sizeof(RecordId));
 		memcpy(buffer + position*nodeSize + sizeof(RecordId), &key, sizeof(int));
 
-		fprintf(stdout, "Successfully wrote node with key: %d, RecordId pid: %d, sid: %d\n", 
+		fprintf(stdout, "Successfully wrote node with key: %d, RecordId pid: %d, sid: %d\n",
 			key, (int)rid.pid, rid.sid);
-		
+
 		return 0;
 	}
 }
@@ -107,7 +107,7 @@ RC BTLeafNode::insert(int key, const RecordId& rid)
  * @param siblingKey[OUT] the first key in the sibling node after split.
  * @return 0 if successful. Return an error code if there is an error.
  */
-RC BTLeafNode::insertAndSplit(int key, const RecordId& rid, 
+RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
                               BTLeafNode& sibling, int& siblingKey)
 {
 	int nodeSize = sizeof(int) + sizeof(RecordId);
@@ -192,13 +192,13 @@ RC BTLeafNode::readEntry(int eid, int& key, RecordId& rid)
 	memcpy(&rid, iter, sizeof(RecordId));
 	iter += sizeof(RecordId);
 	memcpy(&key, iter, sizeof(int));
-	
+
 	return 0;
 }
 
 /*
  * Return the pid of the next sibling node.
- * @return the PageId of the next sibling node 
+ * @return the PageId of the next sibling node
  */
 PageId BTLeafNode::getNextNodePtr()
 {
@@ -207,7 +207,7 @@ PageId BTLeafNode::getNextNodePtr()
 
 /*
  * Set the pid of the next sibling node.
- * @param pid[IN] the PageId of the next sibling node 
+ * @param pid[IN] the PageId of the next sibling node
  * @return 0 if successful. Return an error code if there is an error.
  */
 RC BTLeafNode::setNextNodePtr(PageId pid)
@@ -219,9 +219,9 @@ RC BTLeafNode::setNextNodePtr(PageId pid)
 }
  //*******************************************************************//
 
-// BTLeafNode constructor.  Keeps track of the current key count; be sure to 
+// BTLeafNode constructor.  Keeps track of the current key count; be sure to
 //	increment whenever adding a new element
-BTNonLeafNode::BTNonLeafNode() 
+BTNonLeafNode::BTNonLeafNode()
 {
 	keyCount = 0;
 }
@@ -237,7 +237,7 @@ RC BTNonLeafNode::read(PageId pid, const PageFile& pf)
 {
 	return pf.read(pid, buffer);
 }
-    
+
 /*
  * Write the content of the node to the page pid in the PageFile pf.
  * @param pid[IN] the PageId to write to
@@ -305,7 +305,7 @@ RC BTNonLeafNode::insert(int key, PageId pid)
  * @return 0 if successful. Return an error code if there is an error.
  */
 RC BTNonLeafNode::insertAndSplit(int key, PageId pid, BTNonLeafNode& sibling, int& midKey)
-{ 
+{
 	int nodeSize = sizeof(PageId) + sizeof(int);
 	char* iter = &(buffer[0]);
 	int cur = 0;

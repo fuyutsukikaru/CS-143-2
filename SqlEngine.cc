@@ -65,7 +65,7 @@ RC SqlEngine::select(int attr, const string& table, const vector<SelCond>& cond)
   bool less_equal = false;
 
   if (rc != 0) {
-    goto no_index;
+    goto scan;
   } else {
     for (int i = 0; i < cond.size(); i++) {
       // Check if we have a key condition
@@ -116,11 +116,122 @@ RC SqlEngine::select(int attr, const string& table, const vector<SelCond>& cond)
     // Make sure that there are no conflicts in our conditions
     int prev = -1;
     for (int i = 0; i < keyCond.size(); i++) {
+      int val = atoi(keyCond[i].value);
 
+      // Searching for two equal keys at the same time
+      if (val != prev && prev != -1) {
+        count = 0;
+        goto counter;
+      }
+      // The equal is not in the range
+      else if (((val < high && !less_equal || val <= high && less_equal) ||
+        (high != - 1)) && ((val > low && !greater_equal || val >= low && greater_equal)
+        || low == -1)) {
+        count = 0;
+        goto counter;
+      }
+      prev = val;
     }
 
+    // Search the low end of bound
+    if (low == -1) {
+      low = 0;
+    }
+
+    count = 0;
+    index.locate(low, cursor);
+
+    int myKey;
+    RecordId myRid;
+    rc = tree.readForward(cursor, myKey, myRid);
+
+    if (!greater_equal) {
+      while (myKey == low && rc == 0) {
+        rc = index.readForward(cursor, myKey, myRid);
+      }
+    }
+
+    rc = index.open(table + ".tbl", 'r');
+    if (rc != 0) {
+      fprintf(stderr, "Error: table %s does not exist\n", table.c_str());
+      return rc;
+    }
+
+    // Read the tuples for our range
+    while (rc == 0 && (high == -1 || (myKey <= high && less_equal ||
+      myKey < high && !less_equal))) {
+
+      // If we are counting, we don't need to read values
+      if (attr == 4) {
+        goto incr_count;
+      }
+
+      rc = rf.read(myRid, key, value);
+      if (rc != 0) {
+        fprintf(stderr, "Error: could not read tuple from table %s\n", table.c_str());
+        goto exit_select;
+      }
+
+      // check the conditions on the tuple
+      for (unsigned i = 0; i < cond.size(); i++) {
+        // compute the difference between the tuple value and the condition value
+        switch (valCond[i].attr) {
+          case 1:
+            diff = key - atoi(valCond[i].value);
+            break;
+          case 2:
+            diff = strcmp(value.c_str(), valCond[i].value);
+            break;
+        }
+
+        // skip the tuple if any condition is not met
+        switch (valCond[i].comp) {
+          case SelCond::EQ:
+            if (diff != 0) goto next_record;
+            break;
+          case SelCond::NE:
+            if (diff == 0) goto next_record;
+            break;
+          case SelCond::GT:
+            if (diff <= 0) goto next_record;
+            break;
+          case SelCond::LT:
+            if (diff >= 0) goto next_record;
+            break;
+          case SelCond::GE:
+            if (diff < 0) goto next_record;
+            break;
+          case SelCond::LE:
+            if (diff > 0) goto next_record;
+            break;
+        }
+      }
+
+      // the condition is met for the tuple.
+      // increase matching tuple counter
+      count++;
+
+      // print the tuple
+      switch (attr) {
+      case 1:  // SELECT key
+        fprintf(stdout, "%d\n", key);
+        break;
+      case 2:  // SELECT value
+        fprintf(stdout, "%s\n", value.c_str());
+        break;
+      case 3:  // SELECT *
+        fprintf(stdout, "%d '%s'\n", key, value.c_str());
+        break;
+      }
+
+      next_record:
+      rc = index.readForward(cursor, myKey, myRid);
+    }
+
+    goto counter;
   }
 
+  scan:
   // scan the table file from the beginning
   rid.pid = rid.sid = 0;
   count = 0;
@@ -188,6 +299,7 @@ RC SqlEngine::select(int attr, const string& table, const vector<SelCond>& cond)
     ++rid;
   }
 
+  counter:
   // print matching tuple count if "select count(*)"
   if (attr == 4) {
     fprintf(stdout, "%d\n", count);
