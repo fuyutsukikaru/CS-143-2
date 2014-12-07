@@ -6,7 +6,7 @@
  * @author Junghoo "John" Cho <cho AT cs.ucla.edu>
  * @date 3/24/2008
  */
- 
+
 #include "BTreeIndex.h"
 #include "BTreeNode.h"
 
@@ -31,16 +31,25 @@ BTreeIndex::BTreeIndex()
 RC BTreeIndex::open(const string& indexname, char mode)
 {
 	RC rc = pf.open(indexname, mode);
-	if (rc < 0) {
+	if (rc != 0) {
 		rootPid = -1;
 		return rc;
 	}
 
-	rootPid = 0;
+	//rootPid = 0;
 
-	if (pf.endPid() <= 0) {
-		BTLeafNode leaf;
-		return leaf.write(rootPid, pf);
+	// If no pid initialize a new root node
+	if (pf.endPid() != 0) {
+		char buffer[PageFile::PAGE_SIZE];
+		if (pf.read(0, buffer) != 0) {
+			fprintf(stdout, "Could not read\n");
+			return RC_FILE_READ_FAILED;
+		}
+
+		char* iter = &(buffer[0]);
+		memcpy(&rootPid, iter, sizeof(PageId));
+		iter += sizeof(PageId);
+		memcpy(&treeHeight, iter, sizeof(int));
 	}
 
     return 0;
@@ -52,7 +61,16 @@ RC BTreeIndex::open(const string& indexname, char mode)
  */
 RC BTreeIndex::close()
 {
-	rootPid = -1;
+	//rootPid = -1;
+	char buffer[PageFile::PAGE_SIZE];
+	char* iter = &(buffer[0]);
+	memset(iter, 0, PageFile::PAGE_SIZE);
+	memcpy(iter, &rootPid, sizeof(PageId));
+	iter += sizeof(PageId);
+	memcpy(iter, &treeHeight, sizeof(PageId));
+	if( pf.write(0, buffer) != 0) {
+		return RC_FILE_WRITE_FAILED;
+	}
     return pf.close();
 }
 
@@ -70,7 +88,7 @@ RC BTreeIndex::insert(int key, const RecordId& rid)
 	return insertHelper(rootPid, key, rid, currentHeight, siblingPid, siblingKey);
 }
 
-RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid, 
+RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 						    int curHeight, int& siblingPid, int& siblingKey)
 {
 	if (curHeight < treeHeight)
@@ -86,7 +104,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 		curHead.locateChildPtr(key, pid);
 
 		rc = insertHelper(pid, key, rid, curHeight+1, siblingPid, siblingKey); //rc will be NODE_FULL if it split
-		
+
 		if (rc == RC_NODE_FULL && curHeight != 0) //not the root
 		{//check to split the "parent" node
 			int rc2 = curHead.insert(siblingKey, siblingPid);
@@ -98,7 +116,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 				curHead.write(pid, pf);
 				newNode.write(siblingPid, pf);
-				
+
 				//create new child node, set the right hand pointer to it
 			} else if (rc2 == 0) {
 				return curHead.write(pid, pf);
@@ -116,11 +134,11 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 				curHead.insertAndSplit(key, pid, newNode, siblingKey);
 				BTNonLeafNode newRoot;
 				rootPid = pf.endPid();
-				
+
 				newRoot.initializeRoot(pid, siblingKey, siblingPid);
 
 				treeHeight++;
-				
+
 				newRoot.write(rootPid, pf);
 				curHead.write(pid, pf);
 				newNode.write(siblingPid, pf);
@@ -156,7 +174,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 			siblingPid = pf.endPid();
 
 			curHead.insertAndSplit(key, rid, newNode, siblingKey);
-			
+
 			// Need to set the sibling pointer
 			curHead.setNextNodePtr(siblingPid);
 
@@ -169,17 +187,17 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 }
 
 /*
- * Find the leaf-node index entry whose key value is larger than or 
+ * Find the leaf-node index entry whose key value is larger than or
  * equal to searchKey, and output the location of the entry in IndexCursor.
  * IndexCursor is a "pointer" to a B+tree leaf-node entry consisting of
  * the PageId of the node and the SlotID of the index entry.
  * Note that, for range queries, we need to scan the B+tree leaf nodes.
  * For example, if the query is "key > 1000", we should scan the leaf
  * nodes starting with the key value 1000. For this reason,
- * it is better to return the location of the leaf node entry 
+ * it is better to return the location of the leaf node entry
  * for a given searchKey, instead of returning the RecordId
  * associated with the searchKey directly.
- * Once the location of the index entry is identified and returned 
+ * Once the location of the index entry is identified and returned
  * from this function, you should call readForward() to retrieve the
  * actual (key, rid) pair from the index.
  * @param key[IN] the key to find.
@@ -212,7 +230,7 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 			return rc;
 		}
 	}
-	
+
 	// Initialize a new leaf node
 	BTLeafNode leaf;
 	// Read contents of PageFile into LeafNode

@@ -2,11 +2,11 @@
 
 using namespace std;
 
-// BTLeafNode constructor.  Keeps track of the current key count; be sure to 
+// BTLeafNode constructor.  Keeps track of the current key count; be sure to
 //	increment whenever adding a new element
 
 const int NULL_VALUE = -2147483647; //int min +1 for portability
-BTLeafNode::BTLeafNode() 
+BTLeafNode::BTLeafNode()
 {
 	keyCount = 0;
 	nextPid = 0;
@@ -34,7 +34,7 @@ RC BTLeafNode::read(PageId pid, const PageFile& pf)
 	int i = 0;
 	int nodeSize = sizeof(RecordId) + sizeof(int);
 	memcpy(&check, iter, sizeof(int));
-	while (check != NULL_VALUE && iter < &(buffer[PageFile::PAGE_SIZE)) {
+	while (check != NULL_VALUE && iter < &(buffer[PageFile::PAGE_SIZE])) {
 		keyCount++;
 		iter += nodeSize;
 		memcpy(&check, iter, sizeof(int));
@@ -42,7 +42,7 @@ RC BTLeafNode::read(PageId pid, const PageFile& pf)
 
 	return ret;
 }
-    
+
 /*
  * Write the content of the node to the page pid in the PageFile pf.
  * @param pid[IN] the PageId to write to
@@ -60,7 +60,7 @@ RC BTLeafNode::write(PageId pid, PageFile& pf)
  */
 int BTLeafNode::getKeyCount()
 {
-	fprintf(stdout, "Key count is %d\n", keyCount);
+	//fprintf(stdout, "Key count is %d\n", keyCount);
 	return keyCount;
 }
 
@@ -75,7 +75,7 @@ RC BTLeafNode::insert(int key, const RecordId& rid)
 	int nodeSize = sizeof(int) + sizeof(RecordId);
 	int maxSize = ((PageFile::PAGE_SIZE) - sizeof(PageId))/nodeSize;
 	if (keyCount >= maxSize) {
-		fprintf(stderr, "Error: nodes are full\n");
+		//fprintf(stderr, "Error: nodes are full\n");
 		return RC_NODE_FULL;
 
 	} else {
@@ -84,17 +84,17 @@ RC BTLeafNode::insert(int key, const RecordId& rid)
 
 		if (locate(key, position) == RC_NO_SUCH_RECORD) {
 			position = keyCount; //at the end if it can't be found
-			//position should contain where the stuff should go 
+			//position should contain where the stuff should go
 		}
 		keyCount++;
-		
+
 		memmove(buffer + position*nodeSize + nodeSize, buffer + position*nodeSize, nodeSize*((keyCount-1)-position) + sizeof(PageId));
 		memcpy(buffer + position*nodeSize, &rid, sizeof(RecordId));
 		memcpy(buffer + position*nodeSize + sizeof(RecordId), &key, sizeof(int));
 
-		//fprintf(stdout, "Successfully wrote node with key: %d, RecordId pid: %d, sid: %d\n", 
+		//fprintf(stdout, "Successfully wrote node with key: %d, RecordId pid: %d, sid: %d\n",
 		//	key, (int)rid.pid, rid.sid);
-		
+
 		return 0;
 	}
 }
@@ -109,7 +109,7 @@ RC BTLeafNode::insert(int key, const RecordId& rid)
  * @param siblingKey[OUT] the first key in the sibling node after split.
  * @return 0 if successful. Return an error code if there is an error.
  */
-RC BTLeafNode::insertAndSplit(int key, const RecordId& rid, 
+RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
                               BTLeafNode& sibling, int& siblingKey)
 {
 	int nodeSize = sizeof(int) + sizeof(RecordId);
@@ -123,9 +123,9 @@ RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
 	iter += splitter*nodeSize;
 	memcpy(sibling.getBuffer(), iter, (keyCount - splitter)*nodeSize + sizeof(PageId));
 
-	while (iter < &(buffer[PageFile::PAGE_SIZE)) {
+	while (iter < &(buffer[PageFile::PAGE_SIZE])) {
 		iter += nodeSize;
-		memcpy(iter, NULL_VALUE, sizeof(int));
+		memcpy(iter, &NULL_VALUE, sizeof(int));
 	}
 
 
@@ -170,7 +170,7 @@ RC BTLeafNode::locate(int searchKey, int& eid)
 	}
 
 	eid = -1;
-	fprintf(stderr, "Error: The record does not exist\n");
+	//fprintf(stderr, "Error: The record does not exist\n");
 	return RC_NO_SUCH_RECORD;
 }
 
@@ -188,7 +188,7 @@ RC BTLeafNode::readEntry(int eid, int& key, RecordId& rid)
 	int i = 0;
 
 	if (eid > keyCount) {
-		fprintf(stderr, "Error: The record does not exist\n");
+		//fprintf(stderr, "Error: The record does not exist\n");
 		return RC_NO_SUCH_RECORD;
 	}
 
@@ -200,13 +200,13 @@ RC BTLeafNode::readEntry(int eid, int& key, RecordId& rid)
 	memcpy(&rid, iter, sizeof(RecordId));
 	iter += sizeof(RecordId);
 	memcpy(&key, iter, sizeof(int));
-	
+
 	return 0;
 }
 
 /*
  * Return the pid of the next sibling node.
- * @return the PageId of the next sibling node 
+ * @return the PageId of the next sibling node
  */
 PageId BTLeafNode::getNextNodePtr()
 {
@@ -215,7 +215,7 @@ PageId BTLeafNode::getNextNodePtr()
 
 /*
  * Set the pid of the next sibling node.
- * @param pid[IN] the PageId of the next sibling node 
+ * @param pid[IN] the PageId of the next sibling node
  * @return 0 if successful. Return an error code if there is an error.
  */
 RC BTLeafNode::setNextNodePtr(PageId pid)
@@ -227,9 +227,9 @@ RC BTLeafNode::setNextNodePtr(PageId pid)
 }
  //*******************************************************************//
 
-// BTLeafNode constructor.  Keeps track of the current key count; be sure to 
+// BTLeafNode constructor.  Keeps track of the current key count; be sure to
 //	increment whenever adding a new element
-BTNonLeafNode::BTNonLeafNode() 
+BTNonLeafNode::BTNonLeafNode()
 {
 	keyCount = 0;
 	int i = 0;
@@ -264,7 +264,7 @@ RC BTNonLeafNode::read(PageId pid, const PageFile& pf)
 
 	return ret;
 }
-    
+
 /*
  * Write the content of the node to the page pid in the PageFile pf.
  * @param pid[IN] the PageId to write to
@@ -343,7 +343,7 @@ RC BTNonLeafNode::insert(int key, PageId pid)
  * @return 0 if successful. Return an error code if there is an error.
  */
 RC BTNonLeafNode::insertAndSplit(int key, PageId pid, BTNonLeafNode& sibling, int& midKey)
-{ 
+{
 	int nodeSize = sizeof(PageId) + sizeof(int);
 	char* iter = &(buffer[0]);
 	int cur = 0;
@@ -364,12 +364,12 @@ RC BTNonLeafNode::insertAndSplit(int key, PageId pid, BTNonLeafNode& sibling, in
 	}
 
 
-	memcpy(sibling.getBuffer(), splitPoint + sizeof(int), sizeof(buffer) - (splitPoint - buffer[0]));
+	memcpy(sibling.getBuffer(), splitPoint + sizeof(int), sizeof(buffer) - (splitPoint - &(buffer[0])));
 	char* splitIter = splitPoint;
 	memcpy(&midKey, splitPoint, sizeof(int));
-	
-	while (splitIter < &(buffer[PageFile::PAGE_SIZE)) {
-		memcpy(splitIter, NULL_VALUE, sizeof(int));
+
+	while (splitIter < &(buffer[PageFile::PAGE_SIZE])) {
+		memcpy(splitIter, &NULL_VALUE, sizeof(int));
 		splitIter += nodeSize;
 	}
 
