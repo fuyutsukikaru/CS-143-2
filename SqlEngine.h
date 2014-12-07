@@ -67,6 +67,11 @@ class SqlEngine {
    * @return error code. 0 if no error
    */
   static RC parseLoadLine(const std::string& line, int& key, std::string& value);
+
+private:
+  static RC processConditions(const int attr, const std::vector<SelCond>& conds, std::vector<SelCond>& indexConds, std::vector<SelCond>& tableConds);
+  static bool matchesCondition(const SelCond& cond, const int key, const std::string& value, bool& terminate);
+
 };
 
 #endif /* SQLENGINE_H */

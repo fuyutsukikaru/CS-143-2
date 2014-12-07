@@ -82,10 +82,9 @@ RC BTreeIndex::close()
  */
 RC BTreeIndex::insert(int key, const RecordId& rid)
 {
-	int currentHeight = 1;
+	int currentHeight = 0;
 	int siblingKey;
 	int siblingPid;
-	//fprintf(stdout, "Tree height is %d\n", treeHeight);
 	return insertHelper(rootPid, key, rid, currentHeight, siblingPid, siblingKey);
 }
 
@@ -106,7 +105,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 		rc = insertHelper(pid, key, rid, curHeight+1, siblingPid, siblingKey); //rc will be NODE_FULL if it split
 
-		if (rc == RC_NODE_FULL && curHeight > 1) //not the root
+		if (rc == RC_NODE_FULL && curHeight != 0) //not the root
 		{//check to split the "parent" node
 			int rc2 = curHead.insert(siblingKey, siblingPid);
 			if(rc2 == RC_NODE_FULL)
@@ -128,11 +127,8 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 		else if (rc == RC_NODE_FULL) //full, and at root
 		{
 			int rc2 = curHead.insert(siblingKey, siblingPid);
-			fprintf(stdout, "SiblingKey is %d\n", siblingKey);
-			fprintf(stdout, "SiblingPid is %d\n", siblingPid);
 			if(rc2 == RC_NODE_FULL)
 			{
-				fprintf(stdout, "We are here now!!!!!!!!!!!!!!!!!!!!!!!\n");
 				BTNonLeafNode newNode;
 				siblingPid = pf.endPid();
 				curHead.insertAndSplit(key, pid, newNode, siblingKey);
@@ -149,7 +145,6 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 				return 0;
 
 			} else if (rc2 == 0) {
-				//fprintf(stdout, "We are here now!!!!!!!!!!!!!!!!!!!!!!!\n");
 				return curHead.write(pid, pf);
 			}
 
@@ -160,15 +155,6 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 
 		int rc = 0;
 		BTLeafNode curHead;
-
-		if (treeHeight == 0) {
-			curHead.insert(key,rid);
-			rootPid = pf.endPid();
-			curHead.write(rootPid, pf); //save this node
-			treeHeight++; //tree height is no longer 0
-			return 0;
-		}
-
 		rc = curHead.read(pid, pf);
 		if(rc != 0)
 		{
@@ -188,14 +174,6 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
 			siblingPid = pf.endPid();
 
 			curHead.insertAndSplit(key, rid, newNode, siblingKey);
-
-			if (treeHeight == 1) {
-				BTNonLeafNode firstRoot;
-				rootPid = pf.endPid();
-				firstRoot.initializeRoot(pid, siblingKey, siblingPid);
-				treeHeight++;
-				firstRoot.write(rootPid, pf);
-			}
 
 			// Need to set the sibling pointer
 			curHead.setNextNodePtr(siblingPid);
@@ -232,14 +210,13 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 	RC rc;
 
 	// If the tree is empty, return error
-	//if (treeHeight == 0) {
-	//	return RC_NO_SUCH_RECORD;
-	//}
+	if (treeHeight == 0) {
+		return RC_NO_SUCH_RECORD;
+	}
 
 	// Initialize a temp node
 	BTNonLeafNode curHead;
 	PageId pid = rootPid;
-	fprintf(stdout, "Height of tree is %d\n", treeHeight);
 	//curHead.initalizeRoot(0, -1, -1);
 	for (int curHeight = 1; curHeight < treeHeight; curHeight++) {
 		// Read contents of PageFile into NonLeafNode
@@ -249,7 +226,6 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 		}
 		// Find the leaf node by traversing through the tree
 		rc = curHead.locateChildPtr(searchKey, pid);
-		fprintf(stdout, "Pid is %d\n", pid);
 		if (rc != 0) {
 			return rc;
 		}
@@ -260,8 +236,6 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 	// Read contents of PageFile into LeafNode
 	rc = leaf.read(pid, pf);
 	if (rc != 0) {
-		fprintf(stdout, "Pid is %d\n", pid);
-		fprintf(stdout, "Got an error here\n");
 		return rc;
 	}
 	// Find eid of LeafNode that contains searchKey

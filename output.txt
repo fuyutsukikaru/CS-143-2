@@ -1,192 +1,1039 @@
-SELECT COUNT(*) FROM xsmall
-8
-  -- 0.000 seconds to run the select command. Read 2 pages
-  TA comment#A: 3 pages is okay. Note that you can get 2 if 
-              you make sure that (when split) the pid of 
-              root node is always at index = 0.
-  
-SELECT * FROM xsmall WHERE key < 2500
-272 'Baby Take a Bow'
-1578 'G.I. Blues'
-2244 'King Creole'
-2342 'Last Ride, The'
-  -- 0.000 seconds to run the select command. Read 2 pages
-  TA comment: 3 is okay, see the first comment #A
-
-SELECT COUNT(*) FROM small
-50
-  -- 0.000 seconds to run the select command. Read 2 pages
-  TA comment#B: 
-  you don't need to read "value" column because 
-  no duplicate is allowed in this project.
-  Namely, count(*) == count(key)
-
-SELECT * FROM small WHERE key > 100 AND key < 500
-173 'Angel Levine, The'
-175 'Angel Unchained'
-272 'Baby Take a Bow'
-303 'Bananas'
-395 'Big Jake'
-489 'Blue Hawaii'
-  -- 0.000 seconds to run the select command. Read 6 pages
-  TA comment: 7 is okay, see first comment #A
-
-SELECT COUNT(*) FROM medium
-100
-  -- 0.000 seconds to run the select command. Read 4 pages
-  TA comment: check comment #A and #B
-
-SELECT * FROM medium WHERE key = 489
-489 'Blue Hawaii'
-  -- 0.000 seconds to run the select command. Read 4 pages
-  TA comment: 5 is okay, seed comment #A
-
-SELECT COUNT(*) FROM large
-1000
-  -- 0.000 seconds to run the select command. Read 21 pages
-  TA comment: 22 is okay, see comment #A
-
-SELECT * FROM large WHERE key > 4500
-4506 'Waterworld'
-4515 'Wedding Party, The'
-4524 'Welcome to the Dollhouse'
-4531 'Wharf Rat, The'
-4546 'When Night Is Falling'
-4558 'While You Were Sleeping'
-4560 'White Mans Burden'
-4565 'White Wolves II: Legend of the Wild'
-4570 'Who Is Harry Kellerman and Why Is He Saying Those Terrible Things About Me?'
-4579 'Widows Kiss'
-4581 'Wigstock: The Movie'
-4583 'Wild Angels, The'
-4584 'Wild Bill'
-4589 'Wild Ride, The'
-4601 'Windrunner'
-4619 'Witch Hunt'
-4620 'Witchboard III: The Possession'
-4621 'Witchcraft 7: Judgement Hour'
-4633 'Wizards of the Demon Sword'
-4637 'Wolves, The'
-4657 'Wrecking Crew, The'
-4660 'Wrong Woman, The'
-4673 'Yao a yao yao dao waipo qiao'
-4683 'Young Poisoners Handbook, The'
-4700 'Zooman'
-4710 'By Way of the Stars'
-4727 'Sabrina, the Teenage Witch'
-4732 '¡Dispara!'
-4733 'la folie'
-  -- 0.000 seconds to run the select command. Read 15 pages
-  TA Comment: 16 is okay, see comment#A
-
-SELECT * FROM large WHERE key > 4500 AND key > 0
-4506 'Waterworld'
-4515 'Wedding Party, The'
-4524 'Welcome to the Dollhouse'
-4531 'Wharf Rat, The'
-4546 'When Night Is Falling'
-4558 'While You Were Sleeping'
-4560 'White Mans Burden'
-4565 'White Wolves II: Legend of the Wild'
-4570 'Who Is Harry Kellerman and Why Is He Saying Those Terrible Things About Me?'
-4579 'Widows Kiss'
-4581 'Wigstock: The Movie'
-4583 'Wild Angels, The'
-4584 'Wild Bill'
-4589 'Wild Ride, The'
-4601 'Windrunner'
-4619 'Witch Hunt'
-4620 'Witchboard III: The Possession'
-4621 'Witchcraft 7: Judgement Hour'
-4633 'Wizards of the Demon Sword'
-4637 'Wolves, The'
-4657 'Wrecking Crew, The'
-4660 'Wrong Woman, The'
-4673 'Yao a yao yao dao waipo qiao'
-4683 'Young Poisoners Handbook, The'
-4700 'Zooman'
-4710 'By Way of the Stars'
-4727 'Sabrina, the Teenage Witch'
-4732 '¡Dispara!'
-4733 'la folie'
-  -- 0.000 seconds to run the select command. Read 15 pages
-  TA comment: 16 is okay, see comment #A
-
-SELECT COUNT(*) FROM xlarge
-12278
-  -- 0.000 seconds to run the select command. Read 219 pages
-  TA comment: see comment #A , #B
-
-SELECT * FROM xlarge WHERE key = 4240
-4240 'Tommy Boy'
-  -- 0.000 seconds to run the select command. Read 5 pages
-  TA Comment: 5 is okay, see comment #A
-
-SELECT * FROM xlarge WHERE key > 400 AND key < 500 AND key > 100 AND key < 4000000
-402 'Big Squeeze, The'
-403 'Big Tease, The'
-405 'Bigfoot: The Unforgettable Encounter'
-407 'Biker Zombies'
-408 'Bikini Bistro'
-409 'Bikini Drive-In'
-410 'Bikini Hoe-Down'
-412 'Bikini Traffic School'
-413 'Billy Elliot'
-415 'Billys Holiday'
-416 'Billys Hollywood Screen Kiss'
-418 'Bio-Dome'
-420 'Bird of Prey'
-421 'Birdcage, The'
-422 'Birthday Girl'
-423 'BitterSweet'
-424 'Black and White'
-425 'Black Cat Run'
-427 'Black Day Blue Night'
-428 'Black Dog'
-430 'Black Hawk Down'
-431 'Black Knight'
-433 'Black Out'
-435 'Black Rose of Harlem'
-436 'Black Scorpion'
-437 'Black Scorpion II: Aftershock'
-439 'Black Sea 213'
-440 'Black Sheep'
-442 'Black Widow Escort'
-443 'Blackjack'
-444 'BlackMale'
-445 'Blackout, The'
-447 'Blacktop'
-448 'Blackwater Trail'
-450 'Blade'
-452 'Blair Witch Project, The'
-453 'Blast'
-454 'Blast from the Past'
-457 'Bless the Child'
-458 'Blessed Art Thou'
-459 'Blind Faith'
-460 'Blind Heat'
-462 'Bliss'
-463 'Blonde Heaven'
-464 'Blondes Have More Guns'
-465 'Blood & Donuts'
-467 'Blood and Wine'
-468 'Blood Money'
-471 'Blood of the Innocent'
-472 'Blood Oranges, The'
-474 'Blood, Guts, Bullets and Octane'
-477 'Bloodhounds'
-479 'Bloodmoon'
-480 'Bloodsport 2'
-481 'Bloody Murder'
-484 'Blow'
-485 'Blow Dry'
-486 'Blowback'
-489 'Blue Hawaii'
-490 'Blue Juice'
-491 'Blue Moon'
-492 'Blue Ridge Fall'
-493 'Blues Brothers 2000'
-496 'Bobby G. Cant Swim'
-  -- 0.000 seconds to run the select command. Read 69 pages
-  TA comment: minor differnce such as 69~73 are okay, see comment #A
-
+Print Buffer ===================================
+buffer[0] is equal to 777
+buffer[1] is equal to -2147483648
+buffer[2] is equal to -2147483648
+buffer[3] is equal to -2147483648
+buffer[4] is equal to -2147483648
+buffer[5] is equal to -2147483648
+buffer[6] is equal to -2147483648
+buffer[7] is equal to -2147483648
+buffer[8] is equal to -2147483648
+buffer[9] is equal to -2147483648
+buffer[10] is equal to -2147483648
+buffer[11] is equal to -2147483648
+buffer[12] is equal to -2147483648
+buffer[13] is equal to -2147483648
+buffer[14] is equal to -2147483648
+buffer[15] is equal to -2147483648
+buffer[16] is equal to -2147483648
+buffer[17] is equal to -2147483648
+buffer[18] is equal to -2147483648
+buffer[19] is equal to -2147483648
+buffer[20] is equal to -2147483648
+buffer[21] is equal to -2147483648
+buffer[22] is equal to -2147483648
+buffer[23] is equal to -2147483648
+buffer[24] is equal to -2147483648
+buffer[25] is equal to -2147483648
+buffer[26] is equal to -2147483648
+buffer[27] is equal to -2147483648
+buffer[28] is equal to -2147483648
+buffer[29] is equal to -2147483648
+buffer[30] is equal to -2147483648
+buffer[31] is equal to -2147483648
+buffer[32] is equal to -2147483648
+buffer[33] is equal to -2147483648
+buffer[34] is equal to -2147483648
+buffer[35] is equal to -2147483648
+buffer[36] is equal to -2147483648
+buffer[37] is equal to -2147483648
+buffer[38] is equal to -2147483648
+buffer[39] is equal to -2147483648
+buffer[40] is equal to -2147483648
+buffer[41] is equal to -2147483648
+buffer[42] is equal to -2147483648
+buffer[43] is equal to -2147483648
+buffer[44] is equal to -2147483648
+buffer[45] is equal to -2147483648
+buffer[46] is equal to -2147483648
+buffer[47] is equal to -2147483648
+buffer[48] is equal to -2147483648
+buffer[49] is equal to -2147483648
+buffer[50] is equal to -2147483648
+buffer[51] is equal to -2147483648
+buffer[52] is equal to -2147483648
+buffer[53] is equal to -2147483648
+buffer[54] is equal to -2147483648
+buffer[55] is equal to -2147483648
+buffer[56] is equal to -2147483648
+buffer[57] is equal to -2147483648
+buffer[58] is equal to -2147483648
+buffer[59] is equal to -2147483648
+buffer[60] is equal to -2147483648
+buffer[61] is equal to -2147483648
+buffer[62] is equal to -2147483648
+buffer[63] is equal to -2147483648
+buffer[64] is equal to -2147483648
+buffer[65] is equal to -2147483648
+buffer[66] is equal to -2147483648
+buffer[67] is equal to -2147483648
+buffer[68] is equal to -2147483648
+buffer[69] is equal to -2147483648
+buffer[70] is equal to -2147483648
+buffer[71] is equal to -2147483648
+buffer[72] is equal to -2147483648
+buffer[73] is equal to -2147483648
+buffer[74] is equal to -2147483648
+buffer[75] is equal to -2147483648
+buffer[76] is equal to -2147483648
+buffer[77] is equal to -2147483648
+buffer[78] is equal to -2147483648
+buffer[79] is equal to -2147483648
+buffer[80] is equal to -2147483648
+buffer[81] is equal to -2147483648
+buffer[82] is equal to -2147483648
+buffer[83] is equal to -2147483648
+buffer[84] is equal to -2147483648
+buffer[85] is equal to -2147483648
+buffer[86] is equal to -2147483648
+buffer[87] is equal to -2147483648
+buffer[88] is equal to -2147483648
+buffer[89] is equal to -2147483648
+buffer[90] is equal to -2147483648
+buffer[91] is equal to -2147483648
+buffer[92] is equal to -2147483648
+buffer[93] is equal to -2147483648
+buffer[94] is equal to -2147483648
+buffer[95] is equal to -2147483648
+buffer[96] is equal to -2147483648
+buffer[97] is equal to -2147483648
+buffer[98] is equal to -2147483648
+buffer[99] is equal to -2147483648
+buffer[100] is equal to -2147483648
+buffer[101] is equal to -2147483648
+buffer[102] is equal to -2147483648
+buffer[103] is equal to -2147483648
+buffer[104] is equal to -2147483648
+buffer[105] is equal to -2147483648
+buffer[106] is equal to -2147483648
+buffer[107] is equal to -2147483648
+buffer[108] is equal to -2147483648
+buffer[109] is equal to -2147483648
+buffer[110] is equal to -2147483648
+buffer[111] is equal to -2147483648
+buffer[112] is equal to -2147483648
+buffer[113] is equal to -2147483648
+buffer[114] is equal to -2147483648
+buffer[115] is equal to -2147483648
+buffer[116] is equal to -2147483648
+buffer[117] is equal to -2147483648
+buffer[118] is equal to -2147483648
+buffer[119] is equal to -2147483648
+buffer[120] is equal to -2147483648
+buffer[121] is equal to -2147483648
+buffer[122] is equal to -2147483648
+buffer[123] is equal to -2147483648
+buffer[124] is equal to -2147483648
+buffer[125] is equal to -2147483648
+buffer[126] is equal to -2147483648
+buffer[127] is equal to -2147483648
+buffer[128] is equal to -2147483648
+buffer[129] is equal to -2147483648
+buffer[130] is equal to -2147483648
+buffer[131] is equal to -2147483648
+buffer[132] is equal to -2147483648
+buffer[133] is equal to -2147483648
+buffer[134] is equal to -2147483648
+buffer[135] is equal to -2147483648
+buffer[136] is equal to -2147483648
+buffer[137] is equal to -2147483648
+buffer[138] is equal to -2147483648
+buffer[139] is equal to -2147483648
+buffer[140] is equal to -2147483648
+buffer[141] is equal to -2147483648
+buffer[142] is equal to -2147483648
+buffer[143] is equal to -2147483648
+buffer[144] is equal to -2147483648
+buffer[145] is equal to -2147483648
+buffer[146] is equal to -2147483648
+buffer[147] is equal to -2147483648
+buffer[148] is equal to -2147483648
+buffer[149] is equal to -2147483648
+buffer[150] is equal to -2147483648
+buffer[151] is equal to -2147483648
+buffer[152] is equal to -2147483648
+buffer[153] is equal to -2147483648
+buffer[154] is equal to -2147483648
+buffer[155] is equal to -2147483648
+buffer[156] is equal to -2147483648
+buffer[157] is equal to -2147483648
+buffer[158] is equal to -2147483648
+buffer[159] is equal to -2147483648
+buffer[160] is equal to -2147483648
+buffer[161] is equal to -2147483648
+buffer[162] is equal to -2147483648
+buffer[163] is equal to -2147483648
+buffer[164] is equal to -2147483648
+buffer[165] is equal to -2147483648
+buffer[166] is equal to -2147483648
+buffer[167] is equal to -2147483648
+buffer[168] is equal to -2147483648
+buffer[169] is equal to -2147483648
+buffer[170] is equal to -2147483648
+buffer[171] is equal to -2147483648
+buffer[172] is equal to -2147483648
+buffer[173] is equal to -2147483648
+buffer[174] is equal to -2147483648
+buffer[175] is equal to -2147483648
+buffer[176] is equal to -2147483648
+buffer[177] is equal to -2147483648
+buffer[178] is equal to -2147483648
+buffer[179] is equal to -2147483648
+buffer[180] is equal to -2147483648
+buffer[181] is equal to -2147483648
+buffer[182] is equal to -2147483648
+buffer[183] is equal to -2147483648
+buffer[184] is equal to -2147483648
+buffer[185] is equal to -2147483648
+buffer[186] is equal to -2147483648
+buffer[187] is equal to -2147483648
+buffer[188] is equal to -2147483648
+buffer[189] is equal to -2147483648
+buffer[190] is equal to -2147483648
+buffer[191] is equal to -2147483648
+buffer[192] is equal to -2147483648
+buffer[193] is equal to -2147483648
+buffer[194] is equal to -2147483648
+buffer[195] is equal to -2147483648
+buffer[196] is equal to -2147483648
+buffer[197] is equal to -2147483648
+buffer[198] is equal to -2147483648
+buffer[199] is equal to -2147483648
+buffer[200] is equal to -2147483648
+buffer[201] is equal to -2147483648
+buffer[202] is equal to -2147483648
+buffer[203] is equal to -2147483648
+buffer[204] is equal to -2147483648
+buffer[205] is equal to -2147483648
+buffer[206] is equal to -2147483648
+buffer[207] is equal to -2147483648
+buffer[208] is equal to -2147483648
+buffer[209] is equal to -2147483648
+buffer[210] is equal to -2147483648
+buffer[211] is equal to -2147483648
+buffer[212] is equal to -2147483648
+buffer[213] is equal to -2147483648
+buffer[214] is equal to -2147483648
+buffer[215] is equal to -2147483648
+buffer[216] is equal to -2147483648
+buffer[217] is equal to -2147483648
+buffer[218] is equal to -2147483648
+buffer[219] is equal to -2147483648
+buffer[220] is equal to -2147483648
+buffer[221] is equal to -2147483648
+buffer[222] is equal to -2147483648
+buffer[223] is equal to -2147483648
+buffer[224] is equal to -2147483648
+buffer[225] is equal to -2147483648
+buffer[226] is equal to -2147483648
+buffer[227] is equal to -2147483648
+buffer[228] is equal to -2147483648
+buffer[229] is equal to -2147483648
+buffer[230] is equal to -2147483648
+buffer[231] is equal to -2147483648
+buffer[232] is equal to -2147483648
+buffer[233] is equal to -2147483648
+buffer[234] is equal to -2147483648
+buffer[235] is equal to -2147483648
+buffer[236] is equal to -2147483648
+buffer[237] is equal to -2147483648
+buffer[238] is equal to -2147483648
+buffer[239] is equal to -2147483648
+buffer[240] is equal to -2147483648
+buffer[241] is equal to -2147483648
+buffer[242] is equal to -2147483648
+buffer[243] is equal to -2147483648
+buffer[244] is equal to -2147483648
+buffer[245] is equal to -2147483648
+buffer[246] is equal to -2147483648
+buffer[247] is equal to -2147483648
+buffer[248] is equal to -2147483648
+buffer[249] is equal to -2147483648
+buffer[250] is equal to -2147483648
+buffer[251] is equal to -2147483648
+buffer[252] is equal to -2147483648
+buffer[253] is equal to -2147483648
+buffer[254] is equal to -2147483648
+buffer[255] is equal to 1
+Stack checker: buffer[256] is equal to 1
+End Buffer =====================================
+Print Buffer ===================================
+buffer[0] is equal to 10
+buffer[1] is equal to 20
+buffer[2] is equal to 0
+buffer[3] is equal to 10
+buffer[4] is equal to 20
+buffer[5] is equal to 2
+buffer[6] is equal to 10
+buffer[7] is equal to 20
+buffer[8] is equal to 4
+buffer[9] is equal to 10
+buffer[10] is equal to 20
+buffer[11] is equal to 6
+buffer[12] is equal to 10
+buffer[13] is equal to 20
+buffer[14] is equal to 8
+buffer[15] is equal to 10
+buffer[16] is equal to 20
+buffer[17] is equal to 10
+buffer[18] is equal to 10
+buffer[19] is equal to 20
+buffer[20] is equal to 12
+buffer[21] is equal to 10
+buffer[22] is equal to 20
+buffer[23] is equal to 14
+buffer[24] is equal to 10
+buffer[25] is equal to 20
+buffer[26] is equal to 16
+buffer[27] is equal to 10
+buffer[28] is equal to 20
+buffer[29] is equal to 18
+buffer[30] is equal to 10
+buffer[31] is equal to 20
+buffer[32] is equal to 20
+buffer[33] is equal to 10
+buffer[34] is equal to 20
+buffer[35] is equal to 22
+buffer[36] is equal to 10
+buffer[37] is equal to 20
+buffer[38] is equal to 24
+buffer[39] is equal to 10
+buffer[40] is equal to 20
+buffer[41] is equal to 26
+buffer[42] is equal to 10
+buffer[43] is equal to 20
+buffer[44] is equal to 28
+buffer[45] is equal to 10
+buffer[46] is equal to 20
+buffer[47] is equal to 30
+buffer[48] is equal to 10
+buffer[49] is equal to 20
+buffer[50] is equal to 32
+buffer[51] is equal to 10
+buffer[52] is equal to 20
+buffer[53] is equal to 34
+buffer[54] is equal to 10
+buffer[55] is equal to 20
+buffer[56] is equal to 36
+buffer[57] is equal to 10
+buffer[58] is equal to 20
+buffer[59] is equal to 38
+buffer[60] is equal to 10
+buffer[61] is equal to 20
+buffer[62] is equal to 40
+buffer[63] is equal to 10
+buffer[64] is equal to 20
+buffer[65] is equal to 42
+buffer[66] is equal to 10
+buffer[67] is equal to 20
+buffer[68] is equal to 44
+buffer[69] is equal to 10
+buffer[70] is equal to 20
+buffer[71] is equal to 46
+buffer[72] is equal to 10
+buffer[73] is equal to 20
+buffer[74] is equal to 48
+buffer[75] is equal to 10
+buffer[76] is equal to 20
+buffer[77] is equal to 50
+buffer[78] is equal to 10
+buffer[79] is equal to 20
+buffer[80] is equal to 52
+buffer[81] is equal to 10
+buffer[82] is equal to 20
+buffer[83] is equal to 54
+buffer[84] is equal to 10
+buffer[85] is equal to 20
+buffer[86] is equal to 56
+buffer[87] is equal to 10
+buffer[88] is equal to 20
+buffer[89] is equal to 58
+buffer[90] is equal to 10
+buffer[91] is equal to 20
+buffer[92] is equal to 60
+buffer[93] is equal to 10
+buffer[94] is equal to 20
+buffer[95] is equal to 62
+buffer[96] is equal to 10
+buffer[97] is equal to 20
+buffer[98] is equal to 64
+buffer[99] is equal to 10
+buffer[100] is equal to 20
+buffer[101] is equal to 66
+buffer[102] is equal to 10
+buffer[103] is equal to 20
+buffer[104] is equal to 68
+buffer[105] is equal to 10
+buffer[106] is equal to 20
+buffer[107] is equal to 70
+buffer[108] is equal to 10
+buffer[109] is equal to 20
+buffer[110] is equal to 72
+buffer[111] is equal to 10
+buffer[112] is equal to 20
+buffer[113] is equal to 74
+buffer[114] is equal to 10
+buffer[115] is equal to 20
+buffer[116] is equal to 76
+buffer[117] is equal to 10
+buffer[118] is equal to 20
+buffer[119] is equal to 78
+buffer[120] is equal to 10
+buffer[121] is equal to 20
+buffer[122] is equal to 80
+buffer[123] is equal to 10
+buffer[124] is equal to 20
+buffer[125] is equal to 82
+buffer[126] is equal to 10
+buffer[127] is equal to 20
+buffer[128] is equal to 84
+buffer[129] is equal to 10
+buffer[130] is equal to 20
+buffer[131] is equal to 86
+buffer[132] is equal to 10
+buffer[133] is equal to 20
+buffer[134] is equal to 88
+buffer[135] is equal to 10
+buffer[136] is equal to 20
+buffer[137] is equal to 90
+buffer[138] is equal to 10
+buffer[139] is equal to 20
+buffer[140] is equal to 92
+buffer[141] is equal to 10
+buffer[142] is equal to 20
+buffer[143] is equal to 94
+buffer[144] is equal to 10
+buffer[145] is equal to 20
+buffer[146] is equal to 96
+buffer[147] is equal to 10
+buffer[148] is equal to 20
+buffer[149] is equal to 98
+buffer[150] is equal to 10
+buffer[151] is equal to 20
+buffer[152] is equal to 100
+buffer[153] is equal to 10
+buffer[154] is equal to 20
+buffer[155] is equal to 102
+buffer[156] is equal to 10
+buffer[157] is equal to 20
+buffer[158] is equal to 104
+buffer[159] is equal to 10
+buffer[160] is equal to 20
+buffer[161] is equal to 106
+buffer[162] is equal to 10
+buffer[163] is equal to 20
+buffer[164] is equal to 108
+buffer[165] is equal to 10
+buffer[166] is equal to 20
+buffer[167] is equal to 110
+buffer[168] is equal to 10
+buffer[169] is equal to 20
+buffer[170] is equal to 112
+buffer[171] is equal to 10
+buffer[172] is equal to 20
+buffer[173] is equal to 114
+buffer[174] is equal to 10
+buffer[175] is equal to 20
+buffer[176] is equal to 116
+buffer[177] is equal to 10
+buffer[178] is equal to 20
+buffer[179] is equal to 118
+buffer[180] is equal to 10
+buffer[181] is equal to 20
+buffer[182] is equal to 120
+buffer[183] is equal to 10
+buffer[184] is equal to 20
+buffer[185] is equal to 122
+buffer[186] is equal to 10
+buffer[187] is equal to 20
+buffer[188] is equal to 124
+buffer[189] is equal to 10
+buffer[190] is equal to 20
+buffer[191] is equal to 126
+buffer[192] is equal to 10
+buffer[193] is equal to 20
+buffer[194] is equal to 128
+buffer[195] is equal to 10
+buffer[196] is equal to 20
+buffer[197] is equal to 130
+buffer[198] is equal to 10
+buffer[199] is equal to 20
+buffer[200] is equal to 132
+buffer[201] is equal to 10
+buffer[202] is equal to 20
+buffer[203] is equal to 134
+buffer[204] is equal to 10
+buffer[205] is equal to 20
+buffer[206] is equal to 136
+buffer[207] is equal to 10
+buffer[208] is equal to 20
+buffer[209] is equal to 138
+buffer[210] is equal to 10
+buffer[211] is equal to 20
+buffer[212] is equal to 140
+buffer[213] is equal to 10
+buffer[214] is equal to 20
+buffer[215] is equal to 142
+buffer[216] is equal to 10
+buffer[217] is equal to 20
+buffer[218] is equal to 144
+buffer[219] is equal to 10
+buffer[220] is equal to 20
+buffer[221] is equal to 146
+buffer[222] is equal to 10
+buffer[223] is equal to 20
+buffer[224] is equal to 148
+buffer[225] is equal to 10
+buffer[226] is equal to 20
+buffer[227] is equal to 150
+buffer[228] is equal to 10
+buffer[229] is equal to 20
+buffer[230] is equal to 152
+buffer[231] is equal to 10
+buffer[232] is equal to 20
+buffer[233] is equal to 154
+buffer[234] is equal to 10
+buffer[235] is equal to 20
+buffer[236] is equal to 156
+buffer[237] is equal to 10
+buffer[238] is equal to 20
+buffer[239] is equal to 158
+buffer[240] is equal to 10
+buffer[241] is equal to 20
+buffer[242] is equal to 160
+buffer[243] is equal to 10
+buffer[244] is equal to 20
+buffer[245] is equal to 162
+buffer[246] is equal to 10
+buffer[247] is equal to 20
+buffer[248] is equal to 164
+buffer[249] is equal to 10
+buffer[250] is equal to 20
+buffer[251] is equal to 166
+buffer[252] is equal to 777
+buffer[253] is equal to -2147483648
+buffer[254] is equal to -2147483648
+buffer[255] is equal to 1
+Stack checker: buffer[256] is equal to 1
+End Buffer =====================================
+My node pointer: 777
+Print Buffer ===================================
+buffer[0] is equal to 10
+buffer[1] is equal to 20
+buffer[2] is equal to 0
+buffer[3] is equal to 10
+buffer[4] is equal to 20
+buffer[5] is equal to 2
+buffer[6] is equal to 10
+buffer[7] is equal to 20
+buffer[8] is equal to 4
+buffer[9] is equal to 10
+buffer[10] is equal to 20
+buffer[11] is equal to 6
+buffer[12] is equal to 33
+buffer[13] is equal to 11
+buffer[14] is equal to 7
+buffer[15] is equal to 10
+buffer[16] is equal to 20
+buffer[17] is equal to 8
+buffer[18] is equal to 10
+buffer[19] is equal to 20
+buffer[20] is equal to 10
+buffer[21] is equal to 10
+buffer[22] is equal to 20
+buffer[23] is equal to 12
+buffer[24] is equal to 10
+buffer[25] is equal to 20
+buffer[26] is equal to 14
+buffer[27] is equal to 10
+buffer[28] is equal to 20
+buffer[29] is equal to 16
+buffer[30] is equal to 10
+buffer[31] is equal to 20
+buffer[32] is equal to 18
+buffer[33] is equal to 10
+buffer[34] is equal to 20
+buffer[35] is equal to 20
+buffer[36] is equal to 10
+buffer[37] is equal to 20
+buffer[38] is equal to 22
+buffer[39] is equal to 10
+buffer[40] is equal to 20
+buffer[41] is equal to 24
+buffer[42] is equal to 10
+buffer[43] is equal to 20
+buffer[44] is equal to 26
+buffer[45] is equal to 10
+buffer[46] is equal to 20
+buffer[47] is equal to 28
+buffer[48] is equal to 10
+buffer[49] is equal to 20
+buffer[50] is equal to 30
+buffer[51] is equal to 10
+buffer[52] is equal to 20
+buffer[53] is equal to 32
+buffer[54] is equal to 10
+buffer[55] is equal to 20
+buffer[56] is equal to 34
+buffer[57] is equal to 10
+buffer[58] is equal to 20
+buffer[59] is equal to 36
+buffer[60] is equal to 10
+buffer[61] is equal to 20
+buffer[62] is equal to 38
+buffer[63] is equal to 10
+buffer[64] is equal to 20
+buffer[65] is equal to 40
+buffer[66] is equal to 10
+buffer[67] is equal to 20
+buffer[68] is equal to 42
+buffer[69] is equal to 10
+buffer[70] is equal to 20
+buffer[71] is equal to 44
+buffer[72] is equal to 10
+buffer[73] is equal to 20
+buffer[74] is equal to 46
+buffer[75] is equal to 10
+buffer[76] is equal to 20
+buffer[77] is equal to 48
+buffer[78] is equal to 10
+buffer[79] is equal to 20
+buffer[80] is equal to 50
+buffer[81] is equal to 10
+buffer[82] is equal to 20
+buffer[83] is equal to 52
+buffer[84] is equal to 10
+buffer[85] is equal to 20
+buffer[86] is equal to 54
+buffer[87] is equal to 10
+buffer[88] is equal to 20
+buffer[89] is equal to 56
+buffer[90] is equal to 10
+buffer[91] is equal to 20
+buffer[92] is equal to 58
+buffer[93] is equal to 10
+buffer[94] is equal to 20
+buffer[95] is equal to 60
+buffer[96] is equal to 10
+buffer[97] is equal to 20
+buffer[98] is equal to 62
+buffer[99] is equal to 10
+buffer[100] is equal to 20
+buffer[101] is equal to 64
+buffer[102] is equal to 10
+buffer[103] is equal to 20
+buffer[104] is equal to 66
+buffer[105] is equal to 10
+buffer[106] is equal to 20
+buffer[107] is equal to 68
+buffer[108] is equal to 10
+buffer[109] is equal to 20
+buffer[110] is equal to 70
+buffer[111] is equal to 10
+buffer[112] is equal to 20
+buffer[113] is equal to 72
+buffer[114] is equal to 10
+buffer[115] is equal to 20
+buffer[116] is equal to 74
+buffer[117] is equal to 10
+buffer[118] is equal to 20
+buffer[119] is equal to 76
+buffer[120] is equal to 10
+buffer[121] is equal to 20
+buffer[122] is equal to 78
+buffer[123] is equal to 10
+buffer[124] is equal to 20
+buffer[125] is equal to 80
+buffer[126] is equal to 10
+buffer[127] is equal to 20
+buffer[128] is equal to 82
+buffer[129] is equal to 777
+buffer[130] is equal to 20
+buffer[131] is equal to 86
+buffer[132] is equal to -2147483648
+buffer[133] is equal to 20
+buffer[134] is equal to 88
+buffer[135] is equal to -2147483648
+buffer[136] is equal to 20
+buffer[137] is equal to 90
+buffer[138] is equal to -2147483648
+buffer[139] is equal to 20
+buffer[140] is equal to 92
+buffer[141] is equal to -2147483648
+buffer[142] is equal to 20
+buffer[143] is equal to 94
+buffer[144] is equal to -2147483648
+buffer[145] is equal to 20
+buffer[146] is equal to 96
+buffer[147] is equal to -2147483648
+buffer[148] is equal to 20
+buffer[149] is equal to 98
+buffer[150] is equal to -2147483648
+buffer[151] is equal to 20
+buffer[152] is equal to 100
+buffer[153] is equal to -2147483648
+buffer[154] is equal to 20
+buffer[155] is equal to 102
+buffer[156] is equal to -2147483648
+buffer[157] is equal to 20
+buffer[158] is equal to 104
+buffer[159] is equal to -2147483648
+buffer[160] is equal to 20
+buffer[161] is equal to 106
+buffer[162] is equal to -2147483648
+buffer[163] is equal to 20
+buffer[164] is equal to 108
+buffer[165] is equal to -2147483648
+buffer[166] is equal to 20
+buffer[167] is equal to 110
+buffer[168] is equal to -2147483648
+buffer[169] is equal to 20
+buffer[170] is equal to 112
+buffer[171] is equal to -2147483648
+buffer[172] is equal to 20
+buffer[173] is equal to 114
+buffer[174] is equal to -2147483648
+buffer[175] is equal to 20
+buffer[176] is equal to 116
+buffer[177] is equal to -2147483648
+buffer[178] is equal to 20
+buffer[179] is equal to 118
+buffer[180] is equal to -2147483648
+buffer[181] is equal to 20
+buffer[182] is equal to 120
+buffer[183] is equal to -2147483648
+buffer[184] is equal to 20
+buffer[185] is equal to 122
+buffer[186] is equal to -2147483648
+buffer[187] is equal to 20
+buffer[188] is equal to 124
+buffer[189] is equal to -2147483648
+buffer[190] is equal to 20
+buffer[191] is equal to 126
+buffer[192] is equal to -2147483648
+buffer[193] is equal to 20
+buffer[194] is equal to 128
+buffer[195] is equal to -2147483648
+buffer[196] is equal to 20
+buffer[197] is equal to 130
+buffer[198] is equal to -2147483648
+buffer[199] is equal to 20
+buffer[200] is equal to 132
+buffer[201] is equal to -2147483648
+buffer[202] is equal to 20
+buffer[203] is equal to 134
+buffer[204] is equal to -2147483648
+buffer[205] is equal to 20
+buffer[206] is equal to 136
+buffer[207] is equal to -2147483648
+buffer[208] is equal to 20
+buffer[209] is equal to 138
+buffer[210] is equal to -2147483648
+buffer[211] is equal to 20
+buffer[212] is equal to 140
+buffer[213] is equal to -2147483648
+buffer[214] is equal to 20
+buffer[215] is equal to 142
+buffer[216] is equal to -2147483648
+buffer[217] is equal to 20
+buffer[218] is equal to 144
+buffer[219] is equal to -2147483648
+buffer[220] is equal to 20
+buffer[221] is equal to 146
+buffer[222] is equal to -2147483648
+buffer[223] is equal to 20
+buffer[224] is equal to 148
+buffer[225] is equal to -2147483648
+buffer[226] is equal to 20
+buffer[227] is equal to 150
+buffer[228] is equal to -2147483648
+buffer[229] is equal to 20
+buffer[230] is equal to 152
+buffer[231] is equal to -2147483648
+buffer[232] is equal to 20
+buffer[233] is equal to 154
+buffer[234] is equal to -2147483648
+buffer[235] is equal to 20
+buffer[236] is equal to 156
+buffer[237] is equal to -2147483648
+buffer[238] is equal to 20
+buffer[239] is equal to 158
+buffer[240] is equal to -2147483648
+buffer[241] is equal to 20
+buffer[242] is equal to 160
+buffer[243] is equal to -2147483648
+buffer[244] is equal to 20
+buffer[245] is equal to 162
+buffer[246] is equal to -2147483648
+buffer[247] is equal to 20
+buffer[248] is equal to 164
+buffer[249] is equal to -2147483648
+buffer[250] is equal to 20
+buffer[251] is equal to 166
+buffer[252] is equal to -2147483648
+buffer[253] is equal to -2147483648
+buffer[254] is equal to -2147483648
+buffer[255] is equal to -2147483648
+Stack checker: buffer[256] is equal to -2147483648
+End Buffer =====================================
+Sibling key is 84
+Print Buffer ===================================
+buffer[0] is equal to 10
+buffer[1] is equal to 20
+buffer[2] is equal to 84
+buffer[3] is equal to 10
+buffer[4] is equal to 20
+buffer[5] is equal to 86
+buffer[6] is equal to 10
+buffer[7] is equal to 20
+buffer[8] is equal to 88
+buffer[9] is equal to 10
+buffer[10] is equal to 20
+buffer[11] is equal to 90
+buffer[12] is equal to 10
+buffer[13] is equal to 20
+buffer[14] is equal to 92
+buffer[15] is equal to 10
+buffer[16] is equal to 20
+buffer[17] is equal to 94
+buffer[18] is equal to 10
+buffer[19] is equal to 20
+buffer[20] is equal to 96
+buffer[21] is equal to 10
+buffer[22] is equal to 20
+buffer[23] is equal to 98
+buffer[24] is equal to 10
+buffer[25] is equal to 20
+buffer[26] is equal to 100
+buffer[27] is equal to 10
+buffer[28] is equal to 20
+buffer[29] is equal to 102
+buffer[30] is equal to 10
+buffer[31] is equal to 20
+buffer[32] is equal to 104
+buffer[33] is equal to 10
+buffer[34] is equal to 20
+buffer[35] is equal to 106
+buffer[36] is equal to 10
+buffer[37] is equal to 20
+buffer[38] is equal to 108
+buffer[39] is equal to 10
+buffer[40] is equal to 20
+buffer[41] is equal to 110
+buffer[42] is equal to 10
+buffer[43] is equal to 20
+buffer[44] is equal to 112
+buffer[45] is equal to 10
+buffer[46] is equal to 20
+buffer[47] is equal to 114
+buffer[48] is equal to 10
+buffer[49] is equal to 20
+buffer[50] is equal to 116
+buffer[51] is equal to 10
+buffer[52] is equal to 20
+buffer[53] is equal to 118
+buffer[54] is equal to 10
+buffer[55] is equal to 20
+buffer[56] is equal to 120
+buffer[57] is equal to 10
+buffer[58] is equal to 20
+buffer[59] is equal to 122
+buffer[60] is equal to 10
+buffer[61] is equal to 20
+buffer[62] is equal to 124
+buffer[63] is equal to 10
+buffer[64] is equal to 20
+buffer[65] is equal to 126
+buffer[66] is equal to 10
+buffer[67] is equal to 20
+buffer[68] is equal to 128
+buffer[69] is equal to 10
+buffer[70] is equal to 20
+buffer[71] is equal to 130
+buffer[72] is equal to 10
+buffer[73] is equal to 20
+buffer[74] is equal to 132
+buffer[75] is equal to 10
+buffer[76] is equal to 20
+buffer[77] is equal to 134
+buffer[78] is equal to 10
+buffer[79] is equal to 20
+buffer[80] is equal to 136
+buffer[81] is equal to 10
+buffer[82] is equal to 20
+buffer[83] is equal to 138
+buffer[84] is equal to 10
+buffer[85] is equal to 20
+buffer[86] is equal to 140
+buffer[87] is equal to 10
+buffer[88] is equal to 20
+buffer[89] is equal to 142
+buffer[90] is equal to 10
+buffer[91] is equal to 20
+buffer[92] is equal to 144
+buffer[93] is equal to 10
+buffer[94] is equal to 20
+buffer[95] is equal to 146
+buffer[96] is equal to 10
+buffer[97] is equal to 20
+buffer[98] is equal to 148
+buffer[99] is equal to 10
+buffer[100] is equal to 20
+buffer[101] is equal to 150
+buffer[102] is equal to 10
+buffer[103] is equal to 20
+buffer[104] is equal to 152
+buffer[105] is equal to 10
+buffer[106] is equal to 20
+buffer[107] is equal to 154
+buffer[108] is equal to 10
+buffer[109] is equal to 20
+buffer[110] is equal to 156
+buffer[111] is equal to 10
+buffer[112] is equal to 20
+buffer[113] is equal to 158
+buffer[114] is equal to 10
+buffer[115] is equal to 20
+buffer[116] is equal to 160
+buffer[117] is equal to 10
+buffer[118] is equal to 20
+buffer[119] is equal to 162
+buffer[120] is equal to 10
+buffer[121] is equal to 20
+buffer[122] is equal to 164
+buffer[123] is equal to 10
+buffer[124] is equal to 20
+buffer[125] is equal to 166
+buffer[126] is equal to 777
+buffer[127] is equal to -2147483648
+buffer[128] is equal to -2147483648
+buffer[129] is equal to -2147483648
+buffer[130] is equal to -2147483648
+buffer[131] is equal to -2147483648
+buffer[132] is equal to -2147483648
+buffer[133] is equal to -2147483648
+buffer[134] is equal to -2147483648
+buffer[135] is equal to -2147483648
+buffer[136] is equal to -2147483648
+buffer[137] is equal to -2147483648
+buffer[138] is equal to -2147483648
+buffer[139] is equal to -2147483648
+buffer[140] is equal to -2147483648
+buffer[141] is equal to -2147483648
+buffer[142] is equal to -2147483648
+buffer[143] is equal to -2147483648
+buffer[144] is equal to -2147483648
+buffer[145] is equal to -2147483648
+buffer[146] is equal to -2147483648
+buffer[147] is equal to -2147483648
+buffer[148] is equal to -2147483648
+buffer[149] is equal to -2147483648
+buffer[150] is equal to -2147483648
+buffer[151] is equal to -2147483648
+buffer[152] is equal to -2147483648
+buffer[153] is equal to -2147483648
+buffer[154] is equal to -2147483648
+buffer[155] is equal to -2147483648
+buffer[156] is equal to -2147483648
+buffer[157] is equal to -2147483648
+buffer[158] is equal to -2147483648
+buffer[159] is equal to -2147483648
+buffer[160] is equal to -2147483648
+buffer[161] is equal to -2147483648
+buffer[162] is equal to -2147483648
+buffer[163] is equal to -2147483648
+buffer[164] is equal to -2147483648
+buffer[165] is equal to -2147483648
+buffer[166] is equal to -2147483648
+buffer[167] is equal to -2147483648
+buffer[168] is equal to -2147483648
+buffer[169] is equal to -2147483648
+buffer[170] is equal to -2147483648
+buffer[171] is equal to -2147483648
+buffer[172] is equal to -2147483648
+buffer[173] is equal to -2147483648
+buffer[174] is equal to -2147483648
+buffer[175] is equal to -2147483648
+buffer[176] is equal to -2147483648
+buffer[177] is equal to -2147483648
+buffer[178] is equal to -2147483648
+buffer[179] is equal to -2147483648
+buffer[180] is equal to -2147483648
+buffer[181] is equal to -2147483648
+buffer[182] is equal to -2147483648
+buffer[183] is equal to -2147483648
+buffer[184] is equal to -2147483648
+buffer[185] is equal to -2147483648
+buffer[186] is equal to -2147483648
+buffer[187] is equal to -2147483648
+buffer[188] is equal to -2147483648
+buffer[189] is equal to -2147483648
+buffer[190] is equal to -2147483648
+buffer[191] is equal to -2147483648
+buffer[192] is equal to -2147483648
+buffer[193] is equal to -2147483648
+buffer[194] is equal to -2147483648
+buffer[195] is equal to -2147483648
+buffer[196] is equal to -2147483648
+buffer[197] is equal to -2147483648
+buffer[198] is equal to -2147483648
+buffer[199] is equal to -2147483648
+buffer[200] is equal to -2147483648
+buffer[201] is equal to -2147483648
+buffer[202] is equal to -2147483648
+buffer[203] is equal to -2147483648
+buffer[204] is equal to -2147483648
+buffer[205] is equal to -2147483648
+buffer[206] is equal to -2147483648
+buffer[207] is equal to -2147483648
+buffer[208] is equal to -2147483648
+buffer[209] is equal to -2147483648
+buffer[210] is equal to -2147483648
+buffer[211] is equal to -2147483648
+buffer[212] is equal to -2147483648
+buffer[213] is equal to -2147483648
+buffer[214] is equal to -2147483648
+buffer[215] is equal to -2147483648
+buffer[216] is equal to -2147483648
+buffer[217] is equal to -2147483648
+buffer[218] is equal to -2147483648
+buffer[219] is equal to -2147483648
+buffer[220] is equal to -2147483648
+buffer[221] is equal to -2147483648
+buffer[222] is equal to -2147483648
+buffer[223] is equal to -2147483648
+buffer[224] is equal to -2147483648
+buffer[225] is equal to -2147483648
+buffer[226] is equal to -2147483648
+buffer[227] is equal to -2147483648
+buffer[228] is equal to -2147483648
+buffer[229] is equal to -2147483648
+buffer[230] is equal to -2147483648
+buffer[231] is equal to -2147483648
+buffer[232] is equal to -2147483648
+buffer[233] is equal to -2147483648
+buffer[234] is equal to -2147483648
+buffer[235] is equal to -2147483648
+buffer[236] is equal to -2147483648
+buffer[237] is equal to -2147483648
+buffer[238] is equal to -2147483648
+buffer[239] is equal to -2147483648
+buffer[240] is equal to -2147483648
+buffer[241] is equal to -2147483648
+buffer[242] is equal to -2147483648
+buffer[243] is equal to -2147483648
+buffer[244] is equal to -2147483648
+buffer[245] is equal to -2147483648
+buffer[246] is equal to -2147483648
+buffer[247] is equal to -2147483648
+buffer[248] is equal to -2147483648
+buffer[249] is equal to -2147483648
+buffer[250] is equal to -2147483648
+buffer[251] is equal to -2147483648
+buffer[252] is equal to -2147483648
+buffer[253] is equal to -2147483648
+buffer[254] is equal to -2147483648
+buffer[255] is equal to 2
+Stack checker: buffer[256] is equal to 2
+End Buffer =====================================
+Insert and split test passed...
