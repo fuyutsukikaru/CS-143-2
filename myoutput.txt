@@ -1,0 +1,6408 @@
+The very first root pid is 363
+Root pid is 365
+Reading from pid 365
+Print Buffer ===================================
+buffer [0] : 119
+buffer [1] : 363
+buffer [2] : 84
+buffer [3] : 364
+buffer [4] : 168
+buffer [5] : 366
+buffer [6] : 252
+buffer [7] : 367
+buffer [8] : 336
+buffer [9] : 368
+buffer [10] : 420
+buffer [11] : 369
+buffer [12] : 504
+buffer [13] : 370
+buffer [14] : 588
+buffer [15] : 371
+buffer [16] : 672
+buffer [17] : 372
+buffer [18] : 756
+buffer [19] : 373
+buffer [20] : 840
+buffer [21] : 374
+buffer [22] : 924
+buffer [23] : 375
+buffer [24] : 1008
+buffer [25] : 376
+buffer [26] : 1092
+buffer [27] : 377
+buffer [28] : 1176
+buffer [29] : 378
+buffer [30] : 1260
+buffer [31] : 379
+buffer [32] : 1344
+buffer [33] : 380
+buffer [34] : 1428
+buffer [35] : 381
+buffer [36] : 1512
+buffer [37] : 382
+buffer [38] : 1596
+buffer [39] : 383
+buffer [40] : 1680
+buffer [41] : 384
+buffer [42] : 1764
+buffer [43] : 385
+buffer [44] : 1848
+buffer [45] : 386
+buffer [46] : 1932
+buffer [47] : 387
+buffer [48] : 2016
+buffer [49] : 388
+buffer [50] : 2100
+buffer [51] : 389
+buffer [52] : 2184
+buffer [53] : 390
+buffer [54] : 2268
+buffer [55] : 391
+buffer [56] : 2352
+buffer [57] : 392
+buffer [58] : 2436
+buffer [59] : 393
+buffer [60] : 2520
+buffer [61] : 394
+buffer [62] : 2604
+buffer [63] : 395
+buffer [64] : 2688
+buffer [65] : 396
+buffer [66] : 2772
+buffer [67] : 397
+buffer [68] : 2856
+buffer [69] : 398
+buffer [70] : 2940
+buffer [71] : 399
+buffer [72] : 3024
+buffer [73] : 400
+buffer [74] : 3108
+buffer [75] : 401
+buffer [76] : 3192
+buffer [77] : 402
+buffer [78] : 3276
+buffer [79] : 403
+buffer [80] : 3360
+buffer [81] : 404
+buffer [82] : 3444
+buffer [83] : 405
+buffer [84] : 3528
+buffer [85] : 406
+buffer [86] : 3612
+buffer [87] : 407
+buffer [88] : 3696
+buffer [89] : 408
+buffer [90] : 3780
+buffer [91] : 409
+buffer [92] : 3864
+buffer [93] : 410
+buffer [94] : 3948
+buffer [95] : 411
+buffer [96] : 4032
+buffer [97] : 412
+buffer [98] : 4116
+buffer [99] : 413
+buffer [100] : 4200
+buffer [101] : 414
+buffer [102] : 4284
+buffer [103] : 415
+buffer [104] : 4368
+buffer [105] : 416
+buffer [106] : 4452
+buffer [107] : 417
+buffer [108] : 4536
+buffer [109] : 418
+buffer [110] : 4620
+buffer [111] : 419
+buffer [112] : 4704
+buffer [113] : 420
+buffer [114] : 4788
+buffer [115] : 421
+buffer [116] : 4872
+buffer [117] : 422
+buffer [118] : 4956
+buffer [119] : 423
+buffer [120] : 5040
+buffer [121] : 424
+buffer [122] : 5124
+buffer [123] : 425
+buffer [124] : 5208
+buffer [125] : 426
+buffer [126] : 5292
+buffer [127] : 427
+buffer [128] : 5376
+buffer [129] : 428
+buffer [130] : 5460
+buffer [131] : 429
+buffer [132] : 5544
+buffer [133] : 430
+buffer [134] : 5628
+buffer [135] : 431
+buffer [136] : 5712
+buffer [137] : 432
+buffer [138] : 5796
+buffer [139] : 433
+buffer [140] : 5880
+buffer [141] : 434
+buffer [142] : 5964
+buffer [143] : 435
+buffer [144] : 6048
+buffer [145] : 436
+buffer [146] : 6132
+buffer [147] : 437
+buffer [148] : 6216
+buffer [149] : 438
+buffer [150] : 6300
+buffer [151] : 439
+buffer [152] : 6384
+buffer [153] : 440
+buffer [154] : 6468
+buffer [155] : 441
+buffer [156] : 6552
+buffer [157] : 442
+buffer [158] : 6636
+buffer [159] : 443
+buffer [160] : 6720
+buffer [161] : 444
+buffer [162] : 6804
+buffer [163] : 445
+buffer [164] : 6888
+buffer [165] : 446
+buffer [166] : 6972
+buffer [167] : 447
+buffer [168] : 7056
+buffer [169] : 448
+buffer [170] : 7140
+buffer [171] : 449
+buffer [172] : 7224
+buffer [173] : 450
+buffer [174] : 7308
+buffer [175] : 451
+buffer [176] : 7392
+buffer [177] : 452
+buffer [178] : 7476
+buffer [179] : 453
+buffer [180] : 7560
+buffer [181] : 454
+buffer [182] : 7644
+buffer [183] : 455
+buffer [184] : 7728
+buffer [185] : 456
+buffer [186] : 7812
+buffer [187] : 457
+buffer [188] : 7896
+buffer [189] : 458
+buffer [190] : 7980
+buffer [191] : 459
+buffer [192] : 8064
+buffer [193] : 460
+buffer [194] : 8148
+buffer [195] : 461
+buffer [196] : 8232
+buffer [197] : 462
+buffer [198] : 8316
+buffer [199] : 463
+buffer [200] : 8400
+buffer [201] : 464
+buffer [202] : 8484
+buffer [203] : 465
+buffer [204] : 8568
+buffer [205] : 466
+buffer [206] : 8652
+buffer [207] : 467
+buffer [208] : 8736
+buffer [209] : 468
+buffer [210] : 8820
+buffer [211] : 469
+buffer [212] : 8904
+buffer [213] : 470
+buffer [214] : 8988
+buffer [215] : 471
+buffer [216] : 9072
+buffer [217] : 472
+buffer [218] : 9156
+buffer [219] : 473
+buffer [220] : 9240
+buffer [221] : 474
+buffer [222] : 9324
+buffer [223] : 475
+buffer [224] : 9408
+buffer [225] : 476
+buffer [226] : 9492
+buffer [227] : 477
+buffer [228] : 9576
+buffer [229] : 478
+buffer [230] : 9660
+buffer [231] : 479
+buffer [232] : 9744
+buffer [233] : 480
+buffer [234] : 9828
+buffer [235] : 481
+buffer [236] : 9912
+buffer [237] : 482
+buffer [238] : 9954
+buffer [239] : 483
+buffer [240] : -1078491884
+buffer [241] : 1024
+buffer [242] : 134547283
+buffer [243] : -1078492908
+buffer [244] : 0
+buffer [245] : -1078489692
+buffer [246] : 134546867
+buffer [247] : 0
+buffer [248] : 1
+buffer [249] : -1078493016
+buffer [250] : 134547391
+buffer [251] : -1078489724
+buffer [252] : 363
+buffer [253] : -1078491884
+buffer [254] : 42
+buffer [255] : -1208353568
+End Buffer =====================================
+My pid is 363
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 0
+buffer[2] is equal to 0
+buffer[3] is equal to 0
+buffer[4] is equal to 1
+buffer[5] is equal to 1
+buffer[6] is equal to 1
+buffer[7] is equal to 2
+buffer[8] is equal to 2
+buffer[9] is equal to 2
+buffer[10] is equal to 3
+buffer[11] is equal to 3
+buffer[12] is equal to 3
+buffer[13] is equal to 4
+buffer[14] is equal to 4
+buffer[15] is equal to 4
+buffer[16] is equal to 5
+buffer[17] is equal to 5
+buffer[18] is equal to 5
+buffer[19] is equal to 6
+buffer[20] is equal to 6
+buffer[21] is equal to 6
+buffer[22] is equal to 7
+buffer[23] is equal to 7
+buffer[24] is equal to 7
+buffer[25] is equal to 8
+buffer[26] is equal to 8
+buffer[27] is equal to 8
+buffer[28] is equal to 9
+buffer[29] is equal to 9
+buffer[30] is equal to 9
+buffer[31] is equal to 10
+buffer[32] is equal to 10
+buffer[33] is equal to 10
+buffer[34] is equal to 11
+buffer[35] is equal to 11
+buffer[36] is equal to 11
+buffer[37] is equal to 12
+buffer[38] is equal to 12
+buffer[39] is equal to 12
+buffer[40] is equal to 13
+buffer[41] is equal to 13
+buffer[42] is equal to 13
+buffer[43] is equal to 14
+buffer[44] is equal to 14
+buffer[45] is equal to 14
+buffer[46] is equal to 15
+buffer[47] is equal to 15
+buffer[48] is equal to 15
+buffer[49] is equal to 16
+buffer[50] is equal to 16
+buffer[51] is equal to 16
+buffer[52] is equal to 17
+buffer[53] is equal to 17
+buffer[54] is equal to 17
+buffer[55] is equal to 18
+buffer[56] is equal to 18
+buffer[57] is equal to 18
+buffer[58] is equal to 19
+buffer[59] is equal to 19
+buffer[60] is equal to 19
+buffer[61] is equal to 20
+buffer[62] is equal to 20
+buffer[63] is equal to 20
+buffer[64] is equal to 21
+buffer[65] is equal to 21
+buffer[66] is equal to 21
+buffer[67] is equal to 22
+buffer[68] is equal to 22
+buffer[69] is equal to 22
+buffer[70] is equal to 23
+buffer[71] is equal to 23
+buffer[72] is equal to 23
+buffer[73] is equal to 24
+buffer[74] is equal to 24
+buffer[75] is equal to 24
+buffer[76] is equal to 25
+buffer[77] is equal to 25
+buffer[78] is equal to 25
+buffer[79] is equal to 26
+buffer[80] is equal to 26
+buffer[81] is equal to 26
+buffer[82] is equal to 27
+buffer[83] is equal to 27
+buffer[84] is equal to 27
+buffer[85] is equal to 28
+buffer[86] is equal to 28
+buffer[87] is equal to 28
+buffer[88] is equal to 29
+buffer[89] is equal to 29
+buffer[90] is equal to 29
+buffer[91] is equal to 30
+buffer[92] is equal to 30
+buffer[93] is equal to 30
+buffer[94] is equal to 31
+buffer[95] is equal to 31
+buffer[96] is equal to 31
+buffer[97] is equal to 32
+buffer[98] is equal to 32
+buffer[99] is equal to 32
+buffer[100] is equal to 33
+buffer[101] is equal to 33
+buffer[102] is equal to 33
+buffer[103] is equal to 34
+buffer[104] is equal to 34
+buffer[105] is equal to 34
+buffer[106] is equal to 35
+buffer[107] is equal to 35
+buffer[108] is equal to 35
+buffer[109] is equal to 36
+buffer[110] is equal to 36
+buffer[111] is equal to 36
+buffer[112] is equal to 37
+buffer[113] is equal to 37
+buffer[114] is equal to 37
+buffer[115] is equal to 38
+buffer[116] is equal to 38
+buffer[117] is equal to 38
+buffer[118] is equal to 39
+buffer[119] is equal to 39
+buffer[120] is equal to 39
+buffer[121] is equal to 40
+buffer[122] is equal to 40
+buffer[123] is equal to 40
+buffer[124] is equal to 41
+buffer[125] is equal to 41
+buffer[126] is equal to 41
+buffer[127] is equal to 42
+buffer[128] is equal to 42
+buffer[129] is equal to 42
+buffer[130] is equal to 43
+buffer[131] is equal to 43
+buffer[132] is equal to 43
+buffer[133] is equal to 44
+buffer[134] is equal to 44
+buffer[135] is equal to 44
+buffer[136] is equal to 45
+buffer[137] is equal to 45
+buffer[138] is equal to 45
+buffer[139] is equal to 46
+buffer[140] is equal to 46
+buffer[141] is equal to 46
+buffer[142] is equal to 47
+buffer[143] is equal to 47
+buffer[144] is equal to 47
+buffer[145] is equal to 48
+buffer[146] is equal to 48
+buffer[147] is equal to 48
+buffer[148] is equal to 49
+buffer[149] is equal to 49
+buffer[150] is equal to 49
+buffer[151] is equal to 50
+buffer[152] is equal to 50
+buffer[153] is equal to 50
+buffer[154] is equal to 51
+buffer[155] is equal to 51
+buffer[156] is equal to 51
+buffer[157] is equal to 52
+buffer[158] is equal to 52
+buffer[159] is equal to 52
+buffer[160] is equal to 53
+buffer[161] is equal to 53
+buffer[162] is equal to 53
+buffer[163] is equal to 54
+buffer[164] is equal to 54
+buffer[165] is equal to 54
+buffer[166] is equal to 55
+buffer[167] is equal to 55
+buffer[168] is equal to 55
+buffer[169] is equal to 56
+buffer[170] is equal to 56
+buffer[171] is equal to 56
+buffer[172] is equal to 57
+buffer[173] is equal to 57
+buffer[174] is equal to 57
+buffer[175] is equal to 58
+buffer[176] is equal to 58
+buffer[177] is equal to 58
+buffer[178] is equal to 59
+buffer[179] is equal to 59
+buffer[180] is equal to 59
+buffer[181] is equal to 60
+buffer[182] is equal to 60
+buffer[183] is equal to 60
+buffer[184] is equal to 61
+buffer[185] is equal to 61
+buffer[186] is equal to 61
+buffer[187] is equal to 62
+buffer[188] is equal to 62
+buffer[189] is equal to 62
+buffer[190] is equal to 63
+buffer[191] is equal to 63
+buffer[192] is equal to 63
+buffer[193] is equal to 64
+buffer[194] is equal to 64
+buffer[195] is equal to 64
+buffer[196] is equal to 65
+buffer[197] is equal to 65
+buffer[198] is equal to 65
+buffer[199] is equal to 66
+buffer[200] is equal to 66
+buffer[201] is equal to 66
+buffer[202] is equal to 67
+buffer[203] is equal to 67
+buffer[204] is equal to 67
+buffer[205] is equal to 68
+buffer[206] is equal to 68
+buffer[207] is equal to 68
+buffer[208] is equal to 69
+buffer[209] is equal to 69
+buffer[210] is equal to 69
+buffer[211] is equal to 70
+buffer[212] is equal to 70
+buffer[213] is equal to 70
+buffer[214] is equal to 71
+buffer[215] is equal to 71
+buffer[216] is equal to 71
+buffer[217] is equal to 72
+buffer[218] is equal to 72
+buffer[219] is equal to 72
+buffer[220] is equal to 73
+buffer[221] is equal to 73
+buffer[222] is equal to 73
+buffer[223] is equal to 74
+buffer[224] is equal to 74
+buffer[225] is equal to 74
+buffer[226] is equal to 75
+buffer[227] is equal to 75
+buffer[228] is equal to 75
+buffer[229] is equal to 76
+buffer[230] is equal to 76
+buffer[231] is equal to 76
+buffer[232] is equal to 77
+buffer[233] is equal to 77
+buffer[234] is equal to 77
+buffer[235] is equal to 78
+buffer[236] is equal to 78
+buffer[237] is equal to 78
+buffer[238] is equal to 79
+buffer[239] is equal to 79
+buffer[240] is equal to 79
+buffer[241] is equal to 80
+buffer[242] is equal to 80
+buffer[243] is equal to 80
+buffer[244] is equal to 81
+buffer[245] is equal to 81
+buffer[246] is equal to 81
+buffer[247] is equal to 82
+buffer[248] is equal to 82
+buffer[249] is equal to 82
+buffer[250] is equal to 83
+buffer[251] is equal to 83
+buffer[252] is equal to 83
+buffer[253] is equal to 364
+buffer[254] is equal to 0
+buffer[255] is equal to -1209695924
+Stack checker: buffer[256] is equal to -1209695924
+End Buffer =====================================
+Key is 0
+i is 0
+Pid is 363
+Key is 1
+i is 1
+Pid is 363
+Key is 2
+i is 2
+Pid is 363
+Key is 3
+i is 3
+Pid is 363
+Key is 4
+i is 4
+Pid is 363
+Key is 5
+i is 5
+Pid is 363
+Key is 6
+i is 6
+Pid is 363
+Key is 7
+i is 7
+Pid is 363
+Key is 8
+i is 8
+Pid is 363
+Key is 9
+i is 9
+Pid is 363
+Key is 10
+i is 10
+Pid is 363
+Key is 11
+i is 11
+Pid is 363
+Key is 12
+i is 12
+Pid is 363
+Key is 13
+i is 13
+Pid is 363
+Key is 14
+i is 14
+Pid is 363
+Key is 15
+i is 15
+Pid is 363
+Key is 16
+i is 16
+Pid is 363
+Key is 17
+i is 17
+Pid is 363
+Key is 18
+i is 18
+Pid is 363
+Key is 19
+i is 19
+Pid is 363
+Key is 20
+i is 20
+Pid is 363
+Key is 21
+i is 21
+Pid is 363
+Key is 22
+i is 22
+Pid is 363
+Key is 23
+i is 23
+Pid is 363
+Key is 24
+i is 24
+Pid is 363
+Key is 25
+i is 25
+Pid is 363
+Key is 26
+i is 26
+Pid is 363
+Key is 27
+i is 27
+Pid is 363
+Key is 28
+i is 28
+Pid is 363
+Key is 29
+i is 29
+Pid is 363
+Key is 30
+i is 30
+Pid is 363
+Key is 31
+i is 31
+Pid is 363
+Key is 32
+i is 32
+Pid is 363
+Key is 33
+i is 33
+Pid is 363
+Key is 34
+i is 34
+Pid is 363
+Key is 35
+i is 35
+Pid is 363
+Key is 36
+i is 36
+Pid is 363
+Key is 37
+i is 37
+Pid is 363
+Key is 38
+i is 38
+Pid is 363
+Key is 39
+i is 39
+Pid is 363
+Key is 40
+i is 40
+Pid is 363
+Key is 41
+i is 41
+Pid is 363
+Key is 42
+i is 42
+Pid is 363
+Key is 43
+i is 43
+Pid is 363
+Key is 44
+i is 44
+Pid is 363
+Key is 45
+i is 45
+Pid is 363
+Key is 46
+i is 46
+Pid is 363
+Key is 47
+i is 47
+Pid is 363
+Key is 48
+i is 48
+Pid is 363
+Key is 49
+i is 49
+Pid is 363
+Key is 50
+i is 50
+Pid is 363
+Key is 51
+i is 51
+Pid is 363
+Key is 52
+i is 52
+Pid is 363
+Key is 53
+i is 53
+Pid is 363
+Key is 54
+i is 54
+Pid is 363
+Key is 55
+i is 55
+Pid is 363
+Key is 56
+i is 56
+Pid is 363
+Key is 57
+i is 57
+Pid is 363
+Key is 58
+i is 58
+Pid is 363
+Key is 59
+i is 59
+Pid is 363
+Key is 60
+i is 60
+Pid is 363
+Key is 61
+i is 61
+Pid is 363
+Key is 62
+i is 62
+Pid is 363
+Key is 63
+i is 63
+Pid is 363
+Key is 64
+i is 64
+Pid is 363
+Key is 65
+i is 65
+Pid is 363
+Key is 66
+i is 66
+Pid is 363
+Key is 67
+i is 67
+Pid is 363
+Key is 68
+i is 68
+Pid is 363
+Key is 69
+i is 69
+Pid is 363
+Key is 70
+i is 70
+Pid is 363
+Key is 71
+i is 71
+Pid is 363
+Key is 72
+i is 72
+Pid is 363
+Key is 73
+i is 73
+Pid is 363
+Key is 74
+i is 74
+Pid is 363
+Key is 75
+i is 75
+Pid is 363
+Key is 76
+i is 76
+Pid is 363
+Key is 77
+i is 77
+Pid is 363
+Key is 78
+i is 78
+Pid is 363
+Key is 79
+i is 79
+Pid is 363
+Key is 80
+i is 80
+Pid is 363
+Key is 81
+i is 81
+Pid is 363
+Key is 82
+i is 82
+Pid is 363
+Going to next node!
+Key is 83
+i is 83
+Pid is 364
+My pid is 364
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 84
+buffer[2] is equal to 84
+buffer[3] is equal to 84
+buffer[4] is equal to 85
+buffer[5] is equal to 85
+buffer[6] is equal to 85
+buffer[7] is equal to 86
+buffer[8] is equal to 86
+buffer[9] is equal to 86
+buffer[10] is equal to 87
+buffer[11] is equal to 87
+buffer[12] is equal to 87
+buffer[13] is equal to 88
+buffer[14] is equal to 88
+buffer[15] is equal to 88
+buffer[16] is equal to 89
+buffer[17] is equal to 89
+buffer[18] is equal to 89
+buffer[19] is equal to 90
+buffer[20] is equal to 90
+buffer[21] is equal to 90
+buffer[22] is equal to 91
+buffer[23] is equal to 91
+buffer[24] is equal to 91
+buffer[25] is equal to 92
+buffer[26] is equal to 92
+buffer[27] is equal to 92
+buffer[28] is equal to 93
+buffer[29] is equal to 93
+buffer[30] is equal to 93
+buffer[31] is equal to 94
+buffer[32] is equal to 94
+buffer[33] is equal to 94
+buffer[34] is equal to 95
+buffer[35] is equal to 95
+buffer[36] is equal to 95
+buffer[37] is equal to 96
+buffer[38] is equal to 96
+buffer[39] is equal to 96
+buffer[40] is equal to 97
+buffer[41] is equal to 97
+buffer[42] is equal to 97
+buffer[43] is equal to 98
+buffer[44] is equal to 98
+buffer[45] is equal to 98
+buffer[46] is equal to 99
+buffer[47] is equal to 99
+buffer[48] is equal to 99
+buffer[49] is equal to 100
+buffer[50] is equal to 100
+buffer[51] is equal to 100
+buffer[52] is equal to 101
+buffer[53] is equal to 101
+buffer[54] is equal to 101
+buffer[55] is equal to 102
+buffer[56] is equal to 102
+buffer[57] is equal to 102
+buffer[58] is equal to 103
+buffer[59] is equal to 103
+buffer[60] is equal to 103
+buffer[61] is equal to 104
+buffer[62] is equal to 104
+buffer[63] is equal to 104
+buffer[64] is equal to 105
+buffer[65] is equal to 105
+buffer[66] is equal to 105
+buffer[67] is equal to 106
+buffer[68] is equal to 106
+buffer[69] is equal to 106
+buffer[70] is equal to 107
+buffer[71] is equal to 107
+buffer[72] is equal to 107
+buffer[73] is equal to 108
+buffer[74] is equal to 108
+buffer[75] is equal to 108
+buffer[76] is equal to 109
+buffer[77] is equal to 109
+buffer[78] is equal to 109
+buffer[79] is equal to 110
+buffer[80] is equal to 110
+buffer[81] is equal to 110
+buffer[82] is equal to 111
+buffer[83] is equal to 111
+buffer[84] is equal to 111
+buffer[85] is equal to 112
+buffer[86] is equal to 112
+buffer[87] is equal to 112
+buffer[88] is equal to 113
+buffer[89] is equal to 113
+buffer[90] is equal to 113
+buffer[91] is equal to 114
+buffer[92] is equal to 114
+buffer[93] is equal to 114
+buffer[94] is equal to 115
+buffer[95] is equal to 115
+buffer[96] is equal to 115
+buffer[97] is equal to 116
+buffer[98] is equal to 116
+buffer[99] is equal to 116
+buffer[100] is equal to 117
+buffer[101] is equal to 117
+buffer[102] is equal to 117
+buffer[103] is equal to 118
+buffer[104] is equal to 118
+buffer[105] is equal to 118
+buffer[106] is equal to 119
+buffer[107] is equal to 119
+buffer[108] is equal to 119
+buffer[109] is equal to 120
+buffer[110] is equal to 120
+buffer[111] is equal to 120
+buffer[112] is equal to 121
+buffer[113] is equal to 121
+buffer[114] is equal to 121
+buffer[115] is equal to 122
+buffer[116] is equal to 122
+buffer[117] is equal to 122
+buffer[118] is equal to 123
+buffer[119] is equal to 123
+buffer[120] is equal to 123
+buffer[121] is equal to 124
+buffer[122] is equal to 124
+buffer[123] is equal to 124
+buffer[124] is equal to 125
+buffer[125] is equal to 125
+buffer[126] is equal to 125
+buffer[127] is equal to 126
+buffer[128] is equal to 126
+buffer[129] is equal to 126
+buffer[130] is equal to 127
+buffer[131] is equal to 127
+buffer[132] is equal to 127
+buffer[133] is equal to 128
+buffer[134] is equal to 128
+buffer[135] is equal to 128
+buffer[136] is equal to 129
+buffer[137] is equal to 129
+buffer[138] is equal to 129
+buffer[139] is equal to 130
+buffer[140] is equal to 130
+buffer[141] is equal to 130
+buffer[142] is equal to 131
+buffer[143] is equal to 131
+buffer[144] is equal to 131
+buffer[145] is equal to 132
+buffer[146] is equal to 132
+buffer[147] is equal to 132
+buffer[148] is equal to 133
+buffer[149] is equal to 133
+buffer[150] is equal to 133
+buffer[151] is equal to 134
+buffer[152] is equal to 134
+buffer[153] is equal to 134
+buffer[154] is equal to 135
+buffer[155] is equal to 135
+buffer[156] is equal to 135
+buffer[157] is equal to 136
+buffer[158] is equal to 136
+buffer[159] is equal to 136
+buffer[160] is equal to 137
+buffer[161] is equal to 137
+buffer[162] is equal to 137
+buffer[163] is equal to 138
+buffer[164] is equal to 138
+buffer[165] is equal to 138
+buffer[166] is equal to 139
+buffer[167] is equal to 139
+buffer[168] is equal to 139
+buffer[169] is equal to 140
+buffer[170] is equal to 140
+buffer[171] is equal to 140
+buffer[172] is equal to 141
+buffer[173] is equal to 141
+buffer[174] is equal to 141
+buffer[175] is equal to 142
+buffer[176] is equal to 142
+buffer[177] is equal to 142
+buffer[178] is equal to 143
+buffer[179] is equal to 143
+buffer[180] is equal to 143
+buffer[181] is equal to 144
+buffer[182] is equal to 144
+buffer[183] is equal to 144
+buffer[184] is equal to 145
+buffer[185] is equal to 145
+buffer[186] is equal to 145
+buffer[187] is equal to 146
+buffer[188] is equal to 146
+buffer[189] is equal to 146
+buffer[190] is equal to 147
+buffer[191] is equal to 147
+buffer[192] is equal to 147
+buffer[193] is equal to 148
+buffer[194] is equal to 148
+buffer[195] is equal to 148
+buffer[196] is equal to 149
+buffer[197] is equal to 149
+buffer[198] is equal to 149
+buffer[199] is equal to 150
+buffer[200] is equal to 150
+buffer[201] is equal to 150
+buffer[202] is equal to 151
+buffer[203] is equal to 151
+buffer[204] is equal to 151
+buffer[205] is equal to 152
+buffer[206] is equal to 152
+buffer[207] is equal to 152
+buffer[208] is equal to 153
+buffer[209] is equal to 153
+buffer[210] is equal to 153
+buffer[211] is equal to 154
+buffer[212] is equal to 154
+buffer[213] is equal to 154
+buffer[214] is equal to 155
+buffer[215] is equal to 155
+buffer[216] is equal to 155
+buffer[217] is equal to 156
+buffer[218] is equal to 156
+buffer[219] is equal to 156
+buffer[220] is equal to 157
+buffer[221] is equal to 157
+buffer[222] is equal to 157
+buffer[223] is equal to 158
+buffer[224] is equal to 158
+buffer[225] is equal to 158
+buffer[226] is equal to 159
+buffer[227] is equal to 159
+buffer[228] is equal to 159
+buffer[229] is equal to 160
+buffer[230] is equal to 160
+buffer[231] is equal to 160
+buffer[232] is equal to 161
+buffer[233] is equal to 161
+buffer[234] is equal to 161
+buffer[235] is equal to 162
+buffer[236] is equal to 162
+buffer[237] is equal to 162
+buffer[238] is equal to 163
+buffer[239] is equal to 163
+buffer[240] is equal to 163
+buffer[241] is equal to 164
+buffer[242] is equal to 164
+buffer[243] is equal to 164
+buffer[244] is equal to 165
+buffer[245] is equal to 165
+buffer[246] is equal to 165
+buffer[247] is equal to 166
+buffer[248] is equal to 166
+buffer[249] is equal to 166
+buffer[250] is equal to 167
+buffer[251] is equal to 167
+buffer[252] is equal to 167
+buffer[253] is equal to 366
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 84
+i is 84
+Pid is 364
+Key is 85
+i is 85
+Pid is 364
+Key is 86
+i is 86
+Pid is 364
+Key is 87
+i is 87
+Pid is 364
+Key is 88
+i is 88
+Pid is 364
+Key is 89
+i is 89
+Pid is 364
+Key is 90
+i is 90
+Pid is 364
+Key is 91
+i is 91
+Pid is 364
+Key is 92
+i is 92
+Pid is 364
+Key is 93
+i is 93
+Pid is 364
+Key is 94
+i is 94
+Pid is 364
+Key is 95
+i is 95
+Pid is 364
+Key is 96
+i is 96
+Pid is 364
+Key is 97
+i is 97
+Pid is 364
+Key is 98
+i is 98
+Pid is 364
+Key is 99
+i is 99
+Pid is 364
+Key is 100
+i is 100
+Pid is 364
+Key is 101
+i is 101
+Pid is 364
+Key is 102
+i is 102
+Pid is 364
+Key is 103
+i is 103
+Pid is 364
+Key is 104
+i is 104
+Pid is 364
+Key is 105
+i is 105
+Pid is 364
+Key is 106
+i is 106
+Pid is 364
+Key is 107
+i is 107
+Pid is 364
+Key is 108
+i is 108
+Pid is 364
+Key is 109
+i is 109
+Pid is 364
+Key is 110
+i is 110
+Pid is 364
+Key is 111
+i is 111
+Pid is 364
+Key is 112
+i is 112
+Pid is 364
+Key is 113
+i is 113
+Pid is 364
+Key is 114
+i is 114
+Pid is 364
+Key is 115
+i is 115
+Pid is 364
+Key is 116
+i is 116
+Pid is 364
+Key is 117
+i is 117
+Pid is 364
+Key is 118
+i is 118
+Pid is 364
+Key is 119
+i is 119
+Pid is 364
+Key is 120
+i is 120
+Pid is 364
+Key is 121
+i is 121
+Pid is 364
+Key is 122
+i is 122
+Pid is 364
+Key is 123
+i is 123
+Pid is 364
+Key is 124
+i is 124
+Pid is 364
+Key is 125
+i is 125
+Pid is 364
+Key is 126
+i is 126
+Pid is 364
+Key is 127
+i is 127
+Pid is 364
+Key is 128
+i is 128
+Pid is 364
+Key is 129
+i is 129
+Pid is 364
+Key is 130
+i is 130
+Pid is 364
+Key is 131
+i is 131
+Pid is 364
+Key is 132
+i is 132
+Pid is 364
+Key is 133
+i is 133
+Pid is 364
+Key is 134
+i is 134
+Pid is 364
+Key is 135
+i is 135
+Pid is 364
+Key is 136
+i is 136
+Pid is 364
+Key is 137
+i is 137
+Pid is 364
+Key is 138
+i is 138
+Pid is 364
+Key is 139
+i is 139
+Pid is 364
+Key is 140
+i is 140
+Pid is 364
+Key is 141
+i is 141
+Pid is 364
+Key is 142
+i is 142
+Pid is 364
+Key is 143
+i is 143
+Pid is 364
+Key is 144
+i is 144
+Pid is 364
+Key is 145
+i is 145
+Pid is 364
+Key is 146
+i is 146
+Pid is 364
+Key is 147
+i is 147
+Pid is 364
+Key is 148
+i is 148
+Pid is 364
+Key is 149
+i is 149
+Pid is 364
+Key is 150
+i is 150
+Pid is 364
+Key is 151
+i is 151
+Pid is 364
+Key is 152
+i is 152
+Pid is 364
+Key is 153
+i is 153
+Pid is 364
+Key is 154
+i is 154
+Pid is 364
+Key is 155
+i is 155
+Pid is 364
+Key is 156
+i is 156
+Pid is 364
+Key is 157
+i is 157
+Pid is 364
+Key is 158
+i is 158
+Pid is 364
+Key is 159
+i is 159
+Pid is 364
+Key is 160
+i is 160
+Pid is 364
+Key is 161
+i is 161
+Pid is 364
+Key is 162
+i is 162
+Pid is 364
+Key is 163
+i is 163
+Pid is 364
+Key is 164
+i is 164
+Pid is 364
+Key is 165
+i is 165
+Pid is 364
+Key is 166
+i is 166
+Pid is 364
+Going to next node!
+Key is 167
+i is 167
+Pid is 366
+My pid is 366
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 168
+buffer[2] is equal to 168
+buffer[3] is equal to 168
+buffer[4] is equal to 169
+buffer[5] is equal to 169
+buffer[6] is equal to 169
+buffer[7] is equal to 170
+buffer[8] is equal to 170
+buffer[9] is equal to 170
+buffer[10] is equal to 171
+buffer[11] is equal to 171
+buffer[12] is equal to 171
+buffer[13] is equal to 172
+buffer[14] is equal to 172
+buffer[15] is equal to 172
+buffer[16] is equal to 173
+buffer[17] is equal to 173
+buffer[18] is equal to 173
+buffer[19] is equal to 174
+buffer[20] is equal to 174
+buffer[21] is equal to 174
+buffer[22] is equal to 175
+buffer[23] is equal to 175
+buffer[24] is equal to 175
+buffer[25] is equal to 176
+buffer[26] is equal to 176
+buffer[27] is equal to 176
+buffer[28] is equal to 177
+buffer[29] is equal to 177
+buffer[30] is equal to 177
+buffer[31] is equal to 178
+buffer[32] is equal to 178
+buffer[33] is equal to 178
+buffer[34] is equal to 179
+buffer[35] is equal to 179
+buffer[36] is equal to 179
+buffer[37] is equal to 180
+buffer[38] is equal to 180
+buffer[39] is equal to 180
+buffer[40] is equal to 181
+buffer[41] is equal to 181
+buffer[42] is equal to 181
+buffer[43] is equal to 182
+buffer[44] is equal to 182
+buffer[45] is equal to 182
+buffer[46] is equal to 183
+buffer[47] is equal to 183
+buffer[48] is equal to 183
+buffer[49] is equal to 184
+buffer[50] is equal to 184
+buffer[51] is equal to 184
+buffer[52] is equal to 185
+buffer[53] is equal to 185
+buffer[54] is equal to 185
+buffer[55] is equal to 186
+buffer[56] is equal to 186
+buffer[57] is equal to 186
+buffer[58] is equal to 187
+buffer[59] is equal to 187
+buffer[60] is equal to 187
+buffer[61] is equal to 188
+buffer[62] is equal to 188
+buffer[63] is equal to 188
+buffer[64] is equal to 189
+buffer[65] is equal to 189
+buffer[66] is equal to 189
+buffer[67] is equal to 190
+buffer[68] is equal to 190
+buffer[69] is equal to 190
+buffer[70] is equal to 191
+buffer[71] is equal to 191
+buffer[72] is equal to 191
+buffer[73] is equal to 192
+buffer[74] is equal to 192
+buffer[75] is equal to 192
+buffer[76] is equal to 193
+buffer[77] is equal to 193
+buffer[78] is equal to 193
+buffer[79] is equal to 194
+buffer[80] is equal to 194
+buffer[81] is equal to 194
+buffer[82] is equal to 195
+buffer[83] is equal to 195
+buffer[84] is equal to 195
+buffer[85] is equal to 196
+buffer[86] is equal to 196
+buffer[87] is equal to 196
+buffer[88] is equal to 197
+buffer[89] is equal to 197
+buffer[90] is equal to 197
+buffer[91] is equal to 198
+buffer[92] is equal to 198
+buffer[93] is equal to 198
+buffer[94] is equal to 199
+buffer[95] is equal to 199
+buffer[96] is equal to 199
+buffer[97] is equal to 200
+buffer[98] is equal to 200
+buffer[99] is equal to 200
+buffer[100] is equal to 201
+buffer[101] is equal to 201
+buffer[102] is equal to 201
+buffer[103] is equal to 202
+buffer[104] is equal to 202
+buffer[105] is equal to 202
+buffer[106] is equal to 203
+buffer[107] is equal to 203
+buffer[108] is equal to 203
+buffer[109] is equal to 204
+buffer[110] is equal to 204
+buffer[111] is equal to 204
+buffer[112] is equal to 205
+buffer[113] is equal to 205
+buffer[114] is equal to 205
+buffer[115] is equal to 206
+buffer[116] is equal to 206
+buffer[117] is equal to 206
+buffer[118] is equal to 207
+buffer[119] is equal to 207
+buffer[120] is equal to 207
+buffer[121] is equal to 208
+buffer[122] is equal to 208
+buffer[123] is equal to 208
+buffer[124] is equal to 209
+buffer[125] is equal to 209
+buffer[126] is equal to 209
+buffer[127] is equal to 210
+buffer[128] is equal to 210
+buffer[129] is equal to 210
+buffer[130] is equal to 211
+buffer[131] is equal to 211
+buffer[132] is equal to 211
+buffer[133] is equal to 212
+buffer[134] is equal to 212
+buffer[135] is equal to 212
+buffer[136] is equal to 213
+buffer[137] is equal to 213
+buffer[138] is equal to 213
+buffer[139] is equal to 214
+buffer[140] is equal to 214
+buffer[141] is equal to 214
+buffer[142] is equal to 215
+buffer[143] is equal to 215
+buffer[144] is equal to 215
+buffer[145] is equal to 216
+buffer[146] is equal to 216
+buffer[147] is equal to 216
+buffer[148] is equal to 217
+buffer[149] is equal to 217
+buffer[150] is equal to 217
+buffer[151] is equal to 218
+buffer[152] is equal to 218
+buffer[153] is equal to 218
+buffer[154] is equal to 219
+buffer[155] is equal to 219
+buffer[156] is equal to 219
+buffer[157] is equal to 220
+buffer[158] is equal to 220
+buffer[159] is equal to 220
+buffer[160] is equal to 221
+buffer[161] is equal to 221
+buffer[162] is equal to 221
+buffer[163] is equal to 222
+buffer[164] is equal to 222
+buffer[165] is equal to 222
+buffer[166] is equal to 223
+buffer[167] is equal to 223
+buffer[168] is equal to 223
+buffer[169] is equal to 224
+buffer[170] is equal to 224
+buffer[171] is equal to 224
+buffer[172] is equal to 225
+buffer[173] is equal to 225
+buffer[174] is equal to 225
+buffer[175] is equal to 226
+buffer[176] is equal to 226
+buffer[177] is equal to 226
+buffer[178] is equal to 227
+buffer[179] is equal to 227
+buffer[180] is equal to 227
+buffer[181] is equal to 228
+buffer[182] is equal to 228
+buffer[183] is equal to 228
+buffer[184] is equal to 229
+buffer[185] is equal to 229
+buffer[186] is equal to 229
+buffer[187] is equal to 230
+buffer[188] is equal to 230
+buffer[189] is equal to 230
+buffer[190] is equal to 231
+buffer[191] is equal to 231
+buffer[192] is equal to 231
+buffer[193] is equal to 232
+buffer[194] is equal to 232
+buffer[195] is equal to 232
+buffer[196] is equal to 233
+buffer[197] is equal to 233
+buffer[198] is equal to 233
+buffer[199] is equal to 234
+buffer[200] is equal to 234
+buffer[201] is equal to 234
+buffer[202] is equal to 235
+buffer[203] is equal to 235
+buffer[204] is equal to 235
+buffer[205] is equal to 236
+buffer[206] is equal to 236
+buffer[207] is equal to 236
+buffer[208] is equal to 237
+buffer[209] is equal to 237
+buffer[210] is equal to 237
+buffer[211] is equal to 238
+buffer[212] is equal to 238
+buffer[213] is equal to 238
+buffer[214] is equal to 239
+buffer[215] is equal to 239
+buffer[216] is equal to 239
+buffer[217] is equal to 240
+buffer[218] is equal to 240
+buffer[219] is equal to 240
+buffer[220] is equal to 241
+buffer[221] is equal to 241
+buffer[222] is equal to 241
+buffer[223] is equal to 242
+buffer[224] is equal to 242
+buffer[225] is equal to 242
+buffer[226] is equal to 243
+buffer[227] is equal to 243
+buffer[228] is equal to 243
+buffer[229] is equal to 244
+buffer[230] is equal to 244
+buffer[231] is equal to 244
+buffer[232] is equal to 245
+buffer[233] is equal to 245
+buffer[234] is equal to 245
+buffer[235] is equal to 246
+buffer[236] is equal to 246
+buffer[237] is equal to 246
+buffer[238] is equal to 247
+buffer[239] is equal to 247
+buffer[240] is equal to 247
+buffer[241] is equal to 248
+buffer[242] is equal to 248
+buffer[243] is equal to 248
+buffer[244] is equal to 249
+buffer[245] is equal to 249
+buffer[246] is equal to 249
+buffer[247] is equal to 250
+buffer[248] is equal to 250
+buffer[249] is equal to 250
+buffer[250] is equal to 251
+buffer[251] is equal to 251
+buffer[252] is equal to 251
+buffer[253] is equal to 367
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 168
+i is 168
+Pid is 366
+Key is 169
+i is 169
+Pid is 366
+Key is 170
+i is 170
+Pid is 366
+Key is 171
+i is 171
+Pid is 366
+Key is 172
+i is 172
+Pid is 366
+Key is 173
+i is 173
+Pid is 366
+Key is 174
+i is 174
+Pid is 366
+Key is 175
+i is 175
+Pid is 366
+Key is 176
+i is 176
+Pid is 366
+Key is 177
+i is 177
+Pid is 366
+Key is 178
+i is 178
+Pid is 366
+Key is 179
+i is 179
+Pid is 366
+Key is 180
+i is 180
+Pid is 366
+Key is 181
+i is 181
+Pid is 366
+Key is 182
+i is 182
+Pid is 366
+Key is 183
+i is 183
+Pid is 366
+Key is 184
+i is 184
+Pid is 366
+Key is 185
+i is 185
+Pid is 366
+Key is 186
+i is 186
+Pid is 366
+Key is 187
+i is 187
+Pid is 366
+Key is 188
+i is 188
+Pid is 366
+Key is 189
+i is 189
+Pid is 366
+Key is 190
+i is 190
+Pid is 366
+Key is 191
+i is 191
+Pid is 366
+Key is 192
+i is 192
+Pid is 366
+Key is 193
+i is 193
+Pid is 366
+Key is 194
+i is 194
+Pid is 366
+Key is 195
+i is 195
+Pid is 366
+Key is 196
+i is 196
+Pid is 366
+Key is 197
+i is 197
+Pid is 366
+Key is 198
+i is 198
+Pid is 366
+Key is 199
+i is 199
+Pid is 366
+Key is 200
+i is 200
+Pid is 366
+Key is 201
+i is 201
+Pid is 366
+Key is 202
+i is 202
+Pid is 366
+Key is 203
+i is 203
+Pid is 366
+Key is 204
+i is 204
+Pid is 366
+Key is 205
+i is 205
+Pid is 366
+Key is 206
+i is 206
+Pid is 366
+Key is 207
+i is 207
+Pid is 366
+Key is 208
+i is 208
+Pid is 366
+Key is 209
+i is 209
+Pid is 366
+Key is 210
+i is 210
+Pid is 366
+Key is 211
+i is 211
+Pid is 366
+Key is 212
+i is 212
+Pid is 366
+Key is 213
+i is 213
+Pid is 366
+Key is 214
+i is 214
+Pid is 366
+Key is 215
+i is 215
+Pid is 366
+Key is 216
+i is 216
+Pid is 366
+Key is 217
+i is 217
+Pid is 366
+Key is 218
+i is 218
+Pid is 366
+Key is 219
+i is 219
+Pid is 366
+Key is 220
+i is 220
+Pid is 366
+Key is 221
+i is 221
+Pid is 366
+Key is 222
+i is 222
+Pid is 366
+Key is 223
+i is 223
+Pid is 366
+Key is 224
+i is 224
+Pid is 366
+Key is 225
+i is 225
+Pid is 366
+Key is 226
+i is 226
+Pid is 366
+Key is 227
+i is 227
+Pid is 366
+Key is 228
+i is 228
+Pid is 366
+Key is 229
+i is 229
+Pid is 366
+Key is 230
+i is 230
+Pid is 366
+Key is 231
+i is 231
+Pid is 366
+Key is 232
+i is 232
+Pid is 366
+Key is 233
+i is 233
+Pid is 366
+Key is 234
+i is 234
+Pid is 366
+Key is 235
+i is 235
+Pid is 366
+Key is 236
+i is 236
+Pid is 366
+Key is 237
+i is 237
+Pid is 366
+Key is 238
+i is 238
+Pid is 366
+Key is 239
+i is 239
+Pid is 366
+Key is 240
+i is 240
+Pid is 366
+Key is 241
+i is 241
+Pid is 366
+Key is 242
+i is 242
+Pid is 366
+Key is 243
+i is 243
+Pid is 366
+Key is 244
+i is 244
+Pid is 366
+Key is 245
+i is 245
+Pid is 366
+Key is 246
+i is 246
+Pid is 366
+Key is 247
+i is 247
+Pid is 366
+Key is 248
+i is 248
+Pid is 366
+Key is 249
+i is 249
+Pid is 366
+Key is 250
+i is 250
+Pid is 366
+Going to next node!
+Key is 251
+i is 251
+Pid is 367
+My pid is 367
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 252
+buffer[2] is equal to 252
+buffer[3] is equal to 252
+buffer[4] is equal to 253
+buffer[5] is equal to 253
+buffer[6] is equal to 253
+buffer[7] is equal to 254
+buffer[8] is equal to 254
+buffer[9] is equal to 254
+buffer[10] is equal to 255
+buffer[11] is equal to 255
+buffer[12] is equal to 255
+buffer[13] is equal to 256
+buffer[14] is equal to 256
+buffer[15] is equal to 256
+buffer[16] is equal to 257
+buffer[17] is equal to 257
+buffer[18] is equal to 257
+buffer[19] is equal to 258
+buffer[20] is equal to 258
+buffer[21] is equal to 258
+buffer[22] is equal to 259
+buffer[23] is equal to 259
+buffer[24] is equal to 259
+buffer[25] is equal to 260
+buffer[26] is equal to 260
+buffer[27] is equal to 260
+buffer[28] is equal to 261
+buffer[29] is equal to 261
+buffer[30] is equal to 261
+buffer[31] is equal to 262
+buffer[32] is equal to 262
+buffer[33] is equal to 262
+buffer[34] is equal to 263
+buffer[35] is equal to 263
+buffer[36] is equal to 263
+buffer[37] is equal to 264
+buffer[38] is equal to 264
+buffer[39] is equal to 264
+buffer[40] is equal to 265
+buffer[41] is equal to 265
+buffer[42] is equal to 265
+buffer[43] is equal to 266
+buffer[44] is equal to 266
+buffer[45] is equal to 266
+buffer[46] is equal to 267
+buffer[47] is equal to 267
+buffer[48] is equal to 267
+buffer[49] is equal to 268
+buffer[50] is equal to 268
+buffer[51] is equal to 268
+buffer[52] is equal to 269
+buffer[53] is equal to 269
+buffer[54] is equal to 269
+buffer[55] is equal to 270
+buffer[56] is equal to 270
+buffer[57] is equal to 270
+buffer[58] is equal to 271
+buffer[59] is equal to 271
+buffer[60] is equal to 271
+buffer[61] is equal to 272
+buffer[62] is equal to 272
+buffer[63] is equal to 272
+buffer[64] is equal to 273
+buffer[65] is equal to 273
+buffer[66] is equal to 273
+buffer[67] is equal to 274
+buffer[68] is equal to 274
+buffer[69] is equal to 274
+buffer[70] is equal to 275
+buffer[71] is equal to 275
+buffer[72] is equal to 275
+buffer[73] is equal to 276
+buffer[74] is equal to 276
+buffer[75] is equal to 276
+buffer[76] is equal to 277
+buffer[77] is equal to 277
+buffer[78] is equal to 277
+buffer[79] is equal to 278
+buffer[80] is equal to 278
+buffer[81] is equal to 278
+buffer[82] is equal to 279
+buffer[83] is equal to 279
+buffer[84] is equal to 279
+buffer[85] is equal to 280
+buffer[86] is equal to 280
+buffer[87] is equal to 280
+buffer[88] is equal to 281
+buffer[89] is equal to 281
+buffer[90] is equal to 281
+buffer[91] is equal to 282
+buffer[92] is equal to 282
+buffer[93] is equal to 282
+buffer[94] is equal to 283
+buffer[95] is equal to 283
+buffer[96] is equal to 283
+buffer[97] is equal to 284
+buffer[98] is equal to 284
+buffer[99] is equal to 284
+buffer[100] is equal to 285
+buffer[101] is equal to 285
+buffer[102] is equal to 285
+buffer[103] is equal to 286
+buffer[104] is equal to 286
+buffer[105] is equal to 286
+buffer[106] is equal to 287
+buffer[107] is equal to 287
+buffer[108] is equal to 287
+buffer[109] is equal to 288
+buffer[110] is equal to 288
+buffer[111] is equal to 288
+buffer[112] is equal to 289
+buffer[113] is equal to 289
+buffer[114] is equal to 289
+buffer[115] is equal to 290
+buffer[116] is equal to 290
+buffer[117] is equal to 290
+buffer[118] is equal to 291
+buffer[119] is equal to 291
+buffer[120] is equal to 291
+buffer[121] is equal to 292
+buffer[122] is equal to 292
+buffer[123] is equal to 292
+buffer[124] is equal to 293
+buffer[125] is equal to 293
+buffer[126] is equal to 293
+buffer[127] is equal to 294
+buffer[128] is equal to 294
+buffer[129] is equal to 294
+buffer[130] is equal to 295
+buffer[131] is equal to 295
+buffer[132] is equal to 295
+buffer[133] is equal to 296
+buffer[134] is equal to 296
+buffer[135] is equal to 296
+buffer[136] is equal to 297
+buffer[137] is equal to 297
+buffer[138] is equal to 297
+buffer[139] is equal to 298
+buffer[140] is equal to 298
+buffer[141] is equal to 298
+buffer[142] is equal to 299
+buffer[143] is equal to 299
+buffer[144] is equal to 299
+buffer[145] is equal to 300
+buffer[146] is equal to 300
+buffer[147] is equal to 300
+buffer[148] is equal to 301
+buffer[149] is equal to 301
+buffer[150] is equal to 301
+buffer[151] is equal to 302
+buffer[152] is equal to 302
+buffer[153] is equal to 302
+buffer[154] is equal to 303
+buffer[155] is equal to 303
+buffer[156] is equal to 303
+buffer[157] is equal to 304
+buffer[158] is equal to 304
+buffer[159] is equal to 304
+buffer[160] is equal to 305
+buffer[161] is equal to 305
+buffer[162] is equal to 305
+buffer[163] is equal to 306
+buffer[164] is equal to 306
+buffer[165] is equal to 306
+buffer[166] is equal to 307
+buffer[167] is equal to 307
+buffer[168] is equal to 307
+buffer[169] is equal to 308
+buffer[170] is equal to 308
+buffer[171] is equal to 308
+buffer[172] is equal to 309
+buffer[173] is equal to 309
+buffer[174] is equal to 309
+buffer[175] is equal to 310
+buffer[176] is equal to 310
+buffer[177] is equal to 310
+buffer[178] is equal to 311
+buffer[179] is equal to 311
+buffer[180] is equal to 311
+buffer[181] is equal to 312
+buffer[182] is equal to 312
+buffer[183] is equal to 312
+buffer[184] is equal to 313
+buffer[185] is equal to 313
+buffer[186] is equal to 313
+buffer[187] is equal to 314
+buffer[188] is equal to 314
+buffer[189] is equal to 314
+buffer[190] is equal to 315
+buffer[191] is equal to 315
+buffer[192] is equal to 315
+buffer[193] is equal to 316
+buffer[194] is equal to 316
+buffer[195] is equal to 316
+buffer[196] is equal to 317
+buffer[197] is equal to 317
+buffer[198] is equal to 317
+buffer[199] is equal to 318
+buffer[200] is equal to 318
+buffer[201] is equal to 318
+buffer[202] is equal to 319
+buffer[203] is equal to 319
+buffer[204] is equal to 319
+buffer[205] is equal to 320
+buffer[206] is equal to 320
+buffer[207] is equal to 320
+buffer[208] is equal to 321
+buffer[209] is equal to 321
+buffer[210] is equal to 321
+buffer[211] is equal to 322
+buffer[212] is equal to 322
+buffer[213] is equal to 322
+buffer[214] is equal to 323
+buffer[215] is equal to 323
+buffer[216] is equal to 323
+buffer[217] is equal to 324
+buffer[218] is equal to 324
+buffer[219] is equal to 324
+buffer[220] is equal to 325
+buffer[221] is equal to 325
+buffer[222] is equal to 325
+buffer[223] is equal to 326
+buffer[224] is equal to 326
+buffer[225] is equal to 326
+buffer[226] is equal to 327
+buffer[227] is equal to 327
+buffer[228] is equal to 327
+buffer[229] is equal to 328
+buffer[230] is equal to 328
+buffer[231] is equal to 328
+buffer[232] is equal to 329
+buffer[233] is equal to 329
+buffer[234] is equal to 329
+buffer[235] is equal to 330
+buffer[236] is equal to 330
+buffer[237] is equal to 330
+buffer[238] is equal to 331
+buffer[239] is equal to 331
+buffer[240] is equal to 331
+buffer[241] is equal to 332
+buffer[242] is equal to 332
+buffer[243] is equal to 332
+buffer[244] is equal to 333
+buffer[245] is equal to 333
+buffer[246] is equal to 333
+buffer[247] is equal to 334
+buffer[248] is equal to 334
+buffer[249] is equal to 334
+buffer[250] is equal to 335
+buffer[251] is equal to 335
+buffer[252] is equal to 335
+buffer[253] is equal to 368
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 252
+i is 252
+Pid is 367
+Key is 253
+i is 253
+Pid is 367
+Key is 254
+i is 254
+Pid is 367
+Key is 255
+i is 255
+Pid is 367
+Key is 256
+i is 256
+Pid is 367
+Key is 257
+i is 257
+Pid is 367
+Key is 258
+i is 258
+Pid is 367
+Key is 259
+i is 259
+Pid is 367
+Key is 260
+i is 260
+Pid is 367
+Key is 261
+i is 261
+Pid is 367
+Key is 262
+i is 262
+Pid is 367
+Key is 263
+i is 263
+Pid is 367
+Key is 264
+i is 264
+Pid is 367
+Key is 265
+i is 265
+Pid is 367
+Key is 266
+i is 266
+Pid is 367
+Key is 267
+i is 267
+Pid is 367
+Key is 268
+i is 268
+Pid is 367
+Key is 269
+i is 269
+Pid is 367
+Key is 270
+i is 270
+Pid is 367
+Key is 271
+i is 271
+Pid is 367
+Key is 272
+i is 272
+Pid is 367
+Key is 273
+i is 273
+Pid is 367
+Key is 274
+i is 274
+Pid is 367
+Key is 275
+i is 275
+Pid is 367
+Key is 276
+i is 276
+Pid is 367
+Key is 277
+i is 277
+Pid is 367
+Key is 278
+i is 278
+Pid is 367
+Key is 279
+i is 279
+Pid is 367
+Key is 280
+i is 280
+Pid is 367
+Key is 281
+i is 281
+Pid is 367
+Key is 282
+i is 282
+Pid is 367
+Key is 283
+i is 283
+Pid is 367
+Key is 284
+i is 284
+Pid is 367
+Key is 285
+i is 285
+Pid is 367
+Key is 286
+i is 286
+Pid is 367
+Key is 287
+i is 287
+Pid is 367
+Key is 288
+i is 288
+Pid is 367
+Key is 289
+i is 289
+Pid is 367
+Key is 290
+i is 290
+Pid is 367
+Key is 291
+i is 291
+Pid is 367
+Key is 292
+i is 292
+Pid is 367
+Key is 293
+i is 293
+Pid is 367
+Key is 294
+i is 294
+Pid is 367
+Key is 295
+i is 295
+Pid is 367
+Key is 296
+i is 296
+Pid is 367
+Key is 297
+i is 297
+Pid is 367
+Key is 298
+i is 298
+Pid is 367
+Key is 299
+i is 299
+Pid is 367
+Key is 300
+i is 300
+Pid is 367
+Key is 301
+i is 301
+Pid is 367
+Key is 302
+i is 302
+Pid is 367
+Key is 303
+i is 303
+Pid is 367
+Key is 304
+i is 304
+Pid is 367
+Key is 305
+i is 305
+Pid is 367
+Key is 306
+i is 306
+Pid is 367
+Key is 307
+i is 307
+Pid is 367
+Key is 308
+i is 308
+Pid is 367
+Key is 309
+i is 309
+Pid is 367
+Key is 310
+i is 310
+Pid is 367
+Key is 311
+i is 311
+Pid is 367
+Key is 312
+i is 312
+Pid is 367
+Key is 313
+i is 313
+Pid is 367
+Key is 314
+i is 314
+Pid is 367
+Key is 315
+i is 315
+Pid is 367
+Key is 316
+i is 316
+Pid is 367
+Key is 317
+i is 317
+Pid is 367
+Key is 318
+i is 318
+Pid is 367
+Key is 319
+i is 319
+Pid is 367
+Key is 320
+i is 320
+Pid is 367
+Key is 321
+i is 321
+Pid is 367
+Key is 322
+i is 322
+Pid is 367
+Key is 323
+i is 323
+Pid is 367
+Key is 324
+i is 324
+Pid is 367
+Key is 325
+i is 325
+Pid is 367
+Key is 326
+i is 326
+Pid is 367
+Key is 327
+i is 327
+Pid is 367
+Key is 328
+i is 328
+Pid is 367
+Key is 329
+i is 329
+Pid is 367
+Key is 330
+i is 330
+Pid is 367
+Key is 331
+i is 331
+Pid is 367
+Key is 332
+i is 332
+Pid is 367
+Key is 333
+i is 333
+Pid is 367
+Key is 334
+i is 334
+Pid is 367
+Going to next node!
+Key is 335
+i is 335
+Pid is 368
+My pid is 368
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 336
+buffer[2] is equal to 336
+buffer[3] is equal to 336
+buffer[4] is equal to 337
+buffer[5] is equal to 337
+buffer[6] is equal to 337
+buffer[7] is equal to 338
+buffer[8] is equal to 338
+buffer[9] is equal to 338
+buffer[10] is equal to 339
+buffer[11] is equal to 339
+buffer[12] is equal to 339
+buffer[13] is equal to 340
+buffer[14] is equal to 340
+buffer[15] is equal to 340
+buffer[16] is equal to 341
+buffer[17] is equal to 341
+buffer[18] is equal to 341
+buffer[19] is equal to 342
+buffer[20] is equal to 342
+buffer[21] is equal to 342
+buffer[22] is equal to 343
+buffer[23] is equal to 343
+buffer[24] is equal to 343
+buffer[25] is equal to 344
+buffer[26] is equal to 344
+buffer[27] is equal to 344
+buffer[28] is equal to 345
+buffer[29] is equal to 345
+buffer[30] is equal to 345
+buffer[31] is equal to 346
+buffer[32] is equal to 346
+buffer[33] is equal to 346
+buffer[34] is equal to 347
+buffer[35] is equal to 347
+buffer[36] is equal to 347
+buffer[37] is equal to 348
+buffer[38] is equal to 348
+buffer[39] is equal to 348
+buffer[40] is equal to 349
+buffer[41] is equal to 349
+buffer[42] is equal to 349
+buffer[43] is equal to 350
+buffer[44] is equal to 350
+buffer[45] is equal to 350
+buffer[46] is equal to 351
+buffer[47] is equal to 351
+buffer[48] is equal to 351
+buffer[49] is equal to 352
+buffer[50] is equal to 352
+buffer[51] is equal to 352
+buffer[52] is equal to 353
+buffer[53] is equal to 353
+buffer[54] is equal to 353
+buffer[55] is equal to 354
+buffer[56] is equal to 354
+buffer[57] is equal to 354
+buffer[58] is equal to 355
+buffer[59] is equal to 355
+buffer[60] is equal to 355
+buffer[61] is equal to 356
+buffer[62] is equal to 356
+buffer[63] is equal to 356
+buffer[64] is equal to 357
+buffer[65] is equal to 357
+buffer[66] is equal to 357
+buffer[67] is equal to 358
+buffer[68] is equal to 358
+buffer[69] is equal to 358
+buffer[70] is equal to 359
+buffer[71] is equal to 359
+buffer[72] is equal to 359
+buffer[73] is equal to 360
+buffer[74] is equal to 360
+buffer[75] is equal to 360
+buffer[76] is equal to 361
+buffer[77] is equal to 361
+buffer[78] is equal to 361
+buffer[79] is equal to 362
+buffer[80] is equal to 362
+buffer[81] is equal to 362
+buffer[82] is equal to 363
+buffer[83] is equal to 363
+buffer[84] is equal to 363
+buffer[85] is equal to 364
+buffer[86] is equal to 364
+buffer[87] is equal to 364
+buffer[88] is equal to 365
+buffer[89] is equal to 365
+buffer[90] is equal to 365
+buffer[91] is equal to 366
+buffer[92] is equal to 366
+buffer[93] is equal to 366
+buffer[94] is equal to 367
+buffer[95] is equal to 367
+buffer[96] is equal to 367
+buffer[97] is equal to 368
+buffer[98] is equal to 368
+buffer[99] is equal to 368
+buffer[100] is equal to 369
+buffer[101] is equal to 369
+buffer[102] is equal to 369
+buffer[103] is equal to 370
+buffer[104] is equal to 370
+buffer[105] is equal to 370
+buffer[106] is equal to 371
+buffer[107] is equal to 371
+buffer[108] is equal to 371
+buffer[109] is equal to 372
+buffer[110] is equal to 372
+buffer[111] is equal to 372
+buffer[112] is equal to 373
+buffer[113] is equal to 373
+buffer[114] is equal to 373
+buffer[115] is equal to 374
+buffer[116] is equal to 374
+buffer[117] is equal to 374
+buffer[118] is equal to 375
+buffer[119] is equal to 375
+buffer[120] is equal to 375
+buffer[121] is equal to 376
+buffer[122] is equal to 376
+buffer[123] is equal to 376
+buffer[124] is equal to 377
+buffer[125] is equal to 377
+buffer[126] is equal to 377
+buffer[127] is equal to 378
+buffer[128] is equal to 378
+buffer[129] is equal to 378
+buffer[130] is equal to 379
+buffer[131] is equal to 379
+buffer[132] is equal to 379
+buffer[133] is equal to 380
+buffer[134] is equal to 380
+buffer[135] is equal to 380
+buffer[136] is equal to 381
+buffer[137] is equal to 381
+buffer[138] is equal to 381
+buffer[139] is equal to 382
+buffer[140] is equal to 382
+buffer[141] is equal to 382
+buffer[142] is equal to 383
+buffer[143] is equal to 383
+buffer[144] is equal to 383
+buffer[145] is equal to 384
+buffer[146] is equal to 384
+buffer[147] is equal to 384
+buffer[148] is equal to 385
+buffer[149] is equal to 385
+buffer[150] is equal to 385
+buffer[151] is equal to 386
+buffer[152] is equal to 386
+buffer[153] is equal to 386
+buffer[154] is equal to 387
+buffer[155] is equal to 387
+buffer[156] is equal to 387
+buffer[157] is equal to 388
+buffer[158] is equal to 388
+buffer[159] is equal to 388
+buffer[160] is equal to 389
+buffer[161] is equal to 389
+buffer[162] is equal to 389
+buffer[163] is equal to 390
+buffer[164] is equal to 390
+buffer[165] is equal to 390
+buffer[166] is equal to 391
+buffer[167] is equal to 391
+buffer[168] is equal to 391
+buffer[169] is equal to 392
+buffer[170] is equal to 392
+buffer[171] is equal to 392
+buffer[172] is equal to 393
+buffer[173] is equal to 393
+buffer[174] is equal to 393
+buffer[175] is equal to 394
+buffer[176] is equal to 394
+buffer[177] is equal to 394
+buffer[178] is equal to 395
+buffer[179] is equal to 395
+buffer[180] is equal to 395
+buffer[181] is equal to 396
+buffer[182] is equal to 396
+buffer[183] is equal to 396
+buffer[184] is equal to 397
+buffer[185] is equal to 397
+buffer[186] is equal to 397
+buffer[187] is equal to 398
+buffer[188] is equal to 398
+buffer[189] is equal to 398
+buffer[190] is equal to 399
+buffer[191] is equal to 399
+buffer[192] is equal to 399
+buffer[193] is equal to 400
+buffer[194] is equal to 400
+buffer[195] is equal to 400
+buffer[196] is equal to 401
+buffer[197] is equal to 401
+buffer[198] is equal to 401
+buffer[199] is equal to 402
+buffer[200] is equal to 402
+buffer[201] is equal to 402
+buffer[202] is equal to 403
+buffer[203] is equal to 403
+buffer[204] is equal to 403
+buffer[205] is equal to 404
+buffer[206] is equal to 404
+buffer[207] is equal to 404
+buffer[208] is equal to 405
+buffer[209] is equal to 405
+buffer[210] is equal to 405
+buffer[211] is equal to 406
+buffer[212] is equal to 406
+buffer[213] is equal to 406
+buffer[214] is equal to 407
+buffer[215] is equal to 407
+buffer[216] is equal to 407
+buffer[217] is equal to 408
+buffer[218] is equal to 408
+buffer[219] is equal to 408
+buffer[220] is equal to 409
+buffer[221] is equal to 409
+buffer[222] is equal to 409
+buffer[223] is equal to 410
+buffer[224] is equal to 410
+buffer[225] is equal to 410
+buffer[226] is equal to 411
+buffer[227] is equal to 411
+buffer[228] is equal to 411
+buffer[229] is equal to 412
+buffer[230] is equal to 412
+buffer[231] is equal to 412
+buffer[232] is equal to 413
+buffer[233] is equal to 413
+buffer[234] is equal to 413
+buffer[235] is equal to 414
+buffer[236] is equal to 414
+buffer[237] is equal to 414
+buffer[238] is equal to 415
+buffer[239] is equal to 415
+buffer[240] is equal to 415
+buffer[241] is equal to 416
+buffer[242] is equal to 416
+buffer[243] is equal to 416
+buffer[244] is equal to 417
+buffer[245] is equal to 417
+buffer[246] is equal to 417
+buffer[247] is equal to 418
+buffer[248] is equal to 418
+buffer[249] is equal to 418
+buffer[250] is equal to 419
+buffer[251] is equal to 419
+buffer[252] is equal to 419
+buffer[253] is equal to 369
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 336
+i is 336
+Pid is 368
+Key is 337
+i is 337
+Pid is 368
+Key is 338
+i is 338
+Pid is 368
+Key is 339
+i is 339
+Pid is 368
+Key is 340
+i is 340
+Pid is 368
+Key is 341
+i is 341
+Pid is 368
+Key is 342
+i is 342
+Pid is 368
+Key is 343
+i is 343
+Pid is 368
+Key is 344
+i is 344
+Pid is 368
+Key is 345
+i is 345
+Pid is 368
+Key is 346
+i is 346
+Pid is 368
+Key is 347
+i is 347
+Pid is 368
+Key is 348
+i is 348
+Pid is 368
+Key is 349
+i is 349
+Pid is 368
+Key is 350
+i is 350
+Pid is 368
+Key is 351
+i is 351
+Pid is 368
+Key is 352
+i is 352
+Pid is 368
+Key is 353
+i is 353
+Pid is 368
+Key is 354
+i is 354
+Pid is 368
+Key is 355
+i is 355
+Pid is 368
+Key is 356
+i is 356
+Pid is 368
+Key is 357
+i is 357
+Pid is 368
+Key is 358
+i is 358
+Pid is 368
+Key is 359
+i is 359
+Pid is 368
+Key is 360
+i is 360
+Pid is 368
+Key is 361
+i is 361
+Pid is 368
+Key is 362
+i is 362
+Pid is 368
+Key is 363
+i is 363
+Pid is 368
+Key is 364
+i is 364
+Pid is 368
+Key is 365
+i is 365
+Pid is 368
+Key is 366
+i is 366
+Pid is 368
+Key is 367
+i is 367
+Pid is 368
+Key is 368
+i is 368
+Pid is 368
+Key is 369
+i is 369
+Pid is 368
+Key is 370
+i is 370
+Pid is 368
+Key is 371
+i is 371
+Pid is 368
+Key is 372
+i is 372
+Pid is 368
+Key is 373
+i is 373
+Pid is 368
+Key is 374
+i is 374
+Pid is 368
+Key is 375
+i is 375
+Pid is 368
+Key is 376
+i is 376
+Pid is 368
+Key is 377
+i is 377
+Pid is 368
+Key is 378
+i is 378
+Pid is 368
+Key is 379
+i is 379
+Pid is 368
+Key is 380
+i is 380
+Pid is 368
+Key is 381
+i is 381
+Pid is 368
+Key is 382
+i is 382
+Pid is 368
+Key is 383
+i is 383
+Pid is 368
+Key is 384
+i is 384
+Pid is 368
+Key is 385
+i is 385
+Pid is 368
+Key is 386
+i is 386
+Pid is 368
+Key is 387
+i is 387
+Pid is 368
+Key is 388
+i is 388
+Pid is 368
+Key is 389
+i is 389
+Pid is 368
+Key is 390
+i is 390
+Pid is 368
+Key is 391
+i is 391
+Pid is 368
+Key is 392
+i is 392
+Pid is 368
+Key is 393
+i is 393
+Pid is 368
+Key is 394
+i is 394
+Pid is 368
+Key is 395
+i is 395
+Pid is 368
+Key is 396
+i is 396
+Pid is 368
+Key is 397
+i is 397
+Pid is 368
+Key is 398
+i is 398
+Pid is 368
+Key is 399
+i is 399
+Pid is 368
+Key is 400
+i is 400
+Pid is 368
+Key is 401
+i is 401
+Pid is 368
+Key is 402
+i is 402
+Pid is 368
+Key is 403
+i is 403
+Pid is 368
+Key is 404
+i is 404
+Pid is 368
+Key is 405
+i is 405
+Pid is 368
+Key is 406
+i is 406
+Pid is 368
+Key is 407
+i is 407
+Pid is 368
+Key is 408
+i is 408
+Pid is 368
+Key is 409
+i is 409
+Pid is 368
+Key is 410
+i is 410
+Pid is 368
+Key is 411
+i is 411
+Pid is 368
+Key is 412
+i is 412
+Pid is 368
+Key is 413
+i is 413
+Pid is 368
+Key is 414
+i is 414
+Pid is 368
+Key is 415
+i is 415
+Pid is 368
+Key is 416
+i is 416
+Pid is 368
+Key is 417
+i is 417
+Pid is 368
+Key is 418
+i is 418
+Pid is 368
+Going to next node!
+Key is 419
+i is 419
+Pid is 369
+My pid is 369
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 420
+buffer[2] is equal to 420
+buffer[3] is equal to 420
+buffer[4] is equal to 421
+buffer[5] is equal to 421
+buffer[6] is equal to 421
+buffer[7] is equal to 422
+buffer[8] is equal to 422
+buffer[9] is equal to 422
+buffer[10] is equal to 423
+buffer[11] is equal to 423
+buffer[12] is equal to 423
+buffer[13] is equal to 424
+buffer[14] is equal to 424
+buffer[15] is equal to 424
+buffer[16] is equal to 425
+buffer[17] is equal to 425
+buffer[18] is equal to 425
+buffer[19] is equal to 426
+buffer[20] is equal to 426
+buffer[21] is equal to 426
+buffer[22] is equal to 427
+buffer[23] is equal to 427
+buffer[24] is equal to 427
+buffer[25] is equal to 428
+buffer[26] is equal to 428
+buffer[27] is equal to 428
+buffer[28] is equal to 429
+buffer[29] is equal to 429
+buffer[30] is equal to 429
+buffer[31] is equal to 430
+buffer[32] is equal to 430
+buffer[33] is equal to 430
+buffer[34] is equal to 431
+buffer[35] is equal to 431
+buffer[36] is equal to 431
+buffer[37] is equal to 432
+buffer[38] is equal to 432
+buffer[39] is equal to 432
+buffer[40] is equal to 433
+buffer[41] is equal to 433
+buffer[42] is equal to 433
+buffer[43] is equal to 434
+buffer[44] is equal to 434
+buffer[45] is equal to 434
+buffer[46] is equal to 435
+buffer[47] is equal to 435
+buffer[48] is equal to 435
+buffer[49] is equal to 436
+buffer[50] is equal to 436
+buffer[51] is equal to 436
+buffer[52] is equal to 437
+buffer[53] is equal to 437
+buffer[54] is equal to 437
+buffer[55] is equal to 438
+buffer[56] is equal to 438
+buffer[57] is equal to 438
+buffer[58] is equal to 439
+buffer[59] is equal to 439
+buffer[60] is equal to 439
+buffer[61] is equal to 440
+buffer[62] is equal to 440
+buffer[63] is equal to 440
+buffer[64] is equal to 441
+buffer[65] is equal to 441
+buffer[66] is equal to 441
+buffer[67] is equal to 442
+buffer[68] is equal to 442
+buffer[69] is equal to 442
+buffer[70] is equal to 443
+buffer[71] is equal to 443
+buffer[72] is equal to 443
+buffer[73] is equal to 444
+buffer[74] is equal to 444
+buffer[75] is equal to 444
+buffer[76] is equal to 445
+buffer[77] is equal to 445
+buffer[78] is equal to 445
+buffer[79] is equal to 446
+buffer[80] is equal to 446
+buffer[81] is equal to 446
+buffer[82] is equal to 447
+buffer[83] is equal to 447
+buffer[84] is equal to 447
+buffer[85] is equal to 448
+buffer[86] is equal to 448
+buffer[87] is equal to 448
+buffer[88] is equal to 449
+buffer[89] is equal to 449
+buffer[90] is equal to 449
+buffer[91] is equal to 450
+buffer[92] is equal to 450
+buffer[93] is equal to 450
+buffer[94] is equal to 451
+buffer[95] is equal to 451
+buffer[96] is equal to 451
+buffer[97] is equal to 452
+buffer[98] is equal to 452
+buffer[99] is equal to 452
+buffer[100] is equal to 453
+buffer[101] is equal to 453
+buffer[102] is equal to 453
+buffer[103] is equal to 454
+buffer[104] is equal to 454
+buffer[105] is equal to 454
+buffer[106] is equal to 455
+buffer[107] is equal to 455
+buffer[108] is equal to 455
+buffer[109] is equal to 456
+buffer[110] is equal to 456
+buffer[111] is equal to 456
+buffer[112] is equal to 457
+buffer[113] is equal to 457
+buffer[114] is equal to 457
+buffer[115] is equal to 458
+buffer[116] is equal to 458
+buffer[117] is equal to 458
+buffer[118] is equal to 459
+buffer[119] is equal to 459
+buffer[120] is equal to 459
+buffer[121] is equal to 460
+buffer[122] is equal to 460
+buffer[123] is equal to 460
+buffer[124] is equal to 461
+buffer[125] is equal to 461
+buffer[126] is equal to 461
+buffer[127] is equal to 462
+buffer[128] is equal to 462
+buffer[129] is equal to 462
+buffer[130] is equal to 463
+buffer[131] is equal to 463
+buffer[132] is equal to 463
+buffer[133] is equal to 464
+buffer[134] is equal to 464
+buffer[135] is equal to 464
+buffer[136] is equal to 465
+buffer[137] is equal to 465
+buffer[138] is equal to 465
+buffer[139] is equal to 466
+buffer[140] is equal to 466
+buffer[141] is equal to 466
+buffer[142] is equal to 467
+buffer[143] is equal to 467
+buffer[144] is equal to 467
+buffer[145] is equal to 468
+buffer[146] is equal to 468
+buffer[147] is equal to 468
+buffer[148] is equal to 469
+buffer[149] is equal to 469
+buffer[150] is equal to 469
+buffer[151] is equal to 470
+buffer[152] is equal to 470
+buffer[153] is equal to 470
+buffer[154] is equal to 471
+buffer[155] is equal to 471
+buffer[156] is equal to 471
+buffer[157] is equal to 472
+buffer[158] is equal to 472
+buffer[159] is equal to 472
+buffer[160] is equal to 473
+buffer[161] is equal to 473
+buffer[162] is equal to 473
+buffer[163] is equal to 474
+buffer[164] is equal to 474
+buffer[165] is equal to 474
+buffer[166] is equal to 475
+buffer[167] is equal to 475
+buffer[168] is equal to 475
+buffer[169] is equal to 476
+buffer[170] is equal to 476
+buffer[171] is equal to 476
+buffer[172] is equal to 477
+buffer[173] is equal to 477
+buffer[174] is equal to 477
+buffer[175] is equal to 478
+buffer[176] is equal to 478
+buffer[177] is equal to 478
+buffer[178] is equal to 479
+buffer[179] is equal to 479
+buffer[180] is equal to 479
+buffer[181] is equal to 480
+buffer[182] is equal to 480
+buffer[183] is equal to 480
+buffer[184] is equal to 481
+buffer[185] is equal to 481
+buffer[186] is equal to 481
+buffer[187] is equal to 482
+buffer[188] is equal to 482
+buffer[189] is equal to 482
+buffer[190] is equal to 483
+buffer[191] is equal to 483
+buffer[192] is equal to 483
+buffer[193] is equal to 484
+buffer[194] is equal to 484
+buffer[195] is equal to 484
+buffer[196] is equal to 485
+buffer[197] is equal to 485
+buffer[198] is equal to 485
+buffer[199] is equal to 486
+buffer[200] is equal to 486
+buffer[201] is equal to 486
+buffer[202] is equal to 487
+buffer[203] is equal to 487
+buffer[204] is equal to 487
+buffer[205] is equal to 488
+buffer[206] is equal to 488
+buffer[207] is equal to 488
+buffer[208] is equal to 489
+buffer[209] is equal to 489
+buffer[210] is equal to 489
+buffer[211] is equal to 490
+buffer[212] is equal to 490
+buffer[213] is equal to 490
+buffer[214] is equal to 491
+buffer[215] is equal to 491
+buffer[216] is equal to 491
+buffer[217] is equal to 492
+buffer[218] is equal to 492
+buffer[219] is equal to 492
+buffer[220] is equal to 493
+buffer[221] is equal to 493
+buffer[222] is equal to 493
+buffer[223] is equal to 494
+buffer[224] is equal to 494
+buffer[225] is equal to 494
+buffer[226] is equal to 495
+buffer[227] is equal to 495
+buffer[228] is equal to 495
+buffer[229] is equal to 496
+buffer[230] is equal to 496
+buffer[231] is equal to 496
+buffer[232] is equal to 497
+buffer[233] is equal to 497
+buffer[234] is equal to 497
+buffer[235] is equal to 498
+buffer[236] is equal to 498
+buffer[237] is equal to 498
+buffer[238] is equal to 499
+buffer[239] is equal to 499
+buffer[240] is equal to 499
+buffer[241] is equal to 500
+buffer[242] is equal to 500
+buffer[243] is equal to 500
+buffer[244] is equal to 501
+buffer[245] is equal to 501
+buffer[246] is equal to 501
+buffer[247] is equal to 502
+buffer[248] is equal to 502
+buffer[249] is equal to 502
+buffer[250] is equal to 503
+buffer[251] is equal to 503
+buffer[252] is equal to 503
+buffer[253] is equal to 370
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 420
+i is 420
+Pid is 369
+Key is 421
+i is 421
+Pid is 369
+Key is 422
+i is 422
+Pid is 369
+Key is 423
+i is 423
+Pid is 369
+Key is 424
+i is 424
+Pid is 369
+Key is 425
+i is 425
+Pid is 369
+Key is 426
+i is 426
+Pid is 369
+Key is 427
+i is 427
+Pid is 369
+Key is 428
+i is 428
+Pid is 369
+Key is 429
+i is 429
+Pid is 369
+Key is 430
+i is 430
+Pid is 369
+Key is 431
+i is 431
+Pid is 369
+Key is 432
+i is 432
+Pid is 369
+Key is 433
+i is 433
+Pid is 369
+Key is 434
+i is 434
+Pid is 369
+Key is 435
+i is 435
+Pid is 369
+Key is 436
+i is 436
+Pid is 369
+Key is 437
+i is 437
+Pid is 369
+Key is 438
+i is 438
+Pid is 369
+Key is 439
+i is 439
+Pid is 369
+Key is 440
+i is 440
+Pid is 369
+Key is 441
+i is 441
+Pid is 369
+Key is 442
+i is 442
+Pid is 369
+Key is 443
+i is 443
+Pid is 369
+Key is 444
+i is 444
+Pid is 369
+Key is 445
+i is 445
+Pid is 369
+Key is 446
+i is 446
+Pid is 369
+Key is 447
+i is 447
+Pid is 369
+Key is 448
+i is 448
+Pid is 369
+Key is 449
+i is 449
+Pid is 369
+Key is 450
+i is 450
+Pid is 369
+Key is 451
+i is 451
+Pid is 369
+Key is 452
+i is 452
+Pid is 369
+Key is 453
+i is 453
+Pid is 369
+Key is 454
+i is 454
+Pid is 369
+Key is 455
+i is 455
+Pid is 369
+Key is 456
+i is 456
+Pid is 369
+Key is 457
+i is 457
+Pid is 369
+Key is 458
+i is 458
+Pid is 369
+Key is 459
+i is 459
+Pid is 369
+Key is 460
+i is 460
+Pid is 369
+Key is 461
+i is 461
+Pid is 369
+Key is 462
+i is 462
+Pid is 369
+Key is 463
+i is 463
+Pid is 369
+Key is 464
+i is 464
+Pid is 369
+Key is 465
+i is 465
+Pid is 369
+Key is 466
+i is 466
+Pid is 369
+Key is 467
+i is 467
+Pid is 369
+Key is 468
+i is 468
+Pid is 369
+Key is 469
+i is 469
+Pid is 369
+Key is 470
+i is 470
+Pid is 369
+Key is 471
+i is 471
+Pid is 369
+Key is 472
+i is 472
+Pid is 369
+Key is 473
+i is 473
+Pid is 369
+Key is 474
+i is 474
+Pid is 369
+Key is 475
+i is 475
+Pid is 369
+Key is 476
+i is 476
+Pid is 369
+Key is 477
+i is 477
+Pid is 369
+Key is 478
+i is 478
+Pid is 369
+Key is 479
+i is 479
+Pid is 369
+Key is 480
+i is 480
+Pid is 369
+Key is 481
+i is 481
+Pid is 369
+Key is 482
+i is 482
+Pid is 369
+Key is 483
+i is 483
+Pid is 369
+Key is 484
+i is 484
+Pid is 369
+Key is 485
+i is 485
+Pid is 369
+Key is 486
+i is 486
+Pid is 369
+Key is 487
+i is 487
+Pid is 369
+Key is 488
+i is 488
+Pid is 369
+Key is 489
+i is 489
+Pid is 369
+Key is 490
+i is 490
+Pid is 369
+Key is 491
+i is 491
+Pid is 369
+Key is 492
+i is 492
+Pid is 369
+Key is 493
+i is 493
+Pid is 369
+Key is 494
+i is 494
+Pid is 369
+Key is 495
+i is 495
+Pid is 369
+Key is 496
+i is 496
+Pid is 369
+Key is 497
+i is 497
+Pid is 369
+Key is 498
+i is 498
+Pid is 369
+Key is 499
+i is 499
+Pid is 369
+Key is 500
+i is 500
+Pid is 369
+Key is 501
+i is 501
+Pid is 369
+Key is 502
+i is 502
+Pid is 369
+Going to next node!
+Key is 503
+i is 503
+Pid is 370
+My pid is 370
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 504
+buffer[2] is equal to 504
+buffer[3] is equal to 504
+buffer[4] is equal to 505
+buffer[5] is equal to 505
+buffer[6] is equal to 505
+buffer[7] is equal to 506
+buffer[8] is equal to 506
+buffer[9] is equal to 506
+buffer[10] is equal to 507
+buffer[11] is equal to 507
+buffer[12] is equal to 507
+buffer[13] is equal to 508
+buffer[14] is equal to 508
+buffer[15] is equal to 508
+buffer[16] is equal to 509
+buffer[17] is equal to 509
+buffer[18] is equal to 509
+buffer[19] is equal to 510
+buffer[20] is equal to 510
+buffer[21] is equal to 510
+buffer[22] is equal to 511
+buffer[23] is equal to 511
+buffer[24] is equal to 511
+buffer[25] is equal to 512
+buffer[26] is equal to 512
+buffer[27] is equal to 512
+buffer[28] is equal to 513
+buffer[29] is equal to 513
+buffer[30] is equal to 513
+buffer[31] is equal to 514
+buffer[32] is equal to 514
+buffer[33] is equal to 514
+buffer[34] is equal to 515
+buffer[35] is equal to 515
+buffer[36] is equal to 515
+buffer[37] is equal to 516
+buffer[38] is equal to 516
+buffer[39] is equal to 516
+buffer[40] is equal to 517
+buffer[41] is equal to 517
+buffer[42] is equal to 517
+buffer[43] is equal to 518
+buffer[44] is equal to 518
+buffer[45] is equal to 518
+buffer[46] is equal to 519
+buffer[47] is equal to 519
+buffer[48] is equal to 519
+buffer[49] is equal to 520
+buffer[50] is equal to 520
+buffer[51] is equal to 520
+buffer[52] is equal to 521
+buffer[53] is equal to 521
+buffer[54] is equal to 521
+buffer[55] is equal to 522
+buffer[56] is equal to 522
+buffer[57] is equal to 522
+buffer[58] is equal to 523
+buffer[59] is equal to 523
+buffer[60] is equal to 523
+buffer[61] is equal to 524
+buffer[62] is equal to 524
+buffer[63] is equal to 524
+buffer[64] is equal to 525
+buffer[65] is equal to 525
+buffer[66] is equal to 525
+buffer[67] is equal to 526
+buffer[68] is equal to 526
+buffer[69] is equal to 526
+buffer[70] is equal to 527
+buffer[71] is equal to 527
+buffer[72] is equal to 527
+buffer[73] is equal to 528
+buffer[74] is equal to 528
+buffer[75] is equal to 528
+buffer[76] is equal to 529
+buffer[77] is equal to 529
+buffer[78] is equal to 529
+buffer[79] is equal to 530
+buffer[80] is equal to 530
+buffer[81] is equal to 530
+buffer[82] is equal to 531
+buffer[83] is equal to 531
+buffer[84] is equal to 531
+buffer[85] is equal to 532
+buffer[86] is equal to 532
+buffer[87] is equal to 532
+buffer[88] is equal to 533
+buffer[89] is equal to 533
+buffer[90] is equal to 533
+buffer[91] is equal to 534
+buffer[92] is equal to 534
+buffer[93] is equal to 534
+buffer[94] is equal to 535
+buffer[95] is equal to 535
+buffer[96] is equal to 535
+buffer[97] is equal to 536
+buffer[98] is equal to 536
+buffer[99] is equal to 536
+buffer[100] is equal to 537
+buffer[101] is equal to 537
+buffer[102] is equal to 537
+buffer[103] is equal to 538
+buffer[104] is equal to 538
+buffer[105] is equal to 538
+buffer[106] is equal to 539
+buffer[107] is equal to 539
+buffer[108] is equal to 539
+buffer[109] is equal to 540
+buffer[110] is equal to 540
+buffer[111] is equal to 540
+buffer[112] is equal to 541
+buffer[113] is equal to 541
+buffer[114] is equal to 541
+buffer[115] is equal to 542
+buffer[116] is equal to 542
+buffer[117] is equal to 542
+buffer[118] is equal to 543
+buffer[119] is equal to 543
+buffer[120] is equal to 543
+buffer[121] is equal to 544
+buffer[122] is equal to 544
+buffer[123] is equal to 544
+buffer[124] is equal to 545
+buffer[125] is equal to 545
+buffer[126] is equal to 545
+buffer[127] is equal to 546
+buffer[128] is equal to 546
+buffer[129] is equal to 546
+buffer[130] is equal to 547
+buffer[131] is equal to 547
+buffer[132] is equal to 547
+buffer[133] is equal to 548
+buffer[134] is equal to 548
+buffer[135] is equal to 548
+buffer[136] is equal to 549
+buffer[137] is equal to 549
+buffer[138] is equal to 549
+buffer[139] is equal to 550
+buffer[140] is equal to 550
+buffer[141] is equal to 550
+buffer[142] is equal to 551
+buffer[143] is equal to 551
+buffer[144] is equal to 551
+buffer[145] is equal to 552
+buffer[146] is equal to 552
+buffer[147] is equal to 552
+buffer[148] is equal to 553
+buffer[149] is equal to 553
+buffer[150] is equal to 553
+buffer[151] is equal to 554
+buffer[152] is equal to 554
+buffer[153] is equal to 554
+buffer[154] is equal to 555
+buffer[155] is equal to 555
+buffer[156] is equal to 555
+buffer[157] is equal to 556
+buffer[158] is equal to 556
+buffer[159] is equal to 556
+buffer[160] is equal to 557
+buffer[161] is equal to 557
+buffer[162] is equal to 557
+buffer[163] is equal to 558
+buffer[164] is equal to 558
+buffer[165] is equal to 558
+buffer[166] is equal to 559
+buffer[167] is equal to 559
+buffer[168] is equal to 559
+buffer[169] is equal to 560
+buffer[170] is equal to 560
+buffer[171] is equal to 560
+buffer[172] is equal to 561
+buffer[173] is equal to 561
+buffer[174] is equal to 561
+buffer[175] is equal to 562
+buffer[176] is equal to 562
+buffer[177] is equal to 562
+buffer[178] is equal to 563
+buffer[179] is equal to 563
+buffer[180] is equal to 563
+buffer[181] is equal to 564
+buffer[182] is equal to 564
+buffer[183] is equal to 564
+buffer[184] is equal to 565
+buffer[185] is equal to 565
+buffer[186] is equal to 565
+buffer[187] is equal to 566
+buffer[188] is equal to 566
+buffer[189] is equal to 566
+buffer[190] is equal to 567
+buffer[191] is equal to 567
+buffer[192] is equal to 567
+buffer[193] is equal to 568
+buffer[194] is equal to 568
+buffer[195] is equal to 568
+buffer[196] is equal to 569
+buffer[197] is equal to 569
+buffer[198] is equal to 569
+buffer[199] is equal to 570
+buffer[200] is equal to 570
+buffer[201] is equal to 570
+buffer[202] is equal to 571
+buffer[203] is equal to 571
+buffer[204] is equal to 571
+buffer[205] is equal to 572
+buffer[206] is equal to 572
+buffer[207] is equal to 572
+buffer[208] is equal to 573
+buffer[209] is equal to 573
+buffer[210] is equal to 573
+buffer[211] is equal to 574
+buffer[212] is equal to 574
+buffer[213] is equal to 574
+buffer[214] is equal to 575
+buffer[215] is equal to 575
+buffer[216] is equal to 575
+buffer[217] is equal to 576
+buffer[218] is equal to 576
+buffer[219] is equal to 576
+buffer[220] is equal to 577
+buffer[221] is equal to 577
+buffer[222] is equal to 577
+buffer[223] is equal to 578
+buffer[224] is equal to 578
+buffer[225] is equal to 578
+buffer[226] is equal to 579
+buffer[227] is equal to 579
+buffer[228] is equal to 579
+buffer[229] is equal to 580
+buffer[230] is equal to 580
+buffer[231] is equal to 580
+buffer[232] is equal to 581
+buffer[233] is equal to 581
+buffer[234] is equal to 581
+buffer[235] is equal to 582
+buffer[236] is equal to 582
+buffer[237] is equal to 582
+buffer[238] is equal to 583
+buffer[239] is equal to 583
+buffer[240] is equal to 583
+buffer[241] is equal to 584
+buffer[242] is equal to 584
+buffer[243] is equal to 584
+buffer[244] is equal to 585
+buffer[245] is equal to 585
+buffer[246] is equal to 585
+buffer[247] is equal to 586
+buffer[248] is equal to 586
+buffer[249] is equal to 586
+buffer[250] is equal to 587
+buffer[251] is equal to 587
+buffer[252] is equal to 587
+buffer[253] is equal to 371
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 504
+i is 504
+Pid is 370
+Key is 505
+i is 505
+Pid is 370
+Key is 506
+i is 506
+Pid is 370
+Key is 507
+i is 507
+Pid is 370
+Key is 508
+i is 508
+Pid is 370
+Key is 509
+i is 509
+Pid is 370
+Key is 510
+i is 510
+Pid is 370
+Key is 511
+i is 511
+Pid is 370
+Key is 512
+i is 512
+Pid is 370
+Key is 513
+i is 513
+Pid is 370
+Key is 514
+i is 514
+Pid is 370
+Key is 515
+i is 515
+Pid is 370
+Key is 516
+i is 516
+Pid is 370
+Key is 517
+i is 517
+Pid is 370
+Key is 518
+i is 518
+Pid is 370
+Key is 519
+i is 519
+Pid is 370
+Key is 520
+i is 520
+Pid is 370
+Key is 521
+i is 521
+Pid is 370
+Key is 522
+i is 522
+Pid is 370
+Key is 523
+i is 523
+Pid is 370
+Key is 524
+i is 524
+Pid is 370
+Key is 525
+i is 525
+Pid is 370
+Key is 526
+i is 526
+Pid is 370
+Key is 527
+i is 527
+Pid is 370
+Key is 528
+i is 528
+Pid is 370
+Key is 529
+i is 529
+Pid is 370
+Key is 530
+i is 530
+Pid is 370
+Key is 531
+i is 531
+Pid is 370
+Key is 532
+i is 532
+Pid is 370
+Key is 533
+i is 533
+Pid is 370
+Key is 534
+i is 534
+Pid is 370
+Key is 535
+i is 535
+Pid is 370
+Key is 536
+i is 536
+Pid is 370
+Key is 537
+i is 537
+Pid is 370
+Key is 538
+i is 538
+Pid is 370
+Key is 539
+i is 539
+Pid is 370
+Key is 540
+i is 540
+Pid is 370
+Key is 541
+i is 541
+Pid is 370
+Key is 542
+i is 542
+Pid is 370
+Key is 543
+i is 543
+Pid is 370
+Key is 544
+i is 544
+Pid is 370
+Key is 545
+i is 545
+Pid is 370
+Key is 546
+i is 546
+Pid is 370
+Key is 547
+i is 547
+Pid is 370
+Key is 548
+i is 548
+Pid is 370
+Key is 549
+i is 549
+Pid is 370
+Key is 550
+i is 550
+Pid is 370
+Key is 551
+i is 551
+Pid is 370
+Key is 552
+i is 552
+Pid is 370
+Key is 553
+i is 553
+Pid is 370
+Key is 554
+i is 554
+Pid is 370
+Key is 555
+i is 555
+Pid is 370
+Key is 556
+i is 556
+Pid is 370
+Key is 557
+i is 557
+Pid is 370
+Key is 558
+i is 558
+Pid is 370
+Key is 559
+i is 559
+Pid is 370
+Key is 560
+i is 560
+Pid is 370
+Key is 561
+i is 561
+Pid is 370
+Key is 562
+i is 562
+Pid is 370
+Key is 563
+i is 563
+Pid is 370
+Key is 564
+i is 564
+Pid is 370
+Key is 565
+i is 565
+Pid is 370
+Key is 566
+i is 566
+Pid is 370
+Key is 567
+i is 567
+Pid is 370
+Key is 568
+i is 568
+Pid is 370
+Key is 569
+i is 569
+Pid is 370
+Key is 570
+i is 570
+Pid is 370
+Key is 571
+i is 571
+Pid is 370
+Key is 572
+i is 572
+Pid is 370
+Key is 573
+i is 573
+Pid is 370
+Key is 574
+i is 574
+Pid is 370
+Key is 575
+i is 575
+Pid is 370
+Key is 576
+i is 576
+Pid is 370
+Key is 577
+i is 577
+Pid is 370
+Key is 578
+i is 578
+Pid is 370
+Key is 579
+i is 579
+Pid is 370
+Key is 580
+i is 580
+Pid is 370
+Key is 581
+i is 581
+Pid is 370
+Key is 582
+i is 582
+Pid is 370
+Key is 583
+i is 583
+Pid is 370
+Key is 584
+i is 584
+Pid is 370
+Key is 585
+i is 585
+Pid is 370
+Key is 586
+i is 586
+Pid is 370
+Going to next node!
+Key is 587
+i is 587
+Pid is 371
+My pid is 371
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 588
+buffer[2] is equal to 588
+buffer[3] is equal to 588
+buffer[4] is equal to 589
+buffer[5] is equal to 589
+buffer[6] is equal to 589
+buffer[7] is equal to 590
+buffer[8] is equal to 590
+buffer[9] is equal to 590
+buffer[10] is equal to 591
+buffer[11] is equal to 591
+buffer[12] is equal to 591
+buffer[13] is equal to 592
+buffer[14] is equal to 592
+buffer[15] is equal to 592
+buffer[16] is equal to 593
+buffer[17] is equal to 593
+buffer[18] is equal to 593
+buffer[19] is equal to 594
+buffer[20] is equal to 594
+buffer[21] is equal to 594
+buffer[22] is equal to 595
+buffer[23] is equal to 595
+buffer[24] is equal to 595
+buffer[25] is equal to 596
+buffer[26] is equal to 596
+buffer[27] is equal to 596
+buffer[28] is equal to 597
+buffer[29] is equal to 597
+buffer[30] is equal to 597
+buffer[31] is equal to 598
+buffer[32] is equal to 598
+buffer[33] is equal to 598
+buffer[34] is equal to 599
+buffer[35] is equal to 599
+buffer[36] is equal to 599
+buffer[37] is equal to 600
+buffer[38] is equal to 600
+buffer[39] is equal to 600
+buffer[40] is equal to 601
+buffer[41] is equal to 601
+buffer[42] is equal to 601
+buffer[43] is equal to 602
+buffer[44] is equal to 602
+buffer[45] is equal to 602
+buffer[46] is equal to 603
+buffer[47] is equal to 603
+buffer[48] is equal to 603
+buffer[49] is equal to 604
+buffer[50] is equal to 604
+buffer[51] is equal to 604
+buffer[52] is equal to 605
+buffer[53] is equal to 605
+buffer[54] is equal to 605
+buffer[55] is equal to 606
+buffer[56] is equal to 606
+buffer[57] is equal to 606
+buffer[58] is equal to 607
+buffer[59] is equal to 607
+buffer[60] is equal to 607
+buffer[61] is equal to 608
+buffer[62] is equal to 608
+buffer[63] is equal to 608
+buffer[64] is equal to 609
+buffer[65] is equal to 609
+buffer[66] is equal to 609
+buffer[67] is equal to 610
+buffer[68] is equal to 610
+buffer[69] is equal to 610
+buffer[70] is equal to 611
+buffer[71] is equal to 611
+buffer[72] is equal to 611
+buffer[73] is equal to 612
+buffer[74] is equal to 612
+buffer[75] is equal to 612
+buffer[76] is equal to 613
+buffer[77] is equal to 613
+buffer[78] is equal to 613
+buffer[79] is equal to 614
+buffer[80] is equal to 614
+buffer[81] is equal to 614
+buffer[82] is equal to 615
+buffer[83] is equal to 615
+buffer[84] is equal to 615
+buffer[85] is equal to 616
+buffer[86] is equal to 616
+buffer[87] is equal to 616
+buffer[88] is equal to 617
+buffer[89] is equal to 617
+buffer[90] is equal to 617
+buffer[91] is equal to 618
+buffer[92] is equal to 618
+buffer[93] is equal to 618
+buffer[94] is equal to 619
+buffer[95] is equal to 619
+buffer[96] is equal to 619
+buffer[97] is equal to 620
+buffer[98] is equal to 620
+buffer[99] is equal to 620
+buffer[100] is equal to 621
+buffer[101] is equal to 621
+buffer[102] is equal to 621
+buffer[103] is equal to 622
+buffer[104] is equal to 622
+buffer[105] is equal to 622
+buffer[106] is equal to 623
+buffer[107] is equal to 623
+buffer[108] is equal to 623
+buffer[109] is equal to 624
+buffer[110] is equal to 624
+buffer[111] is equal to 624
+buffer[112] is equal to 625
+buffer[113] is equal to 625
+buffer[114] is equal to 625
+buffer[115] is equal to 626
+buffer[116] is equal to 626
+buffer[117] is equal to 626
+buffer[118] is equal to 627
+buffer[119] is equal to 627
+buffer[120] is equal to 627
+buffer[121] is equal to 628
+buffer[122] is equal to 628
+buffer[123] is equal to 628
+buffer[124] is equal to 629
+buffer[125] is equal to 629
+buffer[126] is equal to 629
+buffer[127] is equal to 630
+buffer[128] is equal to 630
+buffer[129] is equal to 630
+buffer[130] is equal to 631
+buffer[131] is equal to 631
+buffer[132] is equal to 631
+buffer[133] is equal to 632
+buffer[134] is equal to 632
+buffer[135] is equal to 632
+buffer[136] is equal to 633
+buffer[137] is equal to 633
+buffer[138] is equal to 633
+buffer[139] is equal to 634
+buffer[140] is equal to 634
+buffer[141] is equal to 634
+buffer[142] is equal to 635
+buffer[143] is equal to 635
+buffer[144] is equal to 635
+buffer[145] is equal to 636
+buffer[146] is equal to 636
+buffer[147] is equal to 636
+buffer[148] is equal to 637
+buffer[149] is equal to 637
+buffer[150] is equal to 637
+buffer[151] is equal to 638
+buffer[152] is equal to 638
+buffer[153] is equal to 638
+buffer[154] is equal to 639
+buffer[155] is equal to 639
+buffer[156] is equal to 639
+buffer[157] is equal to 640
+buffer[158] is equal to 640
+buffer[159] is equal to 640
+buffer[160] is equal to 641
+buffer[161] is equal to 641
+buffer[162] is equal to 641
+buffer[163] is equal to 642
+buffer[164] is equal to 642
+buffer[165] is equal to 642
+buffer[166] is equal to 643
+buffer[167] is equal to 643
+buffer[168] is equal to 643
+buffer[169] is equal to 644
+buffer[170] is equal to 644
+buffer[171] is equal to 644
+buffer[172] is equal to 645
+buffer[173] is equal to 645
+buffer[174] is equal to 645
+buffer[175] is equal to 646
+buffer[176] is equal to 646
+buffer[177] is equal to 646
+buffer[178] is equal to 647
+buffer[179] is equal to 647
+buffer[180] is equal to 647
+buffer[181] is equal to 648
+buffer[182] is equal to 648
+buffer[183] is equal to 648
+buffer[184] is equal to 649
+buffer[185] is equal to 649
+buffer[186] is equal to 649
+buffer[187] is equal to 650
+buffer[188] is equal to 650
+buffer[189] is equal to 650
+buffer[190] is equal to 651
+buffer[191] is equal to 651
+buffer[192] is equal to 651
+buffer[193] is equal to 652
+buffer[194] is equal to 652
+buffer[195] is equal to 652
+buffer[196] is equal to 653
+buffer[197] is equal to 653
+buffer[198] is equal to 653
+buffer[199] is equal to 654
+buffer[200] is equal to 654
+buffer[201] is equal to 654
+buffer[202] is equal to 655
+buffer[203] is equal to 655
+buffer[204] is equal to 655
+buffer[205] is equal to 656
+buffer[206] is equal to 656
+buffer[207] is equal to 656
+buffer[208] is equal to 657
+buffer[209] is equal to 657
+buffer[210] is equal to 657
+buffer[211] is equal to 658
+buffer[212] is equal to 658
+buffer[213] is equal to 658
+buffer[214] is equal to 659
+buffer[215] is equal to 659
+buffer[216] is equal to 659
+buffer[217] is equal to 660
+buffer[218] is equal to 660
+buffer[219] is equal to 660
+buffer[220] is equal to 661
+buffer[221] is equal to 661
+buffer[222] is equal to 661
+buffer[223] is equal to 662
+buffer[224] is equal to 662
+buffer[225] is equal to 662
+buffer[226] is equal to 663
+buffer[227] is equal to 663
+buffer[228] is equal to 663
+buffer[229] is equal to 664
+buffer[230] is equal to 664
+buffer[231] is equal to 664
+buffer[232] is equal to 665
+buffer[233] is equal to 665
+buffer[234] is equal to 665
+buffer[235] is equal to 666
+buffer[236] is equal to 666
+buffer[237] is equal to 666
+buffer[238] is equal to 667
+buffer[239] is equal to 667
+buffer[240] is equal to 667
+buffer[241] is equal to 668
+buffer[242] is equal to 668
+buffer[243] is equal to 668
+buffer[244] is equal to 669
+buffer[245] is equal to 669
+buffer[246] is equal to 669
+buffer[247] is equal to 670
+buffer[248] is equal to 670
+buffer[249] is equal to 670
+buffer[250] is equal to 671
+buffer[251] is equal to 671
+buffer[252] is equal to 671
+buffer[253] is equal to 372
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 588
+i is 588
+Pid is 371
+Key is 589
+i is 589
+Pid is 371
+Key is 590
+i is 590
+Pid is 371
+Key is 591
+i is 591
+Pid is 371
+Key is 592
+i is 592
+Pid is 371
+Key is 593
+i is 593
+Pid is 371
+Key is 594
+i is 594
+Pid is 371
+Key is 595
+i is 595
+Pid is 371
+Key is 596
+i is 596
+Pid is 371
+Key is 597
+i is 597
+Pid is 371
+Key is 598
+i is 598
+Pid is 371
+Key is 599
+i is 599
+Pid is 371
+Key is 600
+i is 600
+Pid is 371
+Key is 601
+i is 601
+Pid is 371
+Key is 602
+i is 602
+Pid is 371
+Key is 603
+i is 603
+Pid is 371
+Key is 604
+i is 604
+Pid is 371
+Key is 605
+i is 605
+Pid is 371
+Key is 606
+i is 606
+Pid is 371
+Key is 607
+i is 607
+Pid is 371
+Key is 608
+i is 608
+Pid is 371
+Key is 609
+i is 609
+Pid is 371
+Key is 610
+i is 610
+Pid is 371
+Key is 611
+i is 611
+Pid is 371
+Key is 612
+i is 612
+Pid is 371
+Key is 613
+i is 613
+Pid is 371
+Key is 614
+i is 614
+Pid is 371
+Key is 615
+i is 615
+Pid is 371
+Key is 616
+i is 616
+Pid is 371
+Key is 617
+i is 617
+Pid is 371
+Key is 618
+i is 618
+Pid is 371
+Key is 619
+i is 619
+Pid is 371
+Key is 620
+i is 620
+Pid is 371
+Key is 621
+i is 621
+Pid is 371
+Key is 622
+i is 622
+Pid is 371
+Key is 623
+i is 623
+Pid is 371
+Key is 624
+i is 624
+Pid is 371
+Key is 625
+i is 625
+Pid is 371
+Key is 626
+i is 626
+Pid is 371
+Key is 627
+i is 627
+Pid is 371
+Key is 628
+i is 628
+Pid is 371
+Key is 629
+i is 629
+Pid is 371
+Key is 630
+i is 630
+Pid is 371
+Key is 631
+i is 631
+Pid is 371
+Key is 632
+i is 632
+Pid is 371
+Key is 633
+i is 633
+Pid is 371
+Key is 634
+i is 634
+Pid is 371
+Key is 635
+i is 635
+Pid is 371
+Key is 636
+i is 636
+Pid is 371
+Key is 637
+i is 637
+Pid is 371
+Key is 638
+i is 638
+Pid is 371
+Key is 639
+i is 639
+Pid is 371
+Key is 640
+i is 640
+Pid is 371
+Key is 641
+i is 641
+Pid is 371
+Key is 642
+i is 642
+Pid is 371
+Key is 643
+i is 643
+Pid is 371
+Key is 644
+i is 644
+Pid is 371
+Key is 645
+i is 645
+Pid is 371
+Key is 646
+i is 646
+Pid is 371
+Key is 647
+i is 647
+Pid is 371
+Key is 648
+i is 648
+Pid is 371
+Key is 649
+i is 649
+Pid is 371
+Key is 650
+i is 650
+Pid is 371
+Key is 651
+i is 651
+Pid is 371
+Key is 652
+i is 652
+Pid is 371
+Key is 653
+i is 653
+Pid is 371
+Key is 654
+i is 654
+Pid is 371
+Key is 655
+i is 655
+Pid is 371
+Key is 656
+i is 656
+Pid is 371
+Key is 657
+i is 657
+Pid is 371
+Key is 658
+i is 658
+Pid is 371
+Key is 659
+i is 659
+Pid is 371
+Key is 660
+i is 660
+Pid is 371
+Key is 661
+i is 661
+Pid is 371
+Key is 662
+i is 662
+Pid is 371
+Key is 663
+i is 663
+Pid is 371
+Key is 664
+i is 664
+Pid is 371
+Key is 665
+i is 665
+Pid is 371
+Key is 666
+i is 666
+Pid is 371
+Key is 667
+i is 667
+Pid is 371
+Key is 668
+i is 668
+Pid is 371
+Key is 669
+i is 669
+Pid is 371
+Key is 670
+i is 670
+Pid is 371
+Going to next node!
+Key is 671
+i is 671
+Pid is 372
+My pid is 372
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 672
+buffer[2] is equal to 672
+buffer[3] is equal to 672
+buffer[4] is equal to 673
+buffer[5] is equal to 673
+buffer[6] is equal to 673
+buffer[7] is equal to 674
+buffer[8] is equal to 674
+buffer[9] is equal to 674
+buffer[10] is equal to 675
+buffer[11] is equal to 675
+buffer[12] is equal to 675
+buffer[13] is equal to 676
+buffer[14] is equal to 676
+buffer[15] is equal to 676
+buffer[16] is equal to 677
+buffer[17] is equal to 677
+buffer[18] is equal to 677
+buffer[19] is equal to 678
+buffer[20] is equal to 678
+buffer[21] is equal to 678
+buffer[22] is equal to 679
+buffer[23] is equal to 679
+buffer[24] is equal to 679
+buffer[25] is equal to 680
+buffer[26] is equal to 680
+buffer[27] is equal to 680
+buffer[28] is equal to 681
+buffer[29] is equal to 681
+buffer[30] is equal to 681
+buffer[31] is equal to 682
+buffer[32] is equal to 682
+buffer[33] is equal to 682
+buffer[34] is equal to 683
+buffer[35] is equal to 683
+buffer[36] is equal to 683
+buffer[37] is equal to 684
+buffer[38] is equal to 684
+buffer[39] is equal to 684
+buffer[40] is equal to 685
+buffer[41] is equal to 685
+buffer[42] is equal to 685
+buffer[43] is equal to 686
+buffer[44] is equal to 686
+buffer[45] is equal to 686
+buffer[46] is equal to 687
+buffer[47] is equal to 687
+buffer[48] is equal to 687
+buffer[49] is equal to 688
+buffer[50] is equal to 688
+buffer[51] is equal to 688
+buffer[52] is equal to 689
+buffer[53] is equal to 689
+buffer[54] is equal to 689
+buffer[55] is equal to 690
+buffer[56] is equal to 690
+buffer[57] is equal to 690
+buffer[58] is equal to 691
+buffer[59] is equal to 691
+buffer[60] is equal to 691
+buffer[61] is equal to 692
+buffer[62] is equal to 692
+buffer[63] is equal to 692
+buffer[64] is equal to 693
+buffer[65] is equal to 693
+buffer[66] is equal to 693
+buffer[67] is equal to 694
+buffer[68] is equal to 694
+buffer[69] is equal to 694
+buffer[70] is equal to 695
+buffer[71] is equal to 695
+buffer[72] is equal to 695
+buffer[73] is equal to 696
+buffer[74] is equal to 696
+buffer[75] is equal to 696
+buffer[76] is equal to 697
+buffer[77] is equal to 697
+buffer[78] is equal to 697
+buffer[79] is equal to 698
+buffer[80] is equal to 698
+buffer[81] is equal to 698
+buffer[82] is equal to 699
+buffer[83] is equal to 699
+buffer[84] is equal to 699
+buffer[85] is equal to 700
+buffer[86] is equal to 700
+buffer[87] is equal to 700
+buffer[88] is equal to 701
+buffer[89] is equal to 701
+buffer[90] is equal to 701
+buffer[91] is equal to 702
+buffer[92] is equal to 702
+buffer[93] is equal to 702
+buffer[94] is equal to 703
+buffer[95] is equal to 703
+buffer[96] is equal to 703
+buffer[97] is equal to 704
+buffer[98] is equal to 704
+buffer[99] is equal to 704
+buffer[100] is equal to 705
+buffer[101] is equal to 705
+buffer[102] is equal to 705
+buffer[103] is equal to 706
+buffer[104] is equal to 706
+buffer[105] is equal to 706
+buffer[106] is equal to 707
+buffer[107] is equal to 707
+buffer[108] is equal to 707
+buffer[109] is equal to 708
+buffer[110] is equal to 708
+buffer[111] is equal to 708
+buffer[112] is equal to 709
+buffer[113] is equal to 709
+buffer[114] is equal to 709
+buffer[115] is equal to 710
+buffer[116] is equal to 710
+buffer[117] is equal to 710
+buffer[118] is equal to 711
+buffer[119] is equal to 711
+buffer[120] is equal to 711
+buffer[121] is equal to 712
+buffer[122] is equal to 712
+buffer[123] is equal to 712
+buffer[124] is equal to 713
+buffer[125] is equal to 713
+buffer[126] is equal to 713
+buffer[127] is equal to 714
+buffer[128] is equal to 714
+buffer[129] is equal to 714
+buffer[130] is equal to 715
+buffer[131] is equal to 715
+buffer[132] is equal to 715
+buffer[133] is equal to 716
+buffer[134] is equal to 716
+buffer[135] is equal to 716
+buffer[136] is equal to 717
+buffer[137] is equal to 717
+buffer[138] is equal to 717
+buffer[139] is equal to 718
+buffer[140] is equal to 718
+buffer[141] is equal to 718
+buffer[142] is equal to 719
+buffer[143] is equal to 719
+buffer[144] is equal to 719
+buffer[145] is equal to 720
+buffer[146] is equal to 720
+buffer[147] is equal to 720
+buffer[148] is equal to 721
+buffer[149] is equal to 721
+buffer[150] is equal to 721
+buffer[151] is equal to 722
+buffer[152] is equal to 722
+buffer[153] is equal to 722
+buffer[154] is equal to 723
+buffer[155] is equal to 723
+buffer[156] is equal to 723
+buffer[157] is equal to 724
+buffer[158] is equal to 724
+buffer[159] is equal to 724
+buffer[160] is equal to 725
+buffer[161] is equal to 725
+buffer[162] is equal to 725
+buffer[163] is equal to 726
+buffer[164] is equal to 726
+buffer[165] is equal to 726
+buffer[166] is equal to 727
+buffer[167] is equal to 727
+buffer[168] is equal to 727
+buffer[169] is equal to 728
+buffer[170] is equal to 728
+buffer[171] is equal to 728
+buffer[172] is equal to 729
+buffer[173] is equal to 729
+buffer[174] is equal to 729
+buffer[175] is equal to 730
+buffer[176] is equal to 730
+buffer[177] is equal to 730
+buffer[178] is equal to 731
+buffer[179] is equal to 731
+buffer[180] is equal to 731
+buffer[181] is equal to 732
+buffer[182] is equal to 732
+buffer[183] is equal to 732
+buffer[184] is equal to 733
+buffer[185] is equal to 733
+buffer[186] is equal to 733
+buffer[187] is equal to 734
+buffer[188] is equal to 734
+buffer[189] is equal to 734
+buffer[190] is equal to 735
+buffer[191] is equal to 735
+buffer[192] is equal to 735
+buffer[193] is equal to 736
+buffer[194] is equal to 736
+buffer[195] is equal to 736
+buffer[196] is equal to 737
+buffer[197] is equal to 737
+buffer[198] is equal to 737
+buffer[199] is equal to 738
+buffer[200] is equal to 738
+buffer[201] is equal to 738
+buffer[202] is equal to 739
+buffer[203] is equal to 739
+buffer[204] is equal to 739
+buffer[205] is equal to 740
+buffer[206] is equal to 740
+buffer[207] is equal to 740
+buffer[208] is equal to 741
+buffer[209] is equal to 741
+buffer[210] is equal to 741
+buffer[211] is equal to 742
+buffer[212] is equal to 742
+buffer[213] is equal to 742
+buffer[214] is equal to 743
+buffer[215] is equal to 743
+buffer[216] is equal to 743
+buffer[217] is equal to 744
+buffer[218] is equal to 744
+buffer[219] is equal to 744
+buffer[220] is equal to 745
+buffer[221] is equal to 745
+buffer[222] is equal to 745
+buffer[223] is equal to 746
+buffer[224] is equal to 746
+buffer[225] is equal to 746
+buffer[226] is equal to 747
+buffer[227] is equal to 747
+buffer[228] is equal to 747
+buffer[229] is equal to 748
+buffer[230] is equal to 748
+buffer[231] is equal to 748
+buffer[232] is equal to 749
+buffer[233] is equal to 749
+buffer[234] is equal to 749
+buffer[235] is equal to 750
+buffer[236] is equal to 750
+buffer[237] is equal to 750
+buffer[238] is equal to 751
+buffer[239] is equal to 751
+buffer[240] is equal to 751
+buffer[241] is equal to 752
+buffer[242] is equal to 752
+buffer[243] is equal to 752
+buffer[244] is equal to 753
+buffer[245] is equal to 753
+buffer[246] is equal to 753
+buffer[247] is equal to 754
+buffer[248] is equal to 754
+buffer[249] is equal to 754
+buffer[250] is equal to 755
+buffer[251] is equal to 755
+buffer[252] is equal to 755
+buffer[253] is equal to 373
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 672
+i is 672
+Pid is 372
+Key is 673
+i is 673
+Pid is 372
+Key is 674
+i is 674
+Pid is 372
+Key is 675
+i is 675
+Pid is 372
+Key is 676
+i is 676
+Pid is 372
+Key is 677
+i is 677
+Pid is 372
+Key is 678
+i is 678
+Pid is 372
+Key is 679
+i is 679
+Pid is 372
+Key is 680
+i is 680
+Pid is 372
+Key is 681
+i is 681
+Pid is 372
+Key is 682
+i is 682
+Pid is 372
+Key is 683
+i is 683
+Pid is 372
+Key is 684
+i is 684
+Pid is 372
+Key is 685
+i is 685
+Pid is 372
+Key is 686
+i is 686
+Pid is 372
+Key is 687
+i is 687
+Pid is 372
+Key is 688
+i is 688
+Pid is 372
+Key is 689
+i is 689
+Pid is 372
+Key is 690
+i is 690
+Pid is 372
+Key is 691
+i is 691
+Pid is 372
+Key is 692
+i is 692
+Pid is 372
+Key is 693
+i is 693
+Pid is 372
+Key is 694
+i is 694
+Pid is 372
+Key is 695
+i is 695
+Pid is 372
+Key is 696
+i is 696
+Pid is 372
+Key is 697
+i is 697
+Pid is 372
+Key is 698
+i is 698
+Pid is 372
+Key is 699
+i is 699
+Pid is 372
+Key is 700
+i is 700
+Pid is 372
+Key is 701
+i is 701
+Pid is 372
+Key is 702
+i is 702
+Pid is 372
+Key is 703
+i is 703
+Pid is 372
+Key is 704
+i is 704
+Pid is 372
+Key is 705
+i is 705
+Pid is 372
+Key is 706
+i is 706
+Pid is 372
+Key is 707
+i is 707
+Pid is 372
+Key is 708
+i is 708
+Pid is 372
+Key is 709
+i is 709
+Pid is 372
+Key is 710
+i is 710
+Pid is 372
+Key is 711
+i is 711
+Pid is 372
+Key is 712
+i is 712
+Pid is 372
+Key is 713
+i is 713
+Pid is 372
+Key is 714
+i is 714
+Pid is 372
+Key is 715
+i is 715
+Pid is 372
+Key is 716
+i is 716
+Pid is 372
+Key is 717
+i is 717
+Pid is 372
+Key is 718
+i is 718
+Pid is 372
+Key is 719
+i is 719
+Pid is 372
+Key is 720
+i is 720
+Pid is 372
+Key is 721
+i is 721
+Pid is 372
+Key is 722
+i is 722
+Pid is 372
+Key is 723
+i is 723
+Pid is 372
+Key is 724
+i is 724
+Pid is 372
+Key is 725
+i is 725
+Pid is 372
+Key is 726
+i is 726
+Pid is 372
+Key is 727
+i is 727
+Pid is 372
+Key is 728
+i is 728
+Pid is 372
+Key is 729
+i is 729
+Pid is 372
+Key is 730
+i is 730
+Pid is 372
+Key is 731
+i is 731
+Pid is 372
+Key is 732
+i is 732
+Pid is 372
+Key is 733
+i is 733
+Pid is 372
+Key is 734
+i is 734
+Pid is 372
+Key is 735
+i is 735
+Pid is 372
+Key is 736
+i is 736
+Pid is 372
+Key is 737
+i is 737
+Pid is 372
+Key is 738
+i is 738
+Pid is 372
+Key is 739
+i is 739
+Pid is 372
+Key is 740
+i is 740
+Pid is 372
+Key is 741
+i is 741
+Pid is 372
+Key is 742
+i is 742
+Pid is 372
+Key is 743
+i is 743
+Pid is 372
+Key is 744
+i is 744
+Pid is 372
+Key is 745
+i is 745
+Pid is 372
+Key is 746
+i is 746
+Pid is 372
+Key is 747
+i is 747
+Pid is 372
+Key is 748
+i is 748
+Pid is 372
+Key is 749
+i is 749
+Pid is 372
+Key is 750
+i is 750
+Pid is 372
+Key is 751
+i is 751
+Pid is 372
+Key is 752
+i is 752
+Pid is 372
+Key is 753
+i is 753
+Pid is 372
+Key is 754
+i is 754
+Pid is 372
+Going to next node!
+Key is 755
+i is 755
+Pid is 373
+My pid is 373
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 756
+buffer[2] is equal to 756
+buffer[3] is equal to 756
+buffer[4] is equal to 757
+buffer[5] is equal to 757
+buffer[6] is equal to 757
+buffer[7] is equal to 758
+buffer[8] is equal to 758
+buffer[9] is equal to 758
+buffer[10] is equal to 759
+buffer[11] is equal to 759
+buffer[12] is equal to 759
+buffer[13] is equal to 760
+buffer[14] is equal to 760
+buffer[15] is equal to 760
+buffer[16] is equal to 761
+buffer[17] is equal to 761
+buffer[18] is equal to 761
+buffer[19] is equal to 762
+buffer[20] is equal to 762
+buffer[21] is equal to 762
+buffer[22] is equal to 763
+buffer[23] is equal to 763
+buffer[24] is equal to 763
+buffer[25] is equal to 764
+buffer[26] is equal to 764
+buffer[27] is equal to 764
+buffer[28] is equal to 765
+buffer[29] is equal to 765
+buffer[30] is equal to 765
+buffer[31] is equal to 766
+buffer[32] is equal to 766
+buffer[33] is equal to 766
+buffer[34] is equal to 767
+buffer[35] is equal to 767
+buffer[36] is equal to 767
+buffer[37] is equal to 768
+buffer[38] is equal to 768
+buffer[39] is equal to 768
+buffer[40] is equal to 769
+buffer[41] is equal to 769
+buffer[42] is equal to 769
+buffer[43] is equal to 770
+buffer[44] is equal to 770
+buffer[45] is equal to 770
+buffer[46] is equal to 771
+buffer[47] is equal to 771
+buffer[48] is equal to 771
+buffer[49] is equal to 772
+buffer[50] is equal to 772
+buffer[51] is equal to 772
+buffer[52] is equal to 773
+buffer[53] is equal to 773
+buffer[54] is equal to 773
+buffer[55] is equal to 774
+buffer[56] is equal to 774
+buffer[57] is equal to 774
+buffer[58] is equal to 775
+buffer[59] is equal to 775
+buffer[60] is equal to 775
+buffer[61] is equal to 776
+buffer[62] is equal to 776
+buffer[63] is equal to 776
+buffer[64] is equal to 777
+buffer[65] is equal to 777
+buffer[66] is equal to 777
+buffer[67] is equal to 778
+buffer[68] is equal to 778
+buffer[69] is equal to 778
+buffer[70] is equal to 779
+buffer[71] is equal to 779
+buffer[72] is equal to 779
+buffer[73] is equal to 780
+buffer[74] is equal to 780
+buffer[75] is equal to 780
+buffer[76] is equal to 781
+buffer[77] is equal to 781
+buffer[78] is equal to 781
+buffer[79] is equal to 782
+buffer[80] is equal to 782
+buffer[81] is equal to 782
+buffer[82] is equal to 783
+buffer[83] is equal to 783
+buffer[84] is equal to 783
+buffer[85] is equal to 784
+buffer[86] is equal to 784
+buffer[87] is equal to 784
+buffer[88] is equal to 785
+buffer[89] is equal to 785
+buffer[90] is equal to 785
+buffer[91] is equal to 786
+buffer[92] is equal to 786
+buffer[93] is equal to 786
+buffer[94] is equal to 787
+buffer[95] is equal to 787
+buffer[96] is equal to 787
+buffer[97] is equal to 788
+buffer[98] is equal to 788
+buffer[99] is equal to 788
+buffer[100] is equal to 789
+buffer[101] is equal to 789
+buffer[102] is equal to 789
+buffer[103] is equal to 790
+buffer[104] is equal to 790
+buffer[105] is equal to 790
+buffer[106] is equal to 791
+buffer[107] is equal to 791
+buffer[108] is equal to 791
+buffer[109] is equal to 792
+buffer[110] is equal to 792
+buffer[111] is equal to 792
+buffer[112] is equal to 793
+buffer[113] is equal to 793
+buffer[114] is equal to 793
+buffer[115] is equal to 794
+buffer[116] is equal to 794
+buffer[117] is equal to 794
+buffer[118] is equal to 795
+buffer[119] is equal to 795
+buffer[120] is equal to 795
+buffer[121] is equal to 796
+buffer[122] is equal to 796
+buffer[123] is equal to 796
+buffer[124] is equal to 797
+buffer[125] is equal to 797
+buffer[126] is equal to 797
+buffer[127] is equal to 798
+buffer[128] is equal to 798
+buffer[129] is equal to 798
+buffer[130] is equal to 799
+buffer[131] is equal to 799
+buffer[132] is equal to 799
+buffer[133] is equal to 800
+buffer[134] is equal to 800
+buffer[135] is equal to 800
+buffer[136] is equal to 801
+buffer[137] is equal to 801
+buffer[138] is equal to 801
+buffer[139] is equal to 802
+buffer[140] is equal to 802
+buffer[141] is equal to 802
+buffer[142] is equal to 803
+buffer[143] is equal to 803
+buffer[144] is equal to 803
+buffer[145] is equal to 804
+buffer[146] is equal to 804
+buffer[147] is equal to 804
+buffer[148] is equal to 805
+buffer[149] is equal to 805
+buffer[150] is equal to 805
+buffer[151] is equal to 806
+buffer[152] is equal to 806
+buffer[153] is equal to 806
+buffer[154] is equal to 807
+buffer[155] is equal to 807
+buffer[156] is equal to 807
+buffer[157] is equal to 808
+buffer[158] is equal to 808
+buffer[159] is equal to 808
+buffer[160] is equal to 809
+buffer[161] is equal to 809
+buffer[162] is equal to 809
+buffer[163] is equal to 810
+buffer[164] is equal to 810
+buffer[165] is equal to 810
+buffer[166] is equal to 811
+buffer[167] is equal to 811
+buffer[168] is equal to 811
+buffer[169] is equal to 812
+buffer[170] is equal to 812
+buffer[171] is equal to 812
+buffer[172] is equal to 813
+buffer[173] is equal to 813
+buffer[174] is equal to 813
+buffer[175] is equal to 814
+buffer[176] is equal to 814
+buffer[177] is equal to 814
+buffer[178] is equal to 815
+buffer[179] is equal to 815
+buffer[180] is equal to 815
+buffer[181] is equal to 816
+buffer[182] is equal to 816
+buffer[183] is equal to 816
+buffer[184] is equal to 817
+buffer[185] is equal to 817
+buffer[186] is equal to 817
+buffer[187] is equal to 818
+buffer[188] is equal to 818
+buffer[189] is equal to 818
+buffer[190] is equal to 819
+buffer[191] is equal to 819
+buffer[192] is equal to 819
+buffer[193] is equal to 820
+buffer[194] is equal to 820
+buffer[195] is equal to 820
+buffer[196] is equal to 821
+buffer[197] is equal to 821
+buffer[198] is equal to 821
+buffer[199] is equal to 822
+buffer[200] is equal to 822
+buffer[201] is equal to 822
+buffer[202] is equal to 823
+buffer[203] is equal to 823
+buffer[204] is equal to 823
+buffer[205] is equal to 824
+buffer[206] is equal to 824
+buffer[207] is equal to 824
+buffer[208] is equal to 825
+buffer[209] is equal to 825
+buffer[210] is equal to 825
+buffer[211] is equal to 826
+buffer[212] is equal to 826
+buffer[213] is equal to 826
+buffer[214] is equal to 827
+buffer[215] is equal to 827
+buffer[216] is equal to 827
+buffer[217] is equal to 828
+buffer[218] is equal to 828
+buffer[219] is equal to 828
+buffer[220] is equal to 829
+buffer[221] is equal to 829
+buffer[222] is equal to 829
+buffer[223] is equal to 830
+buffer[224] is equal to 830
+buffer[225] is equal to 830
+buffer[226] is equal to 831
+buffer[227] is equal to 831
+buffer[228] is equal to 831
+buffer[229] is equal to 832
+buffer[230] is equal to 832
+buffer[231] is equal to 832
+buffer[232] is equal to 833
+buffer[233] is equal to 833
+buffer[234] is equal to 833
+buffer[235] is equal to 834
+buffer[236] is equal to 834
+buffer[237] is equal to 834
+buffer[238] is equal to 835
+buffer[239] is equal to 835
+buffer[240] is equal to 835
+buffer[241] is equal to 836
+buffer[242] is equal to 836
+buffer[243] is equal to 836
+buffer[244] is equal to 837
+buffer[245] is equal to 837
+buffer[246] is equal to 837
+buffer[247] is equal to 838
+buffer[248] is equal to 838
+buffer[249] is equal to 838
+buffer[250] is equal to 839
+buffer[251] is equal to 839
+buffer[252] is equal to 839
+buffer[253] is equal to 374
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 756
+i is 756
+Pid is 373
+Key is 757
+i is 757
+Pid is 373
+Key is 758
+i is 758
+Pid is 373
+Key is 759
+i is 759
+Pid is 373
+Key is 760
+i is 760
+Pid is 373
+Key is 761
+i is 761
+Pid is 373
+Key is 762
+i is 762
+Pid is 373
+Key is 763
+i is 763
+Pid is 373
+Key is 764
+i is 764
+Pid is 373
+Key is 765
+i is 765
+Pid is 373
+Key is 766
+i is 766
+Pid is 373
+Key is 767
+i is 767
+Pid is 373
+Key is 768
+i is 768
+Pid is 373
+Key is 769
+i is 769
+Pid is 373
+Key is 770
+i is 770
+Pid is 373
+Key is 771
+i is 771
+Pid is 373
+Key is 772
+i is 772
+Pid is 373
+Key is 773
+i is 773
+Pid is 373
+Key is 774
+i is 774
+Pid is 373
+Key is 775
+i is 775
+Pid is 373
+Key is 776
+i is 776
+Pid is 373
+Key is 777
+i is 777
+Pid is 373
+Key is 778
+i is 778
+Pid is 373
+Key is 779
+i is 779
+Pid is 373
+Key is 780
+i is 780
+Pid is 373
+Key is 781
+i is 781
+Pid is 373
+Key is 782
+i is 782
+Pid is 373
+Key is 783
+i is 783
+Pid is 373
+Key is 784
+i is 784
+Pid is 373
+Key is 785
+i is 785
+Pid is 373
+Key is 786
+i is 786
+Pid is 373
+Key is 787
+i is 787
+Pid is 373
+Key is 788
+i is 788
+Pid is 373
+Key is 789
+i is 789
+Pid is 373
+Key is 790
+i is 790
+Pid is 373
+Key is 791
+i is 791
+Pid is 373
+Key is 792
+i is 792
+Pid is 373
+Key is 793
+i is 793
+Pid is 373
+Key is 794
+i is 794
+Pid is 373
+Key is 795
+i is 795
+Pid is 373
+Key is 796
+i is 796
+Pid is 373
+Key is 797
+i is 797
+Pid is 373
+Key is 798
+i is 798
+Pid is 373
+Key is 799
+i is 799
+Pid is 373
+Key is 800
+i is 800
+Pid is 373
+Key is 801
+i is 801
+Pid is 373
+Key is 802
+i is 802
+Pid is 373
+Key is 803
+i is 803
+Pid is 373
+Key is 804
+i is 804
+Pid is 373
+Key is 805
+i is 805
+Pid is 373
+Key is 806
+i is 806
+Pid is 373
+Key is 807
+i is 807
+Pid is 373
+Key is 808
+i is 808
+Pid is 373
+Key is 809
+i is 809
+Pid is 373
+Key is 810
+i is 810
+Pid is 373
+Key is 811
+i is 811
+Pid is 373
+Key is 812
+i is 812
+Pid is 373
+Key is 813
+i is 813
+Pid is 373
+Key is 814
+i is 814
+Pid is 373
+Key is 815
+i is 815
+Pid is 373
+Key is 816
+i is 816
+Pid is 373
+Key is 817
+i is 817
+Pid is 373
+Key is 818
+i is 818
+Pid is 373
+Key is 819
+i is 819
+Pid is 373
+Key is 820
+i is 820
+Pid is 373
+Key is 821
+i is 821
+Pid is 373
+Key is 822
+i is 822
+Pid is 373
+Key is 823
+i is 823
+Pid is 373
+Key is 824
+i is 824
+Pid is 373
+Key is 825
+i is 825
+Pid is 373
+Key is 826
+i is 826
+Pid is 373
+Key is 827
+i is 827
+Pid is 373
+Key is 828
+i is 828
+Pid is 373
+Key is 829
+i is 829
+Pid is 373
+Key is 830
+i is 830
+Pid is 373
+Key is 831
+i is 831
+Pid is 373
+Key is 832
+i is 832
+Pid is 373
+Key is 833
+i is 833
+Pid is 373
+Key is 834
+i is 834
+Pid is 373
+Key is 835
+i is 835
+Pid is 373
+Key is 836
+i is 836
+Pid is 373
+Key is 837
+i is 837
+Pid is 373
+Key is 838
+i is 838
+Pid is 373
+Going to next node!
+Key is 839
+i is 839
+Pid is 374
+My pid is 374
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 840
+buffer[2] is equal to 840
+buffer[3] is equal to 840
+buffer[4] is equal to 841
+buffer[5] is equal to 841
+buffer[6] is equal to 841
+buffer[7] is equal to 842
+buffer[8] is equal to 842
+buffer[9] is equal to 842
+buffer[10] is equal to 843
+buffer[11] is equal to 843
+buffer[12] is equal to 843
+buffer[13] is equal to 844
+buffer[14] is equal to 844
+buffer[15] is equal to 844
+buffer[16] is equal to 845
+buffer[17] is equal to 845
+buffer[18] is equal to 845
+buffer[19] is equal to 846
+buffer[20] is equal to 846
+buffer[21] is equal to 846
+buffer[22] is equal to 847
+buffer[23] is equal to 847
+buffer[24] is equal to 847
+buffer[25] is equal to 848
+buffer[26] is equal to 848
+buffer[27] is equal to 848
+buffer[28] is equal to 849
+buffer[29] is equal to 849
+buffer[30] is equal to 849
+buffer[31] is equal to 850
+buffer[32] is equal to 850
+buffer[33] is equal to 850
+buffer[34] is equal to 851
+buffer[35] is equal to 851
+buffer[36] is equal to 851
+buffer[37] is equal to 852
+buffer[38] is equal to 852
+buffer[39] is equal to 852
+buffer[40] is equal to 853
+buffer[41] is equal to 853
+buffer[42] is equal to 853
+buffer[43] is equal to 854
+buffer[44] is equal to 854
+buffer[45] is equal to 854
+buffer[46] is equal to 855
+buffer[47] is equal to 855
+buffer[48] is equal to 855
+buffer[49] is equal to 856
+buffer[50] is equal to 856
+buffer[51] is equal to 856
+buffer[52] is equal to 857
+buffer[53] is equal to 857
+buffer[54] is equal to 857
+buffer[55] is equal to 858
+buffer[56] is equal to 858
+buffer[57] is equal to 858
+buffer[58] is equal to 859
+buffer[59] is equal to 859
+buffer[60] is equal to 859
+buffer[61] is equal to 860
+buffer[62] is equal to 860
+buffer[63] is equal to 860
+buffer[64] is equal to 861
+buffer[65] is equal to 861
+buffer[66] is equal to 861
+buffer[67] is equal to 862
+buffer[68] is equal to 862
+buffer[69] is equal to 862
+buffer[70] is equal to 863
+buffer[71] is equal to 863
+buffer[72] is equal to 863
+buffer[73] is equal to 864
+buffer[74] is equal to 864
+buffer[75] is equal to 864
+buffer[76] is equal to 865
+buffer[77] is equal to 865
+buffer[78] is equal to 865
+buffer[79] is equal to 866
+buffer[80] is equal to 866
+buffer[81] is equal to 866
+buffer[82] is equal to 867
+buffer[83] is equal to 867
+buffer[84] is equal to 867
+buffer[85] is equal to 868
+buffer[86] is equal to 868
+buffer[87] is equal to 868
+buffer[88] is equal to 869
+buffer[89] is equal to 869
+buffer[90] is equal to 869
+buffer[91] is equal to 870
+buffer[92] is equal to 870
+buffer[93] is equal to 870
+buffer[94] is equal to 871
+buffer[95] is equal to 871
+buffer[96] is equal to 871
+buffer[97] is equal to 872
+buffer[98] is equal to 872
+buffer[99] is equal to 872
+buffer[100] is equal to 873
+buffer[101] is equal to 873
+buffer[102] is equal to 873
+buffer[103] is equal to 874
+buffer[104] is equal to 874
+buffer[105] is equal to 874
+buffer[106] is equal to 875
+buffer[107] is equal to 875
+buffer[108] is equal to 875
+buffer[109] is equal to 876
+buffer[110] is equal to 876
+buffer[111] is equal to 876
+buffer[112] is equal to 877
+buffer[113] is equal to 877
+buffer[114] is equal to 877
+buffer[115] is equal to 878
+buffer[116] is equal to 878
+buffer[117] is equal to 878
+buffer[118] is equal to 879
+buffer[119] is equal to 879
+buffer[120] is equal to 879
+buffer[121] is equal to 880
+buffer[122] is equal to 880
+buffer[123] is equal to 880
+buffer[124] is equal to 881
+buffer[125] is equal to 881
+buffer[126] is equal to 881
+buffer[127] is equal to 882
+buffer[128] is equal to 882
+buffer[129] is equal to 882
+buffer[130] is equal to 883
+buffer[131] is equal to 883
+buffer[132] is equal to 883
+buffer[133] is equal to 884
+buffer[134] is equal to 884
+buffer[135] is equal to 884
+buffer[136] is equal to 885
+buffer[137] is equal to 885
+buffer[138] is equal to 885
+buffer[139] is equal to 886
+buffer[140] is equal to 886
+buffer[141] is equal to 886
+buffer[142] is equal to 887
+buffer[143] is equal to 887
+buffer[144] is equal to 887
+buffer[145] is equal to 888
+buffer[146] is equal to 888
+buffer[147] is equal to 888
+buffer[148] is equal to 889
+buffer[149] is equal to 889
+buffer[150] is equal to 889
+buffer[151] is equal to 890
+buffer[152] is equal to 890
+buffer[153] is equal to 890
+buffer[154] is equal to 891
+buffer[155] is equal to 891
+buffer[156] is equal to 891
+buffer[157] is equal to 892
+buffer[158] is equal to 892
+buffer[159] is equal to 892
+buffer[160] is equal to 893
+buffer[161] is equal to 893
+buffer[162] is equal to 893
+buffer[163] is equal to 894
+buffer[164] is equal to 894
+buffer[165] is equal to 894
+buffer[166] is equal to 895
+buffer[167] is equal to 895
+buffer[168] is equal to 895
+buffer[169] is equal to 896
+buffer[170] is equal to 896
+buffer[171] is equal to 896
+buffer[172] is equal to 897
+buffer[173] is equal to 897
+buffer[174] is equal to 897
+buffer[175] is equal to 898
+buffer[176] is equal to 898
+buffer[177] is equal to 898
+buffer[178] is equal to 899
+buffer[179] is equal to 899
+buffer[180] is equal to 899
+buffer[181] is equal to 900
+buffer[182] is equal to 900
+buffer[183] is equal to 900
+buffer[184] is equal to 901
+buffer[185] is equal to 901
+buffer[186] is equal to 901
+buffer[187] is equal to 902
+buffer[188] is equal to 902
+buffer[189] is equal to 902
+buffer[190] is equal to 903
+buffer[191] is equal to 903
+buffer[192] is equal to 903
+buffer[193] is equal to 904
+buffer[194] is equal to 904
+buffer[195] is equal to 904
+buffer[196] is equal to 905
+buffer[197] is equal to 905
+buffer[198] is equal to 905
+buffer[199] is equal to 906
+buffer[200] is equal to 906
+buffer[201] is equal to 906
+buffer[202] is equal to 907
+buffer[203] is equal to 907
+buffer[204] is equal to 907
+buffer[205] is equal to 908
+buffer[206] is equal to 908
+buffer[207] is equal to 908
+buffer[208] is equal to 909
+buffer[209] is equal to 909
+buffer[210] is equal to 909
+buffer[211] is equal to 910
+buffer[212] is equal to 910
+buffer[213] is equal to 910
+buffer[214] is equal to 911
+buffer[215] is equal to 911
+buffer[216] is equal to 911
+buffer[217] is equal to 912
+buffer[218] is equal to 912
+buffer[219] is equal to 912
+buffer[220] is equal to 913
+buffer[221] is equal to 913
+buffer[222] is equal to 913
+buffer[223] is equal to 914
+buffer[224] is equal to 914
+buffer[225] is equal to 914
+buffer[226] is equal to 915
+buffer[227] is equal to 915
+buffer[228] is equal to 915
+buffer[229] is equal to 916
+buffer[230] is equal to 916
+buffer[231] is equal to 916
+buffer[232] is equal to 917
+buffer[233] is equal to 917
+buffer[234] is equal to 917
+buffer[235] is equal to 918
+buffer[236] is equal to 918
+buffer[237] is equal to 918
+buffer[238] is equal to 919
+buffer[239] is equal to 919
+buffer[240] is equal to 919
+buffer[241] is equal to 920
+buffer[242] is equal to 920
+buffer[243] is equal to 920
+buffer[244] is equal to 921
+buffer[245] is equal to 921
+buffer[246] is equal to 921
+buffer[247] is equal to 922
+buffer[248] is equal to 922
+buffer[249] is equal to 922
+buffer[250] is equal to 923
+buffer[251] is equal to 923
+buffer[252] is equal to 923
+buffer[253] is equal to 375
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 840
+i is 840
+Pid is 374
+Key is 841
+i is 841
+Pid is 374
+Key is 842
+i is 842
+Pid is 374
+Key is 843
+i is 843
+Pid is 374
+Key is 844
+i is 844
+Pid is 374
+Key is 845
+i is 845
+Pid is 374
+Key is 846
+i is 846
+Pid is 374
+Key is 847
+i is 847
+Pid is 374
+Key is 848
+i is 848
+Pid is 374
+Key is 849
+i is 849
+Pid is 374
+Key is 850
+i is 850
+Pid is 374
+Key is 851
+i is 851
+Pid is 374
+Key is 852
+i is 852
+Pid is 374
+Key is 853
+i is 853
+Pid is 374
+Key is 854
+i is 854
+Pid is 374
+Key is 855
+i is 855
+Pid is 374
+Key is 856
+i is 856
+Pid is 374
+Key is 857
+i is 857
+Pid is 374
+Key is 858
+i is 858
+Pid is 374
+Key is 859
+i is 859
+Pid is 374
+Key is 860
+i is 860
+Pid is 374
+Key is 861
+i is 861
+Pid is 374
+Key is 862
+i is 862
+Pid is 374
+Key is 863
+i is 863
+Pid is 374
+Key is 864
+i is 864
+Pid is 374
+Key is 865
+i is 865
+Pid is 374
+Key is 866
+i is 866
+Pid is 374
+Key is 867
+i is 867
+Pid is 374
+Key is 868
+i is 868
+Pid is 374
+Key is 869
+i is 869
+Pid is 374
+Key is 870
+i is 870
+Pid is 374
+Key is 871
+i is 871
+Pid is 374
+Key is 872
+i is 872
+Pid is 374
+Key is 873
+i is 873
+Pid is 374
+Key is 874
+i is 874
+Pid is 374
+Key is 875
+i is 875
+Pid is 374
+Key is 876
+i is 876
+Pid is 374
+Key is 877
+i is 877
+Pid is 374
+Key is 878
+i is 878
+Pid is 374
+Key is 879
+i is 879
+Pid is 374
+Key is 880
+i is 880
+Pid is 374
+Key is 881
+i is 881
+Pid is 374
+Key is 882
+i is 882
+Pid is 374
+Key is 883
+i is 883
+Pid is 374
+Key is 884
+i is 884
+Pid is 374
+Key is 885
+i is 885
+Pid is 374
+Key is 886
+i is 886
+Pid is 374
+Key is 887
+i is 887
+Pid is 374
+Key is 888
+i is 888
+Pid is 374
+Key is 889
+i is 889
+Pid is 374
+Key is 890
+i is 890
+Pid is 374
+Key is 891
+i is 891
+Pid is 374
+Key is 892
+i is 892
+Pid is 374
+Key is 893
+i is 893
+Pid is 374
+Key is 894
+i is 894
+Pid is 374
+Key is 895
+i is 895
+Pid is 374
+Key is 896
+i is 896
+Pid is 374
+Key is 897
+i is 897
+Pid is 374
+Key is 898
+i is 898
+Pid is 374
+Key is 899
+i is 899
+Pid is 374
+Key is 900
+i is 900
+Pid is 374
+Key is 901
+i is 901
+Pid is 374
+Key is 902
+i is 902
+Pid is 374
+Key is 903
+i is 903
+Pid is 374
+Key is 904
+i is 904
+Pid is 374
+Key is 905
+i is 905
+Pid is 374
+Key is 906
+i is 906
+Pid is 374
+Key is 907
+i is 907
+Pid is 374
+Key is 908
+i is 908
+Pid is 374
+Key is 909
+i is 909
+Pid is 374
+Key is 910
+i is 910
+Pid is 374
+Key is 911
+i is 911
+Pid is 374
+Key is 912
+i is 912
+Pid is 374
+Key is 913
+i is 913
+Pid is 374
+Key is 914
+i is 914
+Pid is 374
+Key is 915
+i is 915
+Pid is 374
+Key is 916
+i is 916
+Pid is 374
+Key is 917
+i is 917
+Pid is 374
+Key is 918
+i is 918
+Pid is 374
+Key is 919
+i is 919
+Pid is 374
+Key is 920
+i is 920
+Pid is 374
+Key is 921
+i is 921
+Pid is 374
+Key is 922
+i is 922
+Pid is 374
+Going to next node!
+Key is 923
+i is 923
+Pid is 375
+My pid is 375
+My key count is 84
+Print Buffer ===================================
+buffer[0] is equal to 84
+buffer[1] is equal to 924
+buffer[2] is equal to 924
+buffer[3] is equal to 924
+buffer[4] is equal to 925
+buffer[5] is equal to 925
+buffer[6] is equal to 925
+buffer[7] is equal to 926
+buffer[8] is equal to 926
+buffer[9] is equal to 926
+buffer[10] is equal to 927
+buffer[11] is equal to 927
+buffer[12] is equal to 927
+buffer[13] is equal to 928
+buffer[14] is equal to 928
+buffer[15] is equal to 928
+buffer[16] is equal to 929
+buffer[17] is equal to 929
+buffer[18] is equal to 929
+buffer[19] is equal to 930
+buffer[20] is equal to 930
+buffer[21] is equal to 930
+buffer[22] is equal to 931
+buffer[23] is equal to 931
+buffer[24] is equal to 931
+buffer[25] is equal to 932
+buffer[26] is equal to 932
+buffer[27] is equal to 932
+buffer[28] is equal to 933
+buffer[29] is equal to 933
+buffer[30] is equal to 933
+buffer[31] is equal to 934
+buffer[32] is equal to 934
+buffer[33] is equal to 934
+buffer[34] is equal to 935
+buffer[35] is equal to 935
+buffer[36] is equal to 935
+buffer[37] is equal to 936
+buffer[38] is equal to 936
+buffer[39] is equal to 936
+buffer[40] is equal to 937
+buffer[41] is equal to 937
+buffer[42] is equal to 937
+buffer[43] is equal to 938
+buffer[44] is equal to 938
+buffer[45] is equal to 938
+buffer[46] is equal to 939
+buffer[47] is equal to 939
+buffer[48] is equal to 939
+buffer[49] is equal to 940
+buffer[50] is equal to 940
+buffer[51] is equal to 940
+buffer[52] is equal to 941
+buffer[53] is equal to 941
+buffer[54] is equal to 941
+buffer[55] is equal to 942
+buffer[56] is equal to 942
+buffer[57] is equal to 942
+buffer[58] is equal to 943
+buffer[59] is equal to 943
+buffer[60] is equal to 943
+buffer[61] is equal to 944
+buffer[62] is equal to 944
+buffer[63] is equal to 944
+buffer[64] is equal to 945
+buffer[65] is equal to 945
+buffer[66] is equal to 945
+buffer[67] is equal to 946
+buffer[68] is equal to 946
+buffer[69] is equal to 946
+buffer[70] is equal to 947
+buffer[71] is equal to 947
+buffer[72] is equal to 947
+buffer[73] is equal to 948
+buffer[74] is equal to 948
+buffer[75] is equal to 948
+buffer[76] is equal to 949
+buffer[77] is equal to 949
+buffer[78] is equal to 949
+buffer[79] is equal to 950
+buffer[80] is equal to 950
+buffer[81] is equal to 950
+buffer[82] is equal to 951
+buffer[83] is equal to 951
+buffer[84] is equal to 951
+buffer[85] is equal to 952
+buffer[86] is equal to 952
+buffer[87] is equal to 952
+buffer[88] is equal to 953
+buffer[89] is equal to 953
+buffer[90] is equal to 953
+buffer[91] is equal to 954
+buffer[92] is equal to 954
+buffer[93] is equal to 954
+buffer[94] is equal to 955
+buffer[95] is equal to 955
+buffer[96] is equal to 955
+buffer[97] is equal to 956
+buffer[98] is equal to 956
+buffer[99] is equal to 956
+buffer[100] is equal to 957
+buffer[101] is equal to 957
+buffer[102] is equal to 957
+buffer[103] is equal to 958
+buffer[104] is equal to 958
+buffer[105] is equal to 958
+buffer[106] is equal to 959
+buffer[107] is equal to 959
+buffer[108] is equal to 959
+buffer[109] is equal to 960
+buffer[110] is equal to 960
+buffer[111] is equal to 960
+buffer[112] is equal to 961
+buffer[113] is equal to 961
+buffer[114] is equal to 961
+buffer[115] is equal to 962
+buffer[116] is equal to 962
+buffer[117] is equal to 962
+buffer[118] is equal to 963
+buffer[119] is equal to 963
+buffer[120] is equal to 963
+buffer[121] is equal to 964
+buffer[122] is equal to 964
+buffer[123] is equal to 964
+buffer[124] is equal to 965
+buffer[125] is equal to 965
+buffer[126] is equal to 965
+buffer[127] is equal to 966
+buffer[128] is equal to 966
+buffer[129] is equal to 966
+buffer[130] is equal to 967
+buffer[131] is equal to 967
+buffer[132] is equal to 967
+buffer[133] is equal to 968
+buffer[134] is equal to 968
+buffer[135] is equal to 968
+buffer[136] is equal to 969
+buffer[137] is equal to 969
+buffer[138] is equal to 969
+buffer[139] is equal to 970
+buffer[140] is equal to 970
+buffer[141] is equal to 970
+buffer[142] is equal to 971
+buffer[143] is equal to 971
+buffer[144] is equal to 971
+buffer[145] is equal to 972
+buffer[146] is equal to 972
+buffer[147] is equal to 972
+buffer[148] is equal to 973
+buffer[149] is equal to 973
+buffer[150] is equal to 973
+buffer[151] is equal to 974
+buffer[152] is equal to 974
+buffer[153] is equal to 974
+buffer[154] is equal to 975
+buffer[155] is equal to 975
+buffer[156] is equal to 975
+buffer[157] is equal to 976
+buffer[158] is equal to 976
+buffer[159] is equal to 976
+buffer[160] is equal to 977
+buffer[161] is equal to 977
+buffer[162] is equal to 977
+buffer[163] is equal to 978
+buffer[164] is equal to 978
+buffer[165] is equal to 978
+buffer[166] is equal to 979
+buffer[167] is equal to 979
+buffer[168] is equal to 979
+buffer[169] is equal to 980
+buffer[170] is equal to 980
+buffer[171] is equal to 980
+buffer[172] is equal to 981
+buffer[173] is equal to 981
+buffer[174] is equal to 981
+buffer[175] is equal to 982
+buffer[176] is equal to 982
+buffer[177] is equal to 982
+buffer[178] is equal to 983
+buffer[179] is equal to 983
+buffer[180] is equal to 983
+buffer[181] is equal to 984
+buffer[182] is equal to 984
+buffer[183] is equal to 984
+buffer[184] is equal to 985
+buffer[185] is equal to 985
+buffer[186] is equal to 985
+buffer[187] is equal to 986
+buffer[188] is equal to 986
+buffer[189] is equal to 986
+buffer[190] is equal to 987
+buffer[191] is equal to 987
+buffer[192] is equal to 987
+buffer[193] is equal to 988
+buffer[194] is equal to 988
+buffer[195] is equal to 988
+buffer[196] is equal to 989
+buffer[197] is equal to 989
+buffer[198] is equal to 989
+buffer[199] is equal to 990
+buffer[200] is equal to 990
+buffer[201] is equal to 990
+buffer[202] is equal to 991
+buffer[203] is equal to 991
+buffer[204] is equal to 991
+buffer[205] is equal to 992
+buffer[206] is equal to 992
+buffer[207] is equal to 992
+buffer[208] is equal to 993
+buffer[209] is equal to 993
+buffer[210] is equal to 993
+buffer[211] is equal to 994
+buffer[212] is equal to 994
+buffer[213] is equal to 994
+buffer[214] is equal to 995
+buffer[215] is equal to 995
+buffer[216] is equal to 995
+buffer[217] is equal to 996
+buffer[218] is equal to 996
+buffer[219] is equal to 996
+buffer[220] is equal to 997
+buffer[221] is equal to 997
+buffer[222] is equal to 997
+buffer[223] is equal to 998
+buffer[224] is equal to 998
+buffer[225] is equal to 998
+buffer[226] is equal to 999
+buffer[227] is equal to 999
+buffer[228] is equal to 999
+buffer[229] is equal to 1000
+buffer[230] is equal to 1000
+buffer[231] is equal to 1000
+buffer[232] is equal to 1001
+buffer[233] is equal to 1001
+buffer[234] is equal to 1001
+buffer[235] is equal to 1002
+buffer[236] is equal to 1002
+buffer[237] is equal to 1002
+buffer[238] is equal to 1003
+buffer[239] is equal to 1003
+buffer[240] is equal to 1003
+buffer[241] is equal to 1004
+buffer[242] is equal to 1004
+buffer[243] is equal to 1004
+buffer[244] is equal to 1005
+buffer[245] is equal to 1005
+buffer[246] is equal to 1005
+buffer[247] is equal to 1006
+buffer[248] is equal to 1006
+buffer[249] is equal to 1006
+buffer[250] is equal to 1007
+buffer[251] is equal to 1007
+buffer[252] is equal to 1007
+buffer[253] is equal to 376
+buffer[254] is equal to 0
+buffer[255] is equal to 0
+Stack checker: buffer[256] is equal to 0
+End Buffer =====================================
+Key is 924
+i is 924
+Pid is 375
+Key is 925
+i is 925
+Pid is 375
+Key is 926
+i is 926
+Pid is 375
+Key is 927
+i is 927
+Pid is 375
+Key is 928
+i is 928
+Pid is 375
+Key is 929
+i is 929
+Pid is 375
+Key is 930
+i is 930
+Pid is 375
+Key is 931
+i is 931
+Pid is 375
+Key is 932
+i is 932
+Pid is 375
+Key is 933
+i is 933
+Pid is 375
+Key is 934
+i is 934
+Pid is 375
+Key is 935
+i is 935
+Pid is 375
+Key is 936
+i is 936
+Pid is 375
+Key is 937
+i is 937
+Pid is 375
+Key is 938
+i is 938
+Pid is 375
+Key is 939
+i is 939
+Pid is 375
+Key is 940
+i is 940
+Pid is 375
+Key is 941
+i is 941
+Pid is 375
+Key is 942
+i is 942
+Pid is 375
+Key is 943
+i is 943
+Pid is 375
+Key is 944
+i is 944
+Pid is 375
+Key is 945
+i is 945
+Pid is 375
+Key is 946
+i is 946
+Pid is 375
+Key is 947
+i is 947
+Pid is 375
+Key is 948
+i is 948
+Pid is 375
+Key is 949
+i is 949
+Pid is 375
+Key is 950
+i is 950
+Pid is 375
+Key is 951
+i is 951
+Pid is 375
+Key is 952
+i is 952
+Pid is 375
+Key is 953
+i is 953
+Pid is 375
+Key is 954
+i is 954
+Pid is 375
+Key is 955
+i is 955
+Pid is 375
+Key is 956
+i is 956
+Pid is 375
+Key is 957
+i is 957
+Pid is 375
+Key is 958
+i is 958
+Pid is 375
+Key is 959
+i is 959
+Pid is 375
+Key is 960
+i is 960
+Pid is 375
+Key is 961
+i is 961
+Pid is 375
+Key is 962
+i is 962
+Pid is 375
+Key is 963
+i is 963
+Pid is 375
+Key is 964
+i is 964
+Pid is 375
+Key is 965
+i is 965
+Pid is 375
+Key is 966
+i is 966
+Pid is 375
+Key is 967
+i is 967
+Pid is 375
+Key is 968
+i is 968
+Pid is 375
+Key is 969
+i is 969
+Pid is 375
+Key is 970
+i is 970
+Pid is 375
+Key is 971
+i is 971
+Pid is 375
+Key is 972
+i is 972
+Pid is 375
+Key is 973
+i is 973
+Pid is 375
+Key is 974
+i is 974
+Pid is 375
+Key is 975
+i is 975
+Pid is 375
+Key is 976
+i is 976
+Pid is 375
+Key is 977
+i is 977
+Pid is 375
+Key is 978
+i is 978
+Pid is 375
+Key is 979
+i is 979
+Pid is 375
+Key is 980
+i is 980
+Pid is 375
+Key is 981
+i is 981
+Pid is 375
+Key is 982
+i is 982
+Pid is 375
+Key is 983
+i is 983
+Pid is 375
+Key is 984
+i is 984
+Pid is 375
+Key is 985
+i is 985
+Pid is 375
+Key is 986
+i is 986
+Pid is 375
+Key is 987
+i is 987
+Pid is 375
+Key is 988
+i is 988
+Pid is 375
+Key is 989
+i is 989
+Pid is 375
+Key is 990
+i is 990
+Pid is 375
+Key is 991
+i is 991
+Pid is 375
+Key is 992
+i is 992
+Pid is 375
+Key is 993
+i is 993
+Pid is 375
+Key is 994
+i is 994
+Pid is 375
+Key is 995
+i is 995
+Pid is 375
+Key is 996
+i is 996
+Pid is 375
+Key is 997
+i is 997
+Pid is 375
+Key is 998
+i is 998
+Pid is 375
+Key is 999
+i is 999
+Pid is 375
+locate and forward tests passed
+
+All tests passed successfully!
+
