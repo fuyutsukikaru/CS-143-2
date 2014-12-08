@@ -459,22 +459,22 @@ void test_random()
 void test_function()
 {
 
-	// test_nonleaf_insertion();
-	// test_nonleaf_insert_and_split();
-
-	// test_insertion();
-
-	// test_substitute_insertion();
-
-	// test_sibling_node();
-
-	// test_insert_and_split();
-
-	// test_index_insert();
-
-	test_locate_and_read_forward();
-
-	//test_random();
+	test_nonleaf_insertion();
+	test_nonleaf_insert_and_split();
+// 
+	test_insertion();
+// 
+	test_substitute_insertion();
+// 
+	test_sibling_node();
+// 
+	test_insert_and_split();
+// 
+	test_index_insert();
+// 
+	 test_locate_and_read_forward();
+// 
+	test_random();
 	cout << "\nAll tests passed successfully!\n\n";
 }
 
