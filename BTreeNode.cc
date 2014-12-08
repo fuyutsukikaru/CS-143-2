@@ -124,8 +124,8 @@ RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
 	memcpy(sibling.getBuffer(), iter, (keyCount - splitter)*nodeSize + sizeof(PageId));
 
 	while (iter < &(buffer[PageFile::PAGE_SIZE])) {
-		iter += sizeof(int);
 		memcpy(iter, &NULL_VALUE, sizeof(int));
+		iter += sizeof(int);
 	}
 
 
@@ -374,7 +374,7 @@ RC BTNonLeafNode::insertAndSplit(int key, PageId pid, BTNonLeafNode& sibling, in
 
 	while (splitIter < &(buffer[PageFile::PAGE_SIZE])) {
 		memcpy(splitIter, &NULL_VALUE, sizeof(int));
-		splitIter += nodeSize;
+		splitIter += sizeof(int);
 	}
 
 	sibling.setKeyCount((keyCount - splitter) - 1); //don't include the midkey

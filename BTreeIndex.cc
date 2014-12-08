@@ -398,13 +398,30 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 	int rc = 0;
 	rc = node.read(cursor.pid, pf);
 
+	if (cursor.eid == 0) {
+		fprintf(stdout, "CURRENT PAGE ID IS %d\n", cursor.pid);
+		fprintf(stdout, "Height is %d\n", treeHeight);
+		node.printBuffer();
+	}
+
 	//if rc has an error code
 	if( rc != 0) {
 		return rc;
 	}
 
+	rc = node.readEntry(cursor.eid, key, rid);
+	cursor.eid++;
+
+	int testKey;
+	RecordId testRid;
+	if(node.readEntry(cursor.eid, testKey, testRid) == RC_NO_SUCH_RECORD) {
+		cursor.eid = 0;
+		cursor.pid = node.getNextNodePtr();
+	}
+
+	return 0;
 	//start of the buffer
-	char* tempBuffer = node.getBuffer();
+	/*char* tempBuffer = node.getBuffer();
 	tempBuffer += nodeSize * cursor.eid;
 	//start of key, copy record
 	memcpy(&rid, tempBuffer, sizeof(RecordId));
@@ -427,5 +444,5 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 		//just increment eid
 		cursor.eid++;
 		return 0;
-	}
+	}*/
 }
