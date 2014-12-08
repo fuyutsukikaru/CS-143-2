@@ -9,8 +9,11 @@
 
 #include "BTreeIndex.h"
 #include "BTreeNode.h"
+#include <climits>
 
 using namespace std;
+
+const int NULL_VALUE = INT_MIN; //int min +1 for portability
 
 /*
  * BTreeIndex constructor
@@ -283,7 +286,7 @@ RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, 
         {
             leaf.write(currPid, pf);
             return rcode;
-        } else{
+        } else {
             BTLeafNode sn;
             //sn.cleanStart();
             int key_sibling;
@@ -292,6 +295,7 @@ RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, 
             PageId sibPid = pf.endPid();
             sn.write(sibPid, pf);
 
+            //fprintf(stdout, "Leafs keycount is %d\n", leaf.getKeyCount());
             leaf.setNextNodePtr(sibPid);
             leaf.write(currPid, pf);
 
@@ -303,6 +307,7 @@ RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, 
             return rcode;
         }
     }
+
 }
 
 
@@ -311,11 +316,13 @@ RC BTreeIndex::popedupRoot(PageId lPid, PageId rPid, int key)
     BTNonLeafNode nleaf;
     RC rcode = nleaf.initializeRoot(lPid, key, rPid);
     rootPid = pf.endPid();
+    fprintf(stdout, "New root pid is %d\n", rootPid);
     nleaf.write(rootPid, pf);
     treeHeight +=1;
 
     return rcode;
 }
+
 
 /*
  * Find the leaf-node index entry whose key value is larger than or
@@ -398,27 +405,49 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 	int rc = 0;
 	rc = node.read(cursor.pid, pf);
 
+	if (cursor.eid == 0) {
+		fprintf(stdout, "CURRENT PAGE ID IS %d\n", cursor.pid);
+		fprintf(stdout, "Height is %d\n", treeHeight);
+		node.printBuffer();
+	}
+
 	//if rc has an error code
 	if( rc != 0) {
 		return rc;
 	}
 
 	//start of the buffer
-	char* tempBuffer = node.getBuffer();
-	tempBuffer += nodeSize * cursor.eid;
+	//char* tempBuffer = node.getBuffer();
+	//tempBuffer += nodeSize * cursor.eid;
 	//start of key, copy record
-	memcpy(&rid, tempBuffer, sizeof(RecordId));
-	tempBuffer += sizeof(RecordId);
+	//memcpy(&rid, tempBuffer, sizeof(RecordId));
+	//tempBuffer += sizeof(RecordId);
 	//copy key
-	memcpy(&key, tempBuffer, sizeof(int));
+	//memcpy(&key, tempBuffer, sizeof(int));
+
+	rc = node.readEntry(cursor.eid, key, rid);
+	cursor.eid++;
+
+	int testKey;
+	RecordId testRid;
+	if(node.readEntry(cursor.eid, testKey, testRid) == RC_NO_SUCH_RECORD) {
+		cursor.eid = 0;
+		cursor.pid = node.getNextNodePtr();
+	}
+
+	return 0;
 
 	//set it to the end, where the next sibling pid will be
-	tempBuffer = node.getBuffer() + (node.getKeyCount() * nodeSize);
+	//tempBuffer = node.getBuffer() + (node.getKeyCount() * nodeSize);
 
-	if(cursor.eid == node.getKeyCount())
+	/*fprintf(stdout, "The keyCount is %d\n", node.getKeyCount());
+	fprintf(stdout, "The eid is %d\n", cursor.eid);
+	if(cursor.eid > node.getKeyCount() - 1)
 	{
 		//set pid to the next sibling, set eid to 0
-		memcpy(&(cursor.pid), tempBuffer, sizeof(PageId));
+		//memcpy(&(cursor.pid), tempBuffer, sizeof(PageId));
+		cursor.pid = node.getNextNodePtr();
+		fprintf(stdout, "The next node ptr is %d\n", cursor.pid);
 		cursor.eid = 0;
 		return 0;
 	}
@@ -427,5 +456,70 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 		//just increment eid
 		cursor.eid++;
 		return 0;
+	}*/
+}
+
+void BTreeIndex::printTree()
+{
+	printRecurse(rootPid, 1);
+}
+
+void BTreeIndex::printRecurse(PageId pid, int level)
+{
+	cout << "\n========================================\n";
+	cout << "Printing out level: " << level << endl;
+	cout << "Printing out page pid: " << pid << endl;
+	if (level > treeHeight)
+		return;
+	// Leaf node
+	else if (level == treeHeight)
+	{
+		cout << "Printing out leaf node!" << endl;
+		BTLeafNode node;
+		node.read(pid, pf);
+		RecordId rid;
+		int key = -1;
+		for (int i = 0; i < node.getKeyCount(); i++)
+		{
+			node.readEntry(i, key, rid);
+			cout << "[" << key << "]";
+		}
 	}
+	else
+	{
+		cout << "Printing out nonleaf node!" << endl;
+		BTNonLeafNode node;
+
+		node.read(pid, pf);
+		//int key = -1;
+		/*for (int i = 0; i < node.getKeyCount(); i++)
+		{
+			node.readNonLeafEntry(i, key);
+			cout << "[" << key << "]";
+		}*/
+		node.printBuffer();
+
+		int key = -1;
+		//node.readNonLeafEntry(0, key);
+		char* iter = node.getBuffer() + sizeof(PageId);
+		memcpy(&key, iter, sizeof(int));
+		PageId child;
+		node.locateChildPtr(key-1, child);
+		printRecurse(child, level+1);
+
+		char* iter2 = node.getBuffer() + sizeof(PageId);
+
+		for (int i = 0; i < node.getKeyCount(); i++)
+		{
+			key = -1;
+			//node.readNonLeafEntry(i, key);
+			memcpy(&key, iter2, sizeof(int));
+			iter2 += sizeof(int) + sizeof(PageId);
+			PageId child_page;
+			node.locateChildPtr(key, child_page);
+			printRecurse(child_page, level+1);
+		}
+
+	}
+	cout << "\n========================================\n";
 }

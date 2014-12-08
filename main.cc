@@ -29,24 +29,24 @@ void test_nonleaf_insertion()
 	BTNonLeafNode b;
 
 	b.initializeRoot(pid1, 3, pid2);
-	b.printBuffer();
+	//b.printBuffer();
 	b.insert(6, pid3);
 	b.insert(4, pid4);
 	//b.insert(1, 11);
-	 b.printBuffer();
-	cout << "KeyCount:" << b.getKeyCount() <<endl;
-	cout << "pid2 = " << pid2 << endl;
+	// b.printBuffer();
+	//cout << "KeyCount:" << b.getKeyCount() <<endl;
+	//cout << "pid2 = " << pid2 << endl;
 
 	b.locateChildPtr(6,pid2);
-	cout << "pid2 after call = " << pid2 << endl;
+	//cout << "pid2 after call = " << pid2 << endl;
 	assert(pid2 == 199);
 	b.locateChildPtr(2,pid2);
-	cout << "pid2 after call = " << pid2 << endl;
+	//cout << "pid2 after call = " << pid2 << endl;
 	assert(pid2 == 1);
 	b.locateChildPtr(4, pid2);
 	assert(pid2 == pid4);
 	b.locateChildPtr(5, pid2);
-	cout << "pid2 after call = " << pid2 << endl;
+	//cout << "pid2 after call = " << pid2 << endl;
 	assert(pid2 == pid4);
 }
 
@@ -175,7 +175,7 @@ void test_insertion()
 
 	while (b.insert(counter, rid4) == 0)
 		counter++;
-	 b2.printBuffer();
+	 //b2.printBuffer();
  // [4,5,7,12,15,16,17]
 	cout << "Insertion tests passed...\n";
 }
@@ -360,13 +360,17 @@ void test_locate_and_read_forward()
 		b.insert(i, rid);
 	}
 
+	/*for (int i = 0; i < 10001; i++) {
+		rid.pid = i;
+		rid.sid = i;
+		b.insert(i, rid);
+	}*/
 
-
-	IndexCursor ic;
+	/*IndexCursor ic;
 	b.locate(678, ic);
 
-	cout << "Cursor pid is " << ic.pid << endl;
-	cout << "Cursor eid is " << ic.eid << endl;
+	//cout << "Cursor pid is " << ic.pid << endl;
+	//cout << "Cursor eid is " << ic.eid << endl;
 
 	int key;
 	b.readForward(ic, key, rid2);
@@ -384,29 +388,47 @@ void test_locate_and_read_forward()
 	b.readForward(ic, key, rid2);
 	assert(key == 999);
 	assert(rid2.pid = 999);
-	assert(rid2.sid == 999);
+	assert(rid2.sid == 999);*/
 
+	int key;
 	IndexCursor ic2;
 	b.locate(-10, ic2);
 	// Read forward test
-	// b.printTree();
+	//b.printTree();
+
+	cout << "Eid is " << ic2.eid << endl;
+	cout << "Pid is " << ic2.pid << endl;
+
+	/*for (int i = 0; i < 171; i++) {
+		rid.pid = i;
+		rid.sid = i;
+		b.insert(i, rid);
+	}*/
 	for (int i = 0; i < 10001; i++)
+	//for (int i = 0; i < 171; i++)
 	{
 		if (b.readForward(ic2, key, rid2) < 0)
 		{
 			break;
 		}
 
-		assert(key == i);
-		assert(rid2.pid == i);
-		assert(rid2.sid == i);
+		cout << "Key is " << key << endl;
+		cout << "i is " << i << endl;
+		//cout << "Pid is " << ic2.pid << endl;
+		//if (i = 84) {
+		//	cout << "Pid is " << ic2.pid << endl;
+		//}
+
+		//assert(key == i);
+		//assert(rid2.pid == i);
+		//assert(rid2.sid == i);
 
 	}
 
 	cout << "locate and forward tests passed\n";
 }
 
-void test_random()
+/*void test_random()
 {
 	BTreeIndex b;
 	b.open("test", 'w');
@@ -423,7 +445,7 @@ void test_random()
 
 	b.close();
 
-}
+}*/
 
 //void test_jchu()
 //{
@@ -442,19 +464,19 @@ void test_random()
 void test_function()
 {
 
-	test_nonleaf_insertion();
-	test_nonleaf_insert_and_split();
+	//test_nonleaf_insertion();
+	//test_nonleaf_insert_and_split();
 
-	test_insertion();
+	//test_insertion();
 
-	test_substitute_insertion();
+	//test_substitute_insertion();
 
-	test_sibling_node();
+	//test_sibling_node();
 
-	test_insert_and_split();
+	//test_insert_and_split();
 
 
-	test_index_insert();
+	//test_index_insert();
 
 	test_locate_and_read_forward();
 
