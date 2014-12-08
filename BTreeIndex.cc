@@ -272,29 +272,15 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 		return rc;
 	}
 
-	//start of the buffer
-	char* tempBuffer = node.getBuffer();
-	tempBuffer += nodeSize * cursor.eid;
-	//start of key, copy record
-	memcpy(&rid, tempBuffer, sizeof(RecordId));
-	tempBuffer += sizeof(RecordId);
-	//copy key
-	memcpy(&key, tempBuffer, sizeof(int));
+	rc = node.readEntry(cursor.eid, key, rid);
+	cursor.eid++;
 
-	//set it to the end, where the next sibling pid will be
-	tempBuffer = node.getBuffer() + (node.getKeyCount() * nodeSize);
-
-	if(cursor.eid == node.getKeyCount())
-	{
-		//set pid to the next sibling, set eid to 0
-		memcpy(&(cursor.pid), tempBuffer, sizeof(PageId));
+	int testKey;
+	RecordId testRid;
+	if(node.readEntry(cursor.eid, testKey, testRid) == RC_NO_SUCH_RECORD) {
 		cursor.eid = 0;
-		return 0;
+		cursor.pid = node.getNextNodePtr();
 	}
-	else
-	{
-		//just increment eid
-		cursor.eid++;
-		return 0;
-	}
+
+	return 0;
 }
