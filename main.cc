@@ -397,6 +397,10 @@ void test_locate_and_read_forward()
 			break;
 		}
 
+		cout << "Key is " << key << endl;
+		cout << "i is " << i << endl;
+		cout << "Pid is " << ic2.pid << endl;
+
 		assert(key == i);
 		assert(rid2.pid == i);
 		assert(rid2.sid == i);

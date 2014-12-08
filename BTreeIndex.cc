@@ -252,7 +252,7 @@ RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, 
             {
                 n.write(currPid, pf);
                 return rcode;
-            }else{
+            } else {
                 RC rcode = RC_NODE_FULL;
                 BTNonLeafNode sn;
                 //sn.initializeRoot(INITIAL, INITIAL, INITIAL);
@@ -277,6 +277,10 @@ RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, 
         //leaf.cleanStart();
         leaf.read(currPid, pf);
 
+        if (key == 172) {
+        	fprintf(stdout, "My node now has %d keys\n", leaf.getKeyCount());
+        }
+
         RC rcode = leaf.insert(key, rid);
 
         if (rcode == 0)
@@ -288,6 +292,9 @@ RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, 
             //sn.cleanStart();
             int key_sibling;
             leaf.insertAndSplit(key, rid, sn, key_sibling);
+
+            fprintf(stdout, "My node has %d keys\n", leaf.getKeyCount());
+            fprintf(stdout, "My sibling node has %d keys\n", sn.getKeyCount());
 
             PageId sibPid = pf.endPid();
             sn.write(sibPid, pf);
@@ -402,6 +409,7 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 		fprintf(stdout, "CURRENT PAGE ID IS %d\n", cursor.pid);
 		fprintf(stdout, "Height is %d\n", treeHeight);
 		node.printBuffer();
+		fprintf(stdout, "Current key count is %d\n", node.getKeyCount());
 	}
 
 	//if rc has an error code
