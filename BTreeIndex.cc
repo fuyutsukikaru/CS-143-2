@@ -42,7 +42,6 @@ RC BTreeIndex::open(const string& indexname, char mode)
         char buffer[PageFile::PAGE_SIZE];
         // Read pid 0 into a buffer to get rootPid and treeHeight
         if (pf.read(0, buffer) != 0) {
-            fprintf(stdout, "Could not read index %s", indexname.c_str());
             return RC_FILE_READ_FAILED;
         }
 
@@ -241,7 +240,6 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
     // Initialize a temp node
     BTNonLeafNode curHead;
     PageId pid = rootPid;
-    cout << "Root pid is " << rootPid << endl;
     for (int curHeight = 1; curHeight < treeHeight; curHeight++) {
         // Read PageFile into NonLeafNode
         rc = curHead.read(pid, pf);
@@ -249,8 +247,6 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
             return rc;
         }
 
-        cout << "Reading from pid " << pid << endl;
-        curHead.printBuffer();
         // Find leaf node by locating the correct child ptr
         rc = curHead.locateChildPtr(searchKey, pid);
         if (rc != 0) {
@@ -297,19 +293,12 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
         return rc;
     }
 
-    if (cursor.eid == 0) {
-        cout << "My pid is " << cursor.pid << endl;
-        cout << "My key count is " << node.getKeyCount() << endl;
-        node.printBuffer();
-    }
-
     // Read the entry our current cursor is at
     rc = node.readEntry(cursor.eid, key, rid);
     // Move the cursor forward
     cursor.eid++;
 
     if (cursor.eid >= node.getKeyCount()) {
-        cout << "Going to next node!" << endl;
         cursor.eid = 0;
         cursor.pid = node.getNextNodePtr();
     }
