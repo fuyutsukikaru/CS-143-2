@@ -135,12 +135,23 @@ RC SqlEngine::load(const string& table, const string& loadfile, bool index)
   ifstream input;
   string line;
 
+  // Index of our tree
+  BTreeIndex bIndex;
+
   input.open(loadfile.c_str(), std::ifstream::in);
   if (input.fail()) {
     input.close();
     return RC_FILE_OPEN_FAILED;
   }
-  if ((rc = rf.open((table + ".tbl").c_str(), 'w')) != 0) {
+
+  rc = bIndex.open(table + ".idx", 'w');
+  if (index && rc != 0) {
+    fprintf(stderr, "Error opening index for table %s\n", table.c_str());
+    return rc;
+  }
+
+  rc = rf.open(table + ".tbl", 'w');
+  if (rc != 0) {
     fprintf(stderr, "Error in record file for table %s\n", table.c_str());
     return rc;
   }
@@ -155,10 +166,20 @@ RC SqlEngine::load(const string& table, const string& loadfile, bool index)
       RecordId rid;
       int key;
       string val;
-      if ((rc = parseLoadLine(line, key, val)) == 0) {
-        if ((rc = rf.append(key, val, rid)) != 0) {
+
+      rc = parseLoadLine(line, key, val);
+      if (rc == 0) {
+        rid == rf.endRid();
+        rc = rf.append(key, val, rid);
+        if (rc != 0) {
           fprintf(stderr, "Error appending data to table %s\n", table.c_str());
           break;
+        }
+        if (index) {
+          rc = bIndex.insert(key, rid);
+          if (rc != 0 && rc != RC_NODE_FULL) {
+            fprintf(stderr, "Error inserting into index for table %s\n", table.c_str());
+          }
         }
       } else {
         fprintf(stderr, "Error while parsing loadfile %s\n", loadfile.c_str());
@@ -175,6 +196,10 @@ RC SqlEngine::load(const string& table, const string& loadfile, bool index)
 
   if (rf.close() != 0) {
     return rf.close();
+  }
+
+  if (index) {
+    rc = bIndex.close();
   }
 
   return rc;
