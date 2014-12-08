@@ -133,7 +133,7 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
                 BTNonLeafNode newNode;
                 int midKey;
                 curHead.insertAndSplit(splitKey, splitPid, newNode, midKey);
-                
+
                 PageId sibId = pf.endPid();
                 newNode.write(sibId, pf);
                 curHead.write(pid, pf);
@@ -151,8 +151,8 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
                 siblingKey = midKey;
                 return rc;
             }
-        } 
-        else  
+        }
+        else
         	return rc;
 
     }
@@ -184,14 +184,14 @@ RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
             siblingPid = tempSibPid;
             siblingKey = tempSibKey;
 			if ( curHeight == 1)
-                {
-                	BTNonLeafNode firstRoot;
-                	rootPid = pf.endPid();
-                	rc = firstRoot.initializeRoot(pid, siblingKey, siblingPid);
-                	treeHeight++;
-                	firstRoot.write(rootPid, pf);
+            {
+            	BTNonLeafNode firstRoot;
+            	rootPid = pf.endPid();
+            	rc = firstRoot.initializeRoot(pid, siblingKey, siblingPid);
+            	treeHeight++;
+            	firstRoot.write(rootPid, pf);
 
-            	}
+        	}
             return rc;
         }
     }
@@ -334,67 +334,67 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 	}*/
 }
 
-//void BTreeIndex::printTree()
-//{
-//	printRecurse(rootPid, 1);
-//}
-//
-//void BTreeIndex::printRecurse(PageId pid, int level)
-//{
-//	cout << "\n========================================\n";
-//	cout << "Printing out level: " << level << endl;
-//	cout << "Printing out page pid: " << pid << endl;
-//	if (level > treeHeight)
-//		return;
-//	// Leaf node
-//	else if (level == treeHeight)
-//	{
-//		cout << "Printing out leaf node!" << endl;
-//		BTLeafNode node;
-//		node.read(pid, pf);
-//		RecordId rid;
-//		int key = -1;
-//		for (int i = 0; i < node.getKeyCount(); i++)
-//		{
-//			node.readEntry(i, key, rid);
-//			cout << "[" << key << "]";
-//		}
-//	}
-//	else
-//	{
-//		cout << "Printing out nonleaf node!" << endl;
-//		BTNonLeafNode node;
-//
-//		node.read(pid, pf);
-//		//int key = -1;
-//		/*for (int i = 0; i < node.getKeyCount(); i++)
-//		{
-//			node.readNonLeafEntry(i, key);
-//			cout << "[" << key << "]";
-//		}*/
-//		node.printBuffer();
-//
-//		int key = -1;
-//		//node.readNonLeafEntry(0, key);
-//		char* iter = node.getBuffer() + sizeof(PageId);
-//		memcpy(&key, iter, sizeof(int));
-//		PageId child;
-//		node.locateChildPtr(key-1, child);
-//		printRecurse(child, level+1);
-//
-//		char* iter2 = node.getBuffer() + sizeof(PageId);
-//
-//		for (int i = 0; i < node.getKeyCount(); i++)
-//		{
-//			key = -1;
-//			//node.readNonLeafEntry(i, key);
-//			memcpy(&key, iter2, sizeof(int));
-//			iter2 += sizeof(int) + sizeof(PageId);
-//			PageId child_page;
-//			node.locateChildPtr(key, child_page);
-//			printRecurse(child_page, level+1);
-//		}
-//
-//	}
-//	cout << "\n========================================\n";
-//}
+void BTreeIndex::printTree()
+{
+	printRecurse(rootPid, 1);
+}
+
+void BTreeIndex::printRecurse(PageId pid, int level)
+{
+	cout << "\n========================================\n";
+	cout << "Printing out level: " << level << endl;
+	cout << "Printing out page pid: " << pid << endl;
+	if (level > treeHeight)
+		return;
+	// Leaf node
+	else if (level == treeHeight)
+	{
+		cout << "Printing out leaf node!" << endl;
+		BTLeafNode node;
+		node.read(pid, pf);
+		RecordId rid;
+		int key = -1;
+		for (int i = 0; i < node.getKeyCount(); i++)
+		{
+			node.readEntry(i, key, rid);
+			cout << "[" << key << "]";
+		}
+	}
+	else
+	{
+		cout << "Printing out nonleaf node!" << endl;
+		BTNonLeafNode node;
+
+		node.read(pid, pf);
+		//int key = -1;
+		/*for (int i = 0; i < node.getKeyCount(); i++)
+		{
+			node.readNonLeafEntry(i, key);
+			cout << "[" << key << "]";
+		}*/
+		node.printBuffer();
+
+		int key = -1;
+		//node.readNonLeafEntry(0, key);
+		char* iter = node.getBuffer() + sizeof(PageId);
+		memcpy(&key, iter, sizeof(int));
+		PageId child;
+		node.locateChildPtr(key-1, child);
+		printRecurse(child, level+1);
+
+		char* iter2 = node.getBuffer() + sizeof(PageId);
+
+		for (int i = 0; i < node.getKeyCount(); i++)
+		{
+			key = -1;
+			//node.readNonLeafEntry(i, key);
+			memcpy(&key, iter2, sizeof(int));
+			iter2 += sizeof(int) + sizeof(PageId);
+			PageId child_page;
+			node.locateChildPtr(key, child_page);
+			printRecurse(child_page, level+1);
+		}
+
+	}
+	cout << "\n========================================\n";
+}

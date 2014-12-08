@@ -62,11 +62,8 @@ class BTreeIndex {
   /**
    * Recursive helper
    */
-  //RC insertHelper(PageId pid, int key, const RecordId& rid,
-  //              int curHeight, int& siblingPid, int& siblingKey);
-  RC recursiveInsert(int stage, int key, PageId& retPid, int& retKey, const RecordId& rid, PageId currPid);
-
-  RC popedupRoot(PageId lPid, PageId rPid, int key);
+  RC insertHelper(PageId pid, int key, const RecordId& rid,
+                int curHeight, int& siblingPid, int& siblingKey);
 
   /**
    * Find the leaf-node index entry whose key value is larger than or

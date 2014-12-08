@@ -159,7 +159,7 @@ RC BTLeafNode::insertAndSplit(int key, const RecordId& rid,
 	}
 
 
-	//sibling.setNextNodePtr(getNextNodePtr());
+	sibling.setNextNodePtr(getNextNodePtr());
 	//setNextNodePtr(getNextNodePtr());
 	return 0;
 }
@@ -391,18 +391,18 @@ RC BTNonLeafNode::insertAndSplit(int key, PageId pid, BTNonLeafNode& sibling, in
 		memcpy(&cur, iter, sizeof(int));
 	}
 
-
 	memcpy(sibling.getBuffer(), splitPoint + sizeof(int), PageFile::PAGE_SIZE - (splitPoint - &(buffer[0])));
 	char* splitIter = splitPoint;
 	memcpy(&midKey, splitPoint, sizeof(int));
 
-	while (splitIter < &(buffer[PageFile::PAGE_SIZE])) {
+	sibling.setKeyCount((keyCount - splitter) - 1); //don't include the midkey
+	keyCount = splitter;
+
+	char* pos = splitIter + sizeof(int) * 3;
+	while (splitIter < pos) {
 		memcpy(splitIter, &NULL_VALUE, sizeof(int));
 		splitIter += nodeSize;
 	}
-
-	sibling.setKeyCount((keyCount - splitter) - 1); //don't include the midkey
-	keyCount = splitter;
 
 	if(key > midKey)
 	//if (i > splitter)  //add to the right
@@ -438,6 +438,7 @@ RC BTNonLeafNode::locateChildPtr(int searchKey, PageId& pid)
 	while (key < keyCount) {
 		memcpy(&cur, iter, sizeof(int));
 		if (cur > searchKey) {
+			fprintf(stdout, "We found our searchkey %d with key %d\n", searchKey, cur);
 			iter -= sizeof(PageId);
 			memcpy(&pid, iter, sizeof(PageId));
 			return 0;

@@ -360,6 +360,8 @@ void test_locate_and_read_forward()
 		b.insert(i, rid);
 	}
 
+	b.printTree();
+
 	/*for (int i = 0; i < 10001; i++) {
 		rid.pid = i;
 		rid.sid = i;
@@ -369,8 +371,8 @@ void test_locate_and_read_forward()
 	/*IndexCursor ic;
 	b.locate(678, ic);
 
-	//cout << "Cursor pid is " << ic.pid << endl;
-	//cout << "Cursor eid is " << ic.eid << endl;
+	cout << "Cursor pid is " << ic.pid << endl;
+	cout << "Cursor eid is " << ic.eid << endl;
 
 	int key;
 	b.readForward(ic, key, rid2);
@@ -388,23 +390,23 @@ void test_locate_and_read_forward()
 	b.readForward(ic, key, rid2);
 	assert(key == 999);
 	assert(rid2.pid = 999);
-	assert(rid2.sid == 999);*/
+	assert(rid2.sid == 999);
 
-	int key;
+	//int key;
 	IndexCursor ic2;
 	b.locate(-10, ic2);
 	// Read forward test
 	//b.printTree();
 
 	cout << "Eid is " << ic2.eid << endl;
-	cout << "Pid is " << ic2.pid << endl;
+	cout << "Pid is " << ic2.pid << endl;*/
 
 	/*for (int i = 0; i < 171; i++) {
 		rid.pid = i;
 		rid.sid = i;
 		b.insert(i, rid);
 	}*/
-	for (int i = 0; i < 10001; i++)
+	/*for (int i = 0; i < 10001; i++)
 	//for (int i = 0; i < 171; i++)
 	{
 		if (b.readForward(ic2, key, rid2) < 0)
@@ -412,18 +414,18 @@ void test_locate_and_read_forward()
 			break;
 		}
 
-		cout << "Key is " << key << endl;
-		cout << "i is " << i << endl;
+		//cout << "Key is " << key << endl;
+		//cout << "i is " << i << endl;
 		//cout << "Pid is " << ic2.pid << endl;
 		//if (i = 84) {
 		//	cout << "Pid is " << ic2.pid << endl;
 		//}
 
-		//assert(key == i);
-		//assert(rid2.pid == i);
-		//assert(rid2.sid == i);
+		assert(key == i);
+		assert(rid2.pid == i);
+		assert(rid2.sid == i);
 
-	}
+	}*/
 
 	cout << "locate and forward tests passed\n";
 }
@@ -463,7 +465,6 @@ void test_locate_and_read_forward()
 
 void test_function()
 {
-
 	//test_nonleaf_insertion();
 	//test_nonleaf_insert_and_split();
 
@@ -474,7 +475,6 @@ void test_function()
 	//test_sibling_node();
 
 	//test_insert_and_split();
-
 
 	//test_index_insert();
 
