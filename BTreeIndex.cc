@@ -83,244 +83,119 @@ RC BTreeIndex::close()
  * @param rid[IN] the RecordId for the record being inserted into the index
  * @return error code. 0 if no error
  */
-/*RC BTreeIndex::insert(int key, const RecordId& rid)
-{
-	int currentHeight = 0;
-	int siblingKey;
-	int siblingPid;
-	return insertHelper(rootPid, key, rid, currentHeight, siblingPid, siblingKey);
-}
-
-RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
-						    int curHeight, int& siblingPid, int& siblingKey)
-{
-	if (curHeight < treeHeight)
-	{
-		//not at a leaf node yet
-		int rc = 0;
-		BTNonLeafNode curHead;
-		rc = curHead.read(pid, pf);
-		if (rc != 0) {
-			return rc;
-		}
-
-		curHead.locateChildPtr(key, pid);
-
-		rc = insertHelper(pid, key, rid, curHeight+1, siblingPid, siblingKey); //rc will be NODE_FULL if it split
-
-		if (rc == RC_NODE_FULL && curHeight > 1) //not the root
-		{//check to split the "parent" node
-			int rc2 = curHead.insert(siblingKey, siblingPid);
-			if(rc2 == RC_NODE_FULL)
-			{
-				BTNonLeafNode newNode;
-				siblingPid = pf.endPid();
-				curHead.insertAndSplit(key, pid, newNode, siblingKey);
-
-				curHead.write(pid, pf);
-				newNode.write(siblingPid, pf);
-
-				//create new child node, set the right hand pointer to it
-			} else if (rc2 == 0) {
-				return curHead.write(pid, pf);
-			}
-
-			return rc2; //RC_NODE_FULL
-		}
-		else if (rc == RC_NODE_FULL) //full, and at root
-		{
-			int rc2 = curHead.insert(siblingKey, siblingPid);
-			if(rc2 == RC_NODE_FULL)
-			{
-				BTNonLeafNode newNode;
-				siblingPid = pf.endPid();
-				curHead.insertAndSplit(key, pid, newNode, siblingKey);
-				BTNonLeafNode newRoot;
-				rootPid = pf.endPid();
-
-				newRoot.initializeRoot(pid, siblingKey, siblingPid);
-
-				treeHeight++;
-
-				newRoot.write(rootPid, pf);
-				curHead.write(pid, pf);
-				newNode.write(siblingPid, pf);
-				return 0;
-
-			} else if (rc2 == 0) {
-				return curHead.write(pid, pf);
-			}
-
-			return rc2;  //error in insert function that isn't RC_NODE_FULL
-		}
-	} else {
-		//at a leaf node
-
-		int rc = 0;
-		BTLeafNode curHead;
-
-		if (treeHeight == 0) {
-			curHead.insert(key,rid);
-			rootPid = pf.endPid();
-			curHead.write(rootPid, pf); //save this node
-			treeHeight++; //tree height is no longer 0
-			return 0;
-		}
-
-		rc = curHead.read(pid, pf);
-		if(rc != 0)
-		{
-			return rc;
-		}
-
-		rc = curHead.insert(key, rid);
-		if(rc == 0)
-		{
-			// Success, easiest case, insert works
-			return curHead.write(pid, pf);
-		}
-		else if (rc == RC_NODE_FULL)
-		{
-			// Need to insert and split
-			BTLeafNode newNode;
-			siblingPid = pf.endPid();
-
-			curHead.insertAndSplit(key, rid, newNode, siblingKey);
-
-			if (treeHeight == 1) {
-				BTNonLeafNode firstRoot;
-				rootPid = pf.endPid();
-				firstRoot.initializeRoot(pid, siblingKey, siblingPid);
-				treeHeight++;
-				firstRoot.write(rootPid, pf);
-			}
-
-			// Need to set the sibling pointer
-			curHead.setNextNodePtr(siblingPid);
-
-			curHead.write(pid, pf);
-			newNode.write(siblingPid, pf);
-		}
-		return rc;
-	}
-
-}*/
-
 RC BTreeIndex::insert(int key, const RecordId& rid){
-
-    RC rcode;
-    if (treeHeight != 0){
-    	int rKey;
-    	int start =1;
-    	PageId retPid;
-    	rcode = recursiveInsert(start, key, retPid, rKey, rid, rootPid);
-
-    }else{
-
-    	BTLeafNode leaf;
-    	//leaf.cleanStart();
-    	leaf.insert(key, rid);
+	RC rc = 0;
+    if (treeHeight == 0)
+    {
+    	BTLeafNode newRoot;
+    	newRoot.insert(key, rid);
     	rootPid = pf.endPid();
 
-    	//if (rootPid == BTreeIndex::PAGE_TEMP){ rootPid++; }
-
-    	rcode = leaf.write(rootPid, pf);
+    	rc = newRoot.write(rootPid, pf);
     	treeHeight = 1;
-
     }
-
-    //if (key < minKey || minKey == INITIAL){minKey = key; }
-    return rcode;
+	else
+	{
+    	int currentHeight = 1;
+    	int siblingKey;
+    	PageId siblingPid;
+    	rc = insertHelper(rootPid, key, rid, currentHeight, siblingPid, siblingKey);
+    }
+    return rc;
 }
 
 
-RC BTreeIndex::recursiveInsert(int stage, int key, PageId& retPid, int& retKey, const RecordId& rid, PageId currPid)
+RC BTreeIndex::insertHelper(PageId pid, int key, const RecordId& rid,
+                            int curHeight, int& siblingPid, int& siblingKey)
 {
-    if (stage != treeHeight)
+    if (curHeight < treeHeight)
     {
-        BTNonLeafNode n;
-        //n.initializeRoot(INITIAL, INITIAL, INITIAL);
-        n.read(currPid, pf);
+        BTNonLeafNode curHead;
+        curHead.read(pid, pf);
 
         PageId nextPid, splitPid;
         int splitKey;
-        n.locateChildPtr(key, nextPid);
+        curHead.locateChildPtr(key, nextPid);
 
-        RC rcode = (*this).recursiveInsert(stage+1, key, splitPid, splitKey, rid, nextPid);
+        RC rc = insertHelper(nextPid, key,rid, curHeight+1, splitPid, splitKey);
 
-        if (rcode == RC_NODE_FULL)
+        if (rc == RC_NODE_FULL)
         {
-            rcode = n.insert(splitKey, splitPid);
-            if (rcode == 0)
+            rc = curHead.insert(splitKey, splitPid);
+            if (rc == 0)
             {
-                n.write(currPid, pf);
-                return rcode;
-            }else{
-                RC rcode = RC_NODE_FULL;
-                BTNonLeafNode sn;
-                //sn.initializeRoot(INITIAL, INITIAL, INITIAL);
-
-                int midKey;
-                n.insertAndSplit(splitKey, splitPid, sn, midKey);
-                PageId sibId = pf.endPid();
-                sn.write(sibId, pf);
-                n.write(currPid, pf);
-
-                if ( stage == 1){ rcode = (*this).popedupRoot( currPid, sibId, midKey); }
-
-                retPid = sibId;
-                retKey = midKey;
-                return rcode;
+                curHead.write(pid, pf);
+                return rc;
             }
-        } else  return rcode;
+            else
+            {
+                rc = RC_NODE_FULL;
+                BTNonLeafNode newNode;
+                int midKey;
+                curHead.insertAndSplit(splitKey, splitPid, newNode, midKey);
+                
+                PageId sibId = pf.endPid();
+                newNode.write(sibId, pf);
+                curHead.write(pid, pf);
 
-    } else
+                if ( curHeight == 1)
+                {
+                	BTNonLeafNode firstRoot;
+                	rootPid = pf.endPid();
+                	rc = firstRoot.initializeRoot(pid, siblingKey, siblingPid);
+                	treeHeight++;
+                	firstRoot.write(rootPid, pf);
+            	}
+
+                siblingPid = sibId;
+                siblingKey = midKey;
+                return rc;
+            }
+        } 
+        else  
+        	return rc;
+
+    }
+    else
     {
-        BTLeafNode leaf;
-        //leaf.cleanStart();
-        leaf.read(currPid, pf);
+        BTLeafNode curHead;
+        curHead.read(pid, pf);
 
-        RC rcode = leaf.insert(key, rid);
+        RC rc = curHead.insert(key, rid);
 
-        if (rcode == 0)
+        if (rc == 0)
         {
-            leaf.write(currPid, pf);
-            return rcode;
-        } else {
-            BTLeafNode sn;
+            curHead.write(pid, pf);
+            return rc;
+        }
+        else if (rc == RC_NODE_FULL)
+        {
+            BTLeafNode newNode;
             //sn.cleanStart();
-            int key_sibling;
-            leaf.insertAndSplit(key, rid, sn, key_sibling);
+            int tempSibKey;
+            newNode.insertAndSplit(key, rid, newNode, tempSibKey);
 
-            PageId sibPid = pf.endPid();
-            sn.write(sibPid, pf);
+            PageId tempSibPid = pf.endPid();
+            newNode.write(tempSibPid, pf);
 
-            //fprintf(stdout, "Leafs keycount is %d\n", leaf.getKeyCount());
-            leaf.setNextNodePtr(sibPid);
-            leaf.write(currPid, pf);
+            curHead.setNextNodePtr(tempSibPid);
+            curHead.write(pid, pf);
 
-            retPid = sibPid;
-            retKey = key_sibling;
+            siblingPid = tempSibPid;
+            siblingKey = tempSibKey;
+			if ( curHeight == 1)
+                {
+                	BTNonLeafNode firstRoot;
+                	rootPid = pf.endPid();
+                	rc = firstRoot.initializeRoot(pid, siblingKey, siblingPid);
+                	treeHeight++;
+                	firstRoot.write(rootPid, pf);
 
-            if (stage == 1){ rcode = (*this).popedupRoot(currPid, sibPid, key_sibling);}
-
-            return rcode;
+            	}
+            return rc;
         }
     }
 
-}
-
-
-RC BTreeIndex::popedupRoot(PageId lPid, PageId rPid, int key)
-{
-    BTNonLeafNode nleaf;
-    RC rcode = nleaf.initializeRoot(lPid, key, rPid);
-    rootPid = pf.endPid();
-    fprintf(stdout, "New root pid is %d\n", rootPid);
-    nleaf.write(rootPid, pf);
-    treeHeight +=1;
-
-    return rcode;
 }
 
 
@@ -459,67 +334,67 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 	}*/
 }
 
-void BTreeIndex::printTree()
-{
-	printRecurse(rootPid, 1);
-}
-
-void BTreeIndex::printRecurse(PageId pid, int level)
-{
-	cout << "\n========================================\n";
-	cout << "Printing out level: " << level << endl;
-	cout << "Printing out page pid: " << pid << endl;
-	if (level > treeHeight)
-		return;
-	// Leaf node
-	else if (level == treeHeight)
-	{
-		cout << "Printing out leaf node!" << endl;
-		BTLeafNode node;
-		node.read(pid, pf);
-		RecordId rid;
-		int key = -1;
-		for (int i = 0; i < node.getKeyCount(); i++)
-		{
-			node.readEntry(i, key, rid);
-			cout << "[" << key << "]";
-		}
-	}
-	else
-	{
-		cout << "Printing out nonleaf node!" << endl;
-		BTNonLeafNode node;
-
-		node.read(pid, pf);
-		//int key = -1;
-		/*for (int i = 0; i < node.getKeyCount(); i++)
-		{
-			node.readNonLeafEntry(i, key);
-			cout << "[" << key << "]";
-		}*/
-		node.printBuffer();
-
-		int key = -1;
-		//node.readNonLeafEntry(0, key);
-		char* iter = node.getBuffer() + sizeof(PageId);
-		memcpy(&key, iter, sizeof(int));
-		PageId child;
-		node.locateChildPtr(key-1, child);
-		printRecurse(child, level+1);
-
-		char* iter2 = node.getBuffer() + sizeof(PageId);
-
-		for (int i = 0; i < node.getKeyCount(); i++)
-		{
-			key = -1;
-			//node.readNonLeafEntry(i, key);
-			memcpy(&key, iter2, sizeof(int));
-			iter2 += sizeof(int) + sizeof(PageId);
-			PageId child_page;
-			node.locateChildPtr(key, child_page);
-			printRecurse(child_page, level+1);
-		}
-
-	}
-	cout << "\n========================================\n";
-}
+//void BTreeIndex::printTree()
+//{
+//	printRecurse(rootPid, 1);
+//}
+//
+//void BTreeIndex::printRecurse(PageId pid, int level)
+//{
+//	cout << "\n========================================\n";
+//	cout << "Printing out level: " << level << endl;
+//	cout << "Printing out page pid: " << pid << endl;
+//	if (level > treeHeight)
+//		return;
+//	// Leaf node
+//	else if (level == treeHeight)
+//	{
+//		cout << "Printing out leaf node!" << endl;
+//		BTLeafNode node;
+//		node.read(pid, pf);
+//		RecordId rid;
+//		int key = -1;
+//		for (int i = 0; i < node.getKeyCount(); i++)
+//		{
+//			node.readEntry(i, key, rid);
+//			cout << "[" << key << "]";
+//		}
+//	}
+//	else
+//	{
+//		cout << "Printing out nonleaf node!" << endl;
+//		BTNonLeafNode node;
+//
+//		node.read(pid, pf);
+//		//int key = -1;
+//		/*for (int i = 0; i < node.getKeyCount(); i++)
+//		{
+//			node.readNonLeafEntry(i, key);
+//			cout << "[" << key << "]";
+//		}*/
+//		node.printBuffer();
+//
+//		int key = -1;
+//		//node.readNonLeafEntry(0, key);
+//		char* iter = node.getBuffer() + sizeof(PageId);
+//		memcpy(&key, iter, sizeof(int));
+//		PageId child;
+//		node.locateChildPtr(key-1, child);
+//		printRecurse(child, level+1);
+//
+//		char* iter2 = node.getBuffer() + sizeof(PageId);
+//
+//		for (int i = 0; i < node.getKeyCount(); i++)
+//		{
+//			key = -1;
+//			//node.readNonLeafEntry(i, key);
+//			memcpy(&key, iter2, sizeof(int));
+//			iter2 += sizeof(int) + sizeof(PageId);
+//			PageId child_page;
+//			node.locateChildPtr(key, child_page);
+//			printRecurse(child_page, level+1);
+//		}
+//
+//	}
+//	cout << "\n========================================\n";
+//}
